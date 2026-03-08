@@ -1,0 +1,456 @@
+{
+  "intent": {
+    "product_name": "ExamForge",
+    "product_type": "saas",
+    "target_audience": "Students preparing for competitive exams and educators",
+    "key_features": [
+      "interactive quizzes",
+      "flashcards",
+      "timed mock tests",
+      "instant feedback",
+      "progress tracking"
+    ],
+    "tone": "professional",
+    "style_keywords": [
+      "clean",
+      "distraction-free",
+      "focused study"
+    ],
+    "pages": [
+      "home",
+      "quiz-selection",
+      "quiz-player",
+      "results",
+      "flashcard-study"
+    ],
+    "palette_hint": "optimized for focused study with a clean and distraction-free interface",
+    "complexity": "medium",
+    "industry": "education",
+    "custom_components": [
+      "QuizCard",
+      "QuestionCard",
+      "OptionButton",
+      "Timer",
+      "ProgressBar",
+      "FlashcardComponent"
+    ],
+    "ui_interactions": [
+      "timer",
+      "progress-bar",
+      "instant-feedback"
+    ]
+  },
+  "ontology": {
+    "domain": "marketing",
+    "required_components": [
+      "QuizCard",
+      "Footer",
+      "Navbar",
+      "PricingTable",
+      "Timer",
+      "ProgressBar",
+      "TestimonialSlider",
+      "FeatureGrid",
+      "FlashcardComponent",
+      "Hero",
+      "NewsletterSignup",
+      "QuestionCard",
+      "OptionButton"
+    ]
+  },
+  "layout": {
+    "pages": [
+      {
+        "name": "Home",
+        "route": "/",
+        "layout": {
+          "type": "Section",
+          "children": [
+            {
+              "type": "Container",
+              "children": [
+                {
+                  "type": "Navbar"
+                },
+                {
+                  "type": "Hero"
+                },
+                {
+                  "type": "FlashcardComponent",
+                  "layout": "Grid"
+                },
+                {
+                  "type": "FeatureGrid"
+                },
+                {
+                  "type": "TestimonialSlider"
+                }
+              ]
+            },
+            {
+              "type": "Footer"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quiz Selection",
+        "route": "/quiz-selection",
+        "layout": {
+          "type": "Section",
+          "children": [
+            {
+              "type": "Container",
+              "children": [
+                {
+                  "type": "Navbar"
+                },
+                {
+                  "type": "Stack",
+                  "children": [
+                    {
+                      "type": "QuizCard"
+                    },
+                    {
+                      "type": "QuizCard"
+                    }
+                  ]
+                },
+                {
+                  "type": "Footer"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quiz Player",
+        "route": "/quiz-player",
+        "layout": {
+          "type": "Section",
+          "children": [
+            {
+              "type": "Container",
+              "children": [
+                {
+                  "type": "Navbar"
+                },
+                {
+                  "type": "Stack",
+                  "children": [
+                    {
+                      "type": "QuestionCard"
+                    },
+                    {
+                      "type": "OptionButton"
+                    }
+                  ]
+                },
+                {
+                  "type": "Timer"
+                },
+                {
+                  "type": "ProgressBar"
+                },
+                {
+                  "type": "Footer"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "Results",
+        "route": "/results",
+        "layout": {
+          "type": "Section",
+          "children": [
+            {
+              "type": "Container",
+              "children": [
+                {
+                  "type": "Navbar"
+                },
+                {
+                  "type": "Stack",
+                  "children": [
+                    {
+                      "type": "QuizCard"
+                    },
+                    {
+                      "type": "PricingTable"
+                    }
+                  ]
+                },
+                {
+                  "type": "Footer"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "Flashcard Study",
+        "route": "/flashcard-study",
+        "layout": {
+          "type": "Section",
+          "children": [
+            {
+              "type": "Container",
+              "children": [
+                {
+                  "type": "Navbar"
+                },
+                {
+                  "type": "Stack",
+                  "children": [
+                    {
+                      "type": "FlashcardComponent"
+                    },
+                    {
+                      "type": "NewsletterSignup"
+                    }
+                  ]
+                },
+                {
+                  "type": "Footer"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ast": {
+    "pages": [
+      {
+        "name": "Home",
+        "route": "/",
+        "state_contract": {},
+        "layout": {
+          "type": "Section",
+          "children": [
+            {
+              "type": "Container",
+              "children": [
+                {
+                  "type": "Navbar"
+                },
+                {
+                  "type": "Hero"
+                },
+                {
+                  "type": "FlashcardComponent",
+                  "props": [
+                    "data"
+                  ],
+                  "layout": "Grid"
+                },
+                {
+                  "type": "FeatureGrid"
+                },
+                {
+                  "type": "TestimonialSlider"
+                }
+              ],
+              "state_contract": {}
+            },
+            {
+              "type": "Footer"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quiz Selection",
+        "route": "/quiz-selection",
+        "state_contract": {},
+        "layout": {
+          "type": "Section",
+          "children": [
+            {
+              "type": "Container",
+              "children": [
+                {
+                  "type": "Navbar"
+                },
+                {
+                  "type": "Stack",
+                  "props": [
+                    "quizzes"
+                  ],
+                  "children": [
+                    {
+                      "type": "QuizCard"
+                    },
+                    {
+                      "type": "QuizCard"
+                    }
+                  ]
+                },
+                {
+                  "type": "Footer"
+                }
+              ],
+              "state_contract": {}
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quiz Player",
+        "route": "/quiz-player",
+        "state_contract": {
+          "currentQuestion": "number",
+          "score": "number",
+          "timeLeft": "number"
+        },
+        "layout": {
+          "type": "Section",
+          "children": [
+            {
+              "type": "Container",
+              "children": [
+                {
+                  "type": "Navbar"
+                },
+                {
+                  "type": "Stack",
+                  "props": [
+                    "quizzes"
+                  ],
+                  "children": [
+                    {
+                      "type": "QuestionCard",
+                      "props": [
+                        "data",
+                        "selected",
+                        "onSelect"
+                      ]
+                    },
+                    {
+                      "type": "OptionButton"
+                    }
+                  ]
+                },
+                {
+                  "type": "Timer",
+                  "props": [
+                    "timeLeft",
+                    "onTimeUp"
+                  ]
+                },
+                {
+                  "type": "ProgressBar"
+                },
+                {
+                  "type": "Footer"
+                }
+              ],
+              "state_contract": {}
+            }
+          ]
+        }
+      },
+      {
+        "name": "Results",
+        "route": "/results",
+        "state_contract": {},
+        "layout": {
+          "type": "Section",
+          "children": [
+            {
+              "type": "Container",
+              "children": [
+                {
+                  "type": "Navbar"
+                },
+                {
+                  "type": "Stack",
+                  "props": [
+                    "quizzes"
+                  ],
+                  "children": [
+                    {
+                      "type": "QuizCard"
+                    },
+                    {
+                      "type": "PricingTable"
+                    }
+                  ]
+                },
+                {
+                  "type": "Footer"
+                }
+              ],
+              "state_contract": {}
+            }
+          ]
+        }
+      },
+      {
+        "name": "Flashcard Study",
+        "route": "/flashcard-study",
+        "state_contract": {},
+        "layout": {
+          "type": "Section",
+          "children": [
+            {
+              "type": "Container",
+              "children": [
+                {
+                  "type": "Navbar"
+                },
+                {
+                  "type": "Stack",
+                  "props": [
+                    "data"
+                  ],
+                  "children": [
+                    {
+                      "type": "FlashcardComponent"
+                    },
+                    {
+                      "type": "NewsletterSignup"
+                    }
+                  ]
+                },
+                {
+                  "type": "Footer"
+                }
+              ],
+              "state_contract": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "design": {
+    "palette_id": "P-5",
+    "tailwind": {
+      "container": "max-w-7xl mx-auto px-6",
+      "section": "py-16 md:py-24",
+      "card": "bg-zinc-50 rounded-lg border border-zinc-200 shadow-md p-6",
+      "btn_primary": "bg-zinc-900 hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold transition-all",
+      "btn_secondary": "border border-zinc-300 text-zinc-700 px-6 py-3 rounded-lg hover:bg-zinc-50 transition-all",
+      "text_heading": "text-zinc-900",
+      "text_body": "text-zinc-900 opacity-70",
+      "bg_page": "bg-white",
+      "accent_text": "text-red-500",
+      "accent_bg": "bg-red-500/10",
+      "input": "w-full px-4 py-3 rounded-lg border border-zinc-200 bg-zinc-50 text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-500"
+    },
+    "visual_effect": "none",
+    "effect_placement": "top-right",
+    "text_animation": "typewriter",
+    "border_radius": "rounded-lg",
+    "shadow_style": "shadow-md",
+    "font_pair": "Inter",
+    "dark_mode": false
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "total": 1722,
+  "model": "BAAI/bge-small-en-v1.5",
+  "dim": 384,
+  "device": "cpu"
+}

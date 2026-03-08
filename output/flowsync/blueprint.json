@@ -1,0 +1,513 @@
+{
+  "intent": {
+    "product_name": "FlowSync",
+    "product_type": "landing",
+    "target_audience": "Startup teams, Product managers, Developers, Freelancers",
+    "key_features": [
+      "Task Management",
+      "Team Collaboration",
+      "Workflow Automation"
+    ],
+    "tone": "professional",
+    "style_keywords": [
+      "modern",
+      "clean",
+      "trustworthy",
+      "product-focused"
+    ],
+    "pages": [
+      "home"
+    ],
+    "palette_hint": "color or mood hint not explicitly mentioned",
+    "complexity": "medium",
+    "industry": "Productivity SaaS",
+    "custom_components": [
+      "HeroSection",
+      "FeaturesSection",
+      "ProductShowcase",
+      "BenefitsSection",
+      "TestimonialsSection",
+      "PricingSection",
+      "CTASection",
+      "Navbar",
+      "Footer"
+    ],
+    "ui_interactions": [
+      "hover animations",
+      "smooth scrolling",
+      "section reveal animations"
+    ]
+  },
+  "ontology": {
+    "domain": "marketing",
+    "required_components": [
+      "NewsletterSignup",
+      "FeatureGrid",
+      "Hero",
+      "ProductShowcase",
+      "PricingSection",
+      "Navbar",
+      "HeroSection",
+      "TestimonialsSection",
+      "CTASection",
+      "PricingTable",
+      "FeaturesSection",
+      "Footer",
+      "TestimonialSlider",
+      "BenefitsSection"
+    ]
+  },
+  "layout": {
+    "pages": [
+      {
+        "name": "Landing",
+        "route": "/",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar"
+            },
+            {
+              "type": "HeroSection",
+              "original_name": "HeroSection"
+            },
+            {
+              "type": "FeaturesSection",
+              "original_name": "FeaturesSection"
+            },
+            {
+              "type": "ProductShowcase",
+              "original_name": "ProductShowcase"
+            },
+            {
+              "type": "BenefitsSection",
+              "original_name": "BenefitsSection"
+            },
+            {
+              "type": "TestimonialsSection",
+              "original_name": "TestimonialsSection"
+            },
+            {
+              "type": "PricingSection",
+              "original_name": "PricingSection"
+            },
+            {
+              "type": "CTASection",
+              "original_name": "CTASection"
+            },
+            {
+              "type": "Footer",
+              "original_name": "Footer"
+            },
+            {
+              "type": "NewsletterSignup",
+              "original_name": "NewsletterSignup"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pricing",
+        "route": "/pricing",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar"
+            },
+            {
+              "type": "PricingSection",
+              "original_name": "PricingSection"
+            },
+            {
+              "type": "HeroSection",
+              "original_name": "HeroSection"
+            },
+            {
+              "type": "TestimonialsSection",
+              "original_name": "TestimonialsSection"
+            },
+            {
+              "type": "CTASection",
+              "original_name": "CTASection"
+            },
+            {
+              "type": "FeaturesSection",
+              "original_name": "FeaturesSection"
+            },
+            {
+              "type": "BenefitsSection",
+              "original_name": "BenefitsSection"
+            },
+            {
+              "type": "Footer",
+              "original_name": "Footer"
+            }
+          ]
+        }
+      },
+      {
+        "name": "About",
+        "route": "/about",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar"
+            },
+            {
+              "type": "PricingSection",
+              "original_name": "PricingSection"
+            },
+            {
+              "type": "HeroSection",
+              "original_name": "HeroSection"
+            },
+            {
+              "type": "TestimonialsSection",
+              "original_name": "TestimonialsSection"
+            },
+            {
+              "type": "CTASection",
+              "original_name": "CTASection"
+            },
+            {
+              "type": "FeaturesSection",
+              "original_name": "FeaturesSection"
+            },
+            {
+              "type": "BenefitsSection",
+              "original_name": "BenefitsSection"
+            },
+            {
+              "type": "Footer",
+              "original_name": "Footer"
+            }
+          ]
+        }
+      }
+    ],
+    "discarded_components": [
+      {
+        "component": "FeatureGrid",
+        "discard_reason": "replaced by FeaturesSection"
+      },
+      {
+        "component": "Hero",
+        "discard_reason": "replaced by HeroSection"
+      },
+      {
+        "component": "PricingTable",
+        "discard_reason": "replaced by PricingSection"
+      },
+      {
+        "component": "TestimonialSlider",
+        "discard_reason": "replaced by TestimonialsSection"
+      }
+    ]
+  },
+  "ast": {
+    "pages": [
+      {
+        "name": "Landing",
+        "route": "/",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "Provides navigation options for the user"
+              ]
+            },
+            {
+              "type": "HeroSection",
+              "props": [
+                "title",
+                "subtitle"
+              ],
+              "responsibilities": [
+                "Introduces the main value proposition of the product"
+              ]
+            },
+            {
+              "type": "FeaturesSection",
+              "props": [
+                "features"
+              ],
+              "responsibilities": [
+                "Lists key features of the product"
+              ]
+            },
+            {
+              "type": "ProductShowcase",
+              "props": [
+                "products"
+              ],
+              "responsibilities": [
+                "Highlights featured products or services"
+              ]
+            },
+            {
+              "type": "BenefitsSection",
+              "props": [
+                "benefits"
+              ],
+              "responsibilities": [
+                "Explores the benefits of using the product"
+              ]
+            },
+            {
+              "type": "TestimonialsSection",
+              "props": [
+                "testimonials"
+              ],
+              "responsibilities": [
+                "Shares customer testimonials to build trust"
+              ]
+            },
+            {
+              "type": "PricingSection",
+              "props": [
+                "pricingPlans"
+              ],
+              "responsibilities": [
+                "Displays pricing plans for the product"
+              ]
+            },
+            {
+              "type": "CTASection",
+              "props": [
+                "callToActionText"
+              ],
+              "responsibilities": [
+                "Encourages users to take action, e.g., sign up or purchase"
+              ]
+            },
+            {
+              "type": "Footer",
+              "props": [],
+              "responsibilities": [
+                "Provides additional links and information at the bottom of the page"
+              ]
+            },
+            {
+              "type": "NewsletterSignup",
+              "props": [
+                "formFields"
+              ],
+              "responsibilities": [
+                "Allows users to subscribe to newsletters or updates"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pricing",
+        "route": "/pricing",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "Provides navigation options for the user"
+              ]
+            },
+            {
+              "type": "PricingSection",
+              "props": [
+                "pricingPlans"
+              ],
+              "responsibilities": [
+                "Displays pricing plans for the product"
+              ]
+            },
+            {
+              "type": "HeroSection",
+              "props": [
+                "title",
+                "subtitle"
+              ],
+              "responsibilities": [
+                "Introduces the main value proposition of the product"
+              ]
+            },
+            {
+              "type": "TestimonialsSection",
+              "props": [
+                "testimonials"
+              ],
+              "responsibilities": [
+                "Shares customer testimonials to build trust"
+              ]
+            },
+            {
+              "type": "CTASection",
+              "props": [
+                "callToActionText"
+              ],
+              "responsibilities": [
+                "Encourages users to take action, e.g., sign up or purchase"
+              ]
+            },
+            {
+              "type": "FeaturesSection",
+              "props": [
+                "features"
+              ],
+              "responsibilities": [
+                "Lists key features of the product"
+              ]
+            },
+            {
+              "type": "BenefitsSection",
+              "props": [
+                "benefits"
+              ],
+              "responsibilities": [
+                "Explores the benefits of using the product"
+              ]
+            },
+            {
+              "type": "Footer",
+              "props": [],
+              "responsibilities": [
+                "Provides additional links and information at the bottom of the page"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "About",
+        "route": "/about",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "Provides navigation options for the user"
+              ]
+            },
+            {
+              "type": "PricingSection",
+              "props": [
+                "pricingPlans"
+              ],
+              "responsibilities": [
+                "Displays pricing plans for the product"
+              ]
+            },
+            {
+              "type": "HeroSection",
+              "props": [
+                "title",
+                "subtitle"
+              ],
+              "responsibilities": [
+                "Introduces the main value proposition of the product"
+              ]
+            },
+            {
+              "type": "TestimonialsSection",
+              "props": [
+                "testimonials"
+              ],
+              "responsibilities": [
+                "Shares customer testimonials to build trust"
+              ]
+            },
+            {
+              "type": "CTASection",
+              "props": [
+                "callToActionText"
+              ],
+              "responsibilities": [
+                "Encourages users to take action, e.g., sign up or purchase"
+              ]
+            },
+            {
+              "type": "FeaturesSection",
+              "props": [
+                "features"
+              ],
+              "responsibilities": [
+                "Lists key features of the product"
+              ]
+            },
+            {
+              "type": "BenefitsSection",
+              "props": [
+                "benefits"
+              ],
+              "responsibilities": [
+                "Explores the benefits of using the product"
+              ]
+            },
+            {
+              "type": "Footer",
+              "props": [],
+              "responsibilities": [
+                "Provides additional links and information at the bottom of the page"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "discarded_components": [
+      {
+        "component": "FeatureGrid",
+        "discard_reason": "replaced by FeaturesSection"
+      },
+      {
+        "component": "Hero",
+        "discard_reason": "replaced by HeroSection"
+      },
+      {
+        "component": "PricingTable",
+        "discard_reason": "replaced by PricingSection"
+      },
+      {
+        "component": "TestimonialSlider",
+        "discard_reason": "replaced by TestimonialsSection"
+      }
+    ]
+  },
+  "design": {
+    "palette_id": "P-5",
+    "tailwind": {
+      "container": "max-w-7xl mx-auto px-6",
+      "section": "py-16 md:py-24",
+      "card": "bg-zinc-50 rounded-xl border border-zinc-200 shadow-md p-6",
+      "btn_primary": "bg-zinc-900 hover:opacity-90 text-white px-6 py-3 rounded-xl font-semibold transition-all",
+      "btn_secondary": "border border-zinc-300 text-zinc-700 px-6 py-3 rounded-xl hover:bg-zinc-50 transition-all",
+      "text_heading": "text-zinc-900",
+      "text_body": "text-zinc-900 opacity-70",
+      "bg_page": "bg-white",
+      "accent_text": "text-red-500",
+      "accent_bg": "bg-red-500/10",
+      "input": "w-full px-4 py-3 rounded-xl border border-zinc-200 bg-zinc-50 text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-500"
+    },
+    "visual_effect": "none",
+    "effect_placement": "top-right",
+    "text_animation": "typewriter",
+    "border_radius": "rounded-xl",
+    "shadow_style": "shadow-md",
+    "font_pair": "Inter",
+    "dark_mode": false
+  }
+}

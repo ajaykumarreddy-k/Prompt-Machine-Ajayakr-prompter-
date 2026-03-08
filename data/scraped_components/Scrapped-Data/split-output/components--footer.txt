@@ -1,0 +1,82 @@
+[57]  Section footer components
+URL  : https://www.untitledui.com/react/components/section-footers
+
+── CODE
+
+npx untitledui@latest add section-footer
+
+npx untitledui@latest add section-footer
+
+npx untitledui@latest add section-footer
+
+[166]  Stacked Circular Footer
+URL  : https://21st.dev/community/components/stacked-circular-footer
+
+── CSS
+
+[273]  Flickering Footer
+URL  : https://21st.dev/community/components/flickering-footer
+
+── TSX (React)
+
+"use client";
+
+import { DIcons } from "dicons";
+import { useTheme } from "next-themes";
+
+function handleScrollTop() {
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
+const Footer = () => {
+  const { setTheme } = useTheme();
+
+  return (
+    <div className="flex items-center justify-center">
+      <div className="flex items-center rounded-full border border-dotted">
+        <button
+          onClick={() => setTheme("light")}
+          className="bg-black mr-3 rounded-full p-2 text-white dark:bg-background dark:text-white"
+        >
+          <DIcons.Sun className="h-5 w-5" strokeWidth={1} />
+          <span className="sr-only">T</span>
+        </button>
+
+        <button type="button" onClick={handleScrollTop}>
+          <DIcons.ArrowUp className="h-3 w-3" />
+          <span className="sr-only">Top</span>
+        </button>
+
+        <button
+          onClick={() => setTheme("dark")}
+          className="dark:bg-black ml-3 rounded-full p-2 text-black dark:text-white"
+        >
+          <DIcons.Moon className="h-5 w-5" strokeWidth={1} />
+          <span className="sr-only">T</span>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;
+
+[402]  Modem Animated Footer
+URL  : https://21st.dev/community/components/modem-animated-footer
+
+── TSX (React)
+
+[415]  Footer Taped Design
+URL  : https://21st.dev/community/components/footer-taped-design
+
+── TSX (React)
+
+[101]  Interactive Typographic Wave Footer
+URL  : https://freefrontend.com/code/interactive-typographic-wave-footer-2026-02-06/
+By   : anon
+Tags : HTML36, CSS282, JavaScript218, Bootstrap65, Tailwind CSS78, html canvas api, js particles, js background effects, js text effects, js mouse tracking, js waves, js ripple effect, Rising Bubbles Particles EffectJavaScript
+
+── HTML

@@ -1,0 +1,60 @@
+"""stage1_intent_parser.py — Extract structured intent from PRD text."""
+
+from ollama import ollama, extract_json
+
+SYSTEM = (
+    "You are a PRD analysis expert. Extract structured information from product "
+    "requirement documents. Respond with valid JSON only — no markdown, no explanation."
+)
+
+FALLBACK: dict = {
+    "product_name":      "App",
+    "product_type":      "landing",
+    "target_audience":   "general users",
+    "key_features":      ["feature 1", "feature 2", "feature 3"],
+    "tone":              "professional",
+    "style_keywords":    ["modern", "clean"],
+    "pages":             ["home"],
+    "palette_hint":      "blue",
+    "complexity":        "medium",
+    "industry":          "technology",
+    "custom_components": [],
+    "ui_interactions":   [],
+}
+
+
+def parse_intent(prd: str) -> dict:
+    prompt = f"""Analyze this PRD and extract structured information.
+
+PRD:
+{prd}
+
+Return ONLY valid JSON with this exact shape:
+{{
+  "product_name":       "short product name",
+  "product_type":       "landing|dashboard|auth|saas|portfolio|ecommerce|tool",
+  "target_audience":    "who uses this",
+  "key_features":       ["feature1", "feature2", "feature3"],
+  "tone":               "professional|playful|minimal|bold|technical|creative",
+  "style_keywords":     ["keyword1", "keyword2"],
+  "pages":              ["home", "quiz-selection", "quiz-player", "results"],
+  "palette_hint":       "color or mood hint",
+  "complexity":         "simple|medium|complex",
+  "industry":           "industry or domain",
+  "custom_components":  ["ComponentName1", "ComponentName2"],
+  "ui_interactions":    ["timer", "progress-bar", "instant-feedback"]
+}}
+
+Rules:
+- custom_components: extract ALL named components from any Component Structure, Component List, or similar section
+- pages: extract ALL named screens/pages mentioned anywhere in the PRD
+- ui_interactions: capture dynamic behaviors like timers, progress bars, modals, animations, transitions
+- If the PRD explicitly lists component names like QuizCard, Timer, ProgressBar, OptionButton — include them exactly"""
+
+    raw    = ollama(prompt, system=SYSTEM, label="Parsing PRD intent")
+    parsed = extract_json(raw)
+    if not parsed or not isinstance(parsed, dict):
+        print("\033[33m⚠  Intent parse failed — using defaults\033[0m")
+        return FALLBACK
+
+    return {**FALLBACK, **parsed}

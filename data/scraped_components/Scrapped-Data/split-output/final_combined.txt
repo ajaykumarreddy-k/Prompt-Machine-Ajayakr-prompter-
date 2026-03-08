@@ -1,0 +1,831 @@
+===FILE: knowledge-base/components/navbar.md===
+# Navbar
+
+## Purpose
+The navigation bar operates as the primary orienting element for the application, providing users global routing access and housing critical brand identity and top-level actions.
+
+## When To Use
+- At the global top of all marketing and landing pages
+- Across internal pages to maintain consistent cross-navigation
+- When clear access to features, pricing, and authentication is required
+
+## Structure
+- Branding Container (Logo + Application Name)
+- Primary Navigation Links (Desktop)
+- Secondary Actions (Log In / Sign Up buttons)
+- Mobile Collapse Toggle (Hamburger Menu)
+
+## Variants
+- Simple Brand + Auth: Basic layout with brand on left, auth on right.
+- Centered Links: Links sit symmetrically in the center for marketing focus.
+- Glassmorphism: Sticky transparent navbar with backdrop blur effect.
+
+## Design Notes
+- Utilize `backdrop-blur-md` and `bg-white/80` for a modern glass effect.
+- Horizontal padding should be generous (`px-6` or `px-8`).
+- Links should rely on hover transitions (e.g., `hover:text-primary-600` and `transition-colors duration-200`).
+- Ensure the mobile menu falls cleanly into a vertical list below `md` breakpoint.
+
+## React Component
+// Navbar — synthesised from AKR scraper data
+export default function Navbar() {
+  return (
+    <nav className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/80 px-6 py-4 text-sm font-medium backdrop-blur-md">
+      <div className="mx-auto flex max-w-7xl items-center justify-between">
+        <div className="flex items-center gap-2">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-white font-bold">B</div>
+          <span className="text-xl font-bold tracking-tight text-gray-900">Brand</span>
+        </div>
+        <div className="hidden items-center gap-8 md:flex">
+          <a href="#" className="text-gray-600 transition-colors hover:text-gray-900">Features</a>
+          <a href="#" className="text-gray-600 transition-colors hover:text-gray-900">Pricing</a>
+          <a href="#" className="text-gray-600 transition-colors hover:text-gray-900">Docs</a>
+        </div>
+        <div className="flex items-center gap-4">
+          <a href="#" className="hidden text-gray-600 transition-colors hover:text-gray-900 md:block">Log in</a>
+          <a href="#" className="rounded-lg bg-gray-900 px-4 py-2 text-white transition-colors hover:bg-gray-800">Sign up</a>
+        </div>
+      </div>
+    </nav>
+  );
+}
+===FILE: knowledge-base/components/hero.md===
+# Hero
+
+## Purpose
+The hero dictates the first impression of a page, quickly conveying the core value proposition and demanding an immediate user action.
+
+## When To Use
+- At the top of any product introduction page
+- Marketing landing pages directing to a single funnel
+- Whenever massive visual emphasis and a strong CTA are necessary
+
+## Structure
+- Primary Headline (H1, visually dominant)
+- Subhealine / Context Paragraph (Descriptive, medium text size)
+- Primary Action Group (Main CTA button + Secondary Link)
+- Visual Asset (Dashboard illustration, abstract gradient, or product image)
+
+## Variants
+- Text-Centric: Centered large typography with no image, reliant on a subtle gradient mesh background.
+- Split Layout: Left-aligned typography and CTA, right-aligned floating product image.
+- Background Visual: Image or video filling the entire container with dark overlay and white text.
+
+## Design Notes
+- The headline must utilize `tracking-tight` and `font-extrabold` to look punchy.
+- Apply high vertical margins (`py-24` or `py-32`) to isolate the message.
+- A primary CTA should have high contrast (e.g., pure black or strong primary color).
+- Supporting sub-text should be faded (`text-gray-500` or `text-gray-600`) to enforce hierarchy.
+
+## React Component
+// Hero — synthesised from AKR scraper data
+export default function Hero() {
+  return (
+    <section className="relative overflow-hidden bg-white px-6 py-32 sm:py-40">
+      <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+        <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
+      </div>
+      <div className="mx-auto max-w-4xl text-center">
+        <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-7xl">
+          Build faster with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600">modern tools</span>
+        </h1>
+        <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-xl">
+          Streamline your workflow, increase velocity, and deploy scalable systems directly from your terminal using our comprehensive unified platform.
+        </p>
+        <div className="mt-10 flex items-center justify-center gap-x-6">
+          <a href="#" className="rounded-xl bg-gray-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">
+            Get started
+          </a>
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900 group">
+            Learn more <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+===FILE: knowledge-base/components/cards.md===
+# Cards
+
+## Purpose
+Cards encapsulate discrete data objects into unified, digestible surface areas that imply interaction or summarize rich structures.
+
+## When To Use
+- To display grids of pricing plans, features, or team members
+- Representing physical objects or distinct digital files (e.g., projects, repos)
+- Acting as entry points to deeper content views
+
+## Structure
+- Header/Visual (Icon, avatar, or banner image)
+- Title Element
+- Body Content (Text paragraph or metric array)
+- Footer/Action (Action buttons or interaction hints)
+
+## Variants
+- Feature Card: Top-aligned icon, strong title, descriptive text.
+- Stat Card: Huge typography displaying a metric, smaller label text, often possessing a trend indicator element.
+- Profile Card: Centered avatar, bolded name, subtle role text, social links.
+
+## Design Notes
+- Rely on subtle borders (`border-gray-200`) and slight shadows (`shadow-sm`) to define edges.
+- Provide ample inner padding (`p-6` or `p-8`).
+- For hover states, elevate the card (`hover:shadow-md`) and perhaps slightly translate it on the Y-axis (`hover:-translate-y-1 transition-all`).
+- When grouped, use a CSS grid with gaps (`grid-cols-1 md:grid-cols-3 gap-6`).
+
+## React Component
+// Card — synthesised from AKR scraper data
+export default function Card() {
+  return (
+    <div className="group relative flex flex-col items-start justify-between rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md cursor-pointer overflow-hidden">
+      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 mb-4 transition-transform group-hover:scale-110">
+        <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="h-6 w-6">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+        </svg>
+      </div>
+      <h3 className="mb-2 text-lg font-semibold text-gray-900">Lightning Velocity</h3>
+      <p className="mb-6 text-sm leading-relaxed text-gray-600">
+        Deploy globally distributed assets in milliseconds natively via edge architecture. Avoid long cold starts and build times.
+      </p>
+      <div className="mt-auto flex items-center text-sm font-semibold text-blue-600">
+        Read docs
+        <svg className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </div>
+    </div>
+  );
+}
+===FILE: knowledge-base/components/sidebar.md===
+# Sidebar
+
+## Purpose
+The sidebar dictates local area routing in dense applications, remaining stubbornly anchored while inner content changes, establishing strong operational memory.
+
+## When To Use
+- Inside authenticated dashboards
+- During deeply nested documentation flows
+- Applications divided into many independent feature verticals
+
+## Structure
+- Branding Bar (Logo + Name, typically matching the height of standard horizontal navbars)
+- Action Block (Quick "Create" or "Search" functions at the top)
+- Navigation List (Vertically stacked active/inactive routing links)
+- Settings/Profile Anchor (Fixed to the bottom of the column)
+
+## Variants
+- Full Fixed: Stays 250px-300px wide, persistently visible on desktop.
+- Mini Rail: Collapses down to just an icon list (70px wide) to maximize workspace.
+- Offcanvas Drawer: The mobile equivalent, completely hidden until summoned.
+
+## Design Notes
+- Differentiate the sidebar background slightly from the main content (e.g., `bg-gray-50` sidebar vs `bg-white` main).
+- Active states must pop immediately — use a highlighted background like `bg-blue-50` and vivid text `text-blue-700`.
+- Inactive links should be highly readable but subdued like `text-gray-600 hover:bg-gray-100`.
+- Ensure it takes full screen height `h-screen` and applies `overflow-y-auto`.
+
+## React Component
+// Sidebar — synthesised from AKR scraper data
+export default function Sidebar() {
+  return (
+    <aside className="fixed inset-y-0 left-0 flex w-64 flex-col border-r border-gray-200 bg-gray-50">
+      <div className="flex shrink-0 items-center border-b border-gray-200 px-6 h-16">
+        <div className="h-8 w-8 rounded bg-gray-900 text-white flex items-center justify-center font-bold mr-3">D</div>
+        <span className="text-lg font-bold text-gray-900">Dashboard</span>
+      </div>
+      <div className="flex-1 overflow-y-auto px-4 py-6">
+        <nav className="flex flex-col gap-y-1">
+          <a href="#" className="flex items-center gap-x-3 rounded-lg bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-gray-200">
+            <svg className="h-5 w-5 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="#" className="flex items-center gap-x-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900">
+            <svg className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            Team
+          </a>
+          <a href="#" className="flex items-center gap-x-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900">
+            <svg className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            Analytics
+          </a>
+        </nav>
+      </div>
+      <div className="shrink-0 border-t border-gray-200 p-4">
+        <a href="#" className="flex items-center gap-x-3 rounded-lg p-2 transition-colors hover:bg-gray-100 cursor-pointer">
+          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-100 text-sm font-bold text-blue-700">AK</div>
+          <div className="flex flex-col text-sm">
+            <span className="font-semibold text-gray-900">Alex Knight</span>
+            <span className="text-xs text-gray-500">View profile</span>
+          </div>
+        </a>
+      </div>
+    </aside>
+  );
+}
+===FILE: knowledge-base/components/tables.md===
+# Tables
+
+## Purpose
+Tables render repetitive, structured dataset iterations cleanly across vertical and horizontal planes for hyper-efficient visual analysis, sorting, and actioning.
+
+## When To Use
+- Lists of users, invoices, transactional logs, or event histories
+- Administration panels requiring bulk selection capabilities
+- Displaying numeric metrics that require strict comparative alignment
+
+## Structure
+- Header Ribbon (Table Title, Filters, Search Bar)
+- Column Headings (Categorical labels, optionally sortable)
+- Row Body (Map of data entries with text, badges, or avatars)
+- Action Column (Edit, delete, or view buttons usually pinned right)
+- Footer Bar (Pagination and current count information)
+
+## Variants
+- Contained Table: Floats within a shadow card, encased in borders, standard for white modern dashboards.
+- Flat Striped: No outer border, alternating gray and white rows for high data-density reading.
+- Minimal: No vertical dividers, very sheer horizontal lines, emphasizing white space.
+
+## Design Notes
+- Avoid heavy black borders. Use `border-gray-200` or `divide-gray-200` to let data breathe.
+- Table headings should be capitalized, tiny, and muted (`text-xs uppercase text-gray-500 font-medium tracking-wider`).
+- Always encase the table tag itself in an `overflow-x-auto` wrapper to permit mobile horizontal swiping gracefully.
+- Highlight rows on hover with `hover:bg-gray-50`.
+
+## React Component
+// Table — synthesised from AKR scraper data
+export default function Table() {
+  return (
+    <div className="mx-auto w-full max-w-5xl rounded-xl border border-gray-200 bg-white shadow-sm">
+      <div className="flex items-center justify-between border-b border-gray-200 px-6 py-4">
+        <h3 className="text-base font-semibold text-gray-900">Team Members</h3>
+        <button className="rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-800">Add user</button>
+      </div>
+      <div className="overflow-x-auto">
+        <table className="w-full text-left text-sm text-gray-600">
+          <thead className="bg-gray-50 text-xs uppercase tracking-wider text-gray-500 border-b border-gray-200">
+            <tr>
+              <th scope="col" className="px-6 py-3 font-medium">Name</th>
+              <th scope="col" className="px-6 py-3 font-medium">Role</th>
+              <th scope="col" className="px-6 py-3 font-medium">Status</th>
+              <th scope="col" className="px-6 py-3 font-medium text-right">Actions</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-200 bg-white">
+            <tr className="transition-colors hover:bg-gray-50">
+              <td className="px-6 py-4">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-xs font-semibold text-blue-700">JD</div>
+                  <div>
+                    <div className="font-medium text-gray-900">Jane Doe</div>
+                    <div className="text-gray-500">jane@example.com</div>
+                  </div>
+                </div>
+              </td>
+              <td className="px-6 py-4 font-medium text-gray-900">Admin</td>
+              <td className="px-6 py-4">
+                <span className="inline-flex items-center gap-1.5 rounded-md bg-green-50 px-2.5 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
+                  <span className="h-1.5 w-1.5 rounded-full bg-green-500"></span>Active
+                </span>
+              </td>
+              <td className="px-6 py-4 text-right">
+                <button className="text-gray-400 transition-colors hover:text-gray-900 mx-2 font-medium">Edit</button>
+              </td>
+            </tr>
+            <tr className="transition-colors hover:bg-gray-50">
+              <td className="px-6 py-4">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 text-xs font-semibold text-gray-700">MS</div>
+                  <div>
+                    <div className="font-medium text-gray-900">Mike Smith</div>
+                    <div className="text-gray-500">mike@example.com</div>
+                  </div>
+                </div>
+              </td>
+              <td className="px-6 py-4 text-gray-600">Editor</td>
+              <td className="px-6 py-4">
+                <span className="inline-flex items-center gap-1.5 rounded-md bg-gray-50 px-2.5 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-600/20">
+                  <span className="h-1.5 w-1.5 rounded-full bg-gray-400"></span>Offline
+                </span>
+              </td>
+              <td className="px-6 py-4 text-right">
+                <button className="text-gray-400 transition-colors hover:text-gray-900 mx-2 font-medium">Edit</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+===FILE: knowledge-base/components/forms.md===
+# Forms
+
+## Purpose
+Forms gather structured inputs from users, acting as the bridge for data entry, authentication flows, and profile management across applications.
+
+## When To Use
+- Login and registration walls
+- Newsletter opt-in fields on marketing pages
+- Product configuration options inside dashboards
+- Updating system settings
+
+## Structure
+- Form Header (Greeting, Context or Title)
+- Field Blocks (Visually grouped labels, inputs, and helper text)
+- Interacting Elements (Checkboxes, Toggles, Select drop-downs)
+- Validation Feedback (Red error states below inputs)
+- Primary Action Trigger (Submit Button)
+
+## Variants
+- Centered Login Card: A floating card focusing completely on email/password collection.
+- Inline Newsletter: A single row combining input and button natively into a layout.
+- Vertical Dashboard Stack: Form flows grouped in standard layout columns.
+
+## Design Notes
+- Every input must be securely coupled with a visible, accessible `<label>`.
+- Generous gap spacing (`space-y-4` or `space-y-6`) is required to easily identify input boundaries.
+- Inputs must feature distinct focus rings (`focus:ring-2 focus:ring-blue-500 focus:border-blue-500`) to confirm keyboard navigation actively.
+- Button width typically expands mapping to the input widths via `w-full` for cleaner alignment.
+
+## React Component
+// Form — synthesised from AKR scraper data
+export default function Form() {
+  return (
+    <div className="flex min-h-screen items-center justify-center p-4 bg-gray-50">
+      <div className="w-full max-w-sm rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+        <div className="mb-6 text-center">
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900">Welcome back</h2>
+          <p className="mt-2 text-sm text-gray-500">Enter your details to access your account</p>
+        </div>
+        <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+          <div>
+            <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-gray-900">Email address</label>
+            <input 
+              type="email" 
+              id="email" 
+              className="block w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 outline-none transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20" 
+              placeholder="you@company.com" 
+            />
+          </div>
+          <div>
+            <div className="mb-1.5 flex items-center justify-between">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-900">Password</label>
+              <a href="#" className="text-xs font-semibold text-blue-600 hover:text-blue-500">Forgot password?</a>
+            </div>
+            <input 
+              type="password" 
+              id="password" 
+              className="block w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 outline-none transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20" 
+              placeholder="••••••••" 
+            />
+          </div>
+          <button 
+            type="submit" 
+            className="mt-2 flex w-full items-center justify-center rounded-lg bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 active:scale-95"
+          >
+            Sign in
+          </button>
+        </form>
+        <div className="mt-8 text-center text-sm text-gray-500">
+          Not a member? <a href="#" className="font-semibold text-blue-600 hover:text-blue-500">Create an account</a>
+        </div>
+      </div>
+    </div>
+  );
+}
+===FILE: knowledge-base/components/footer.md===
+# Footer
+
+## Purpose
+The footer serves as the absolute baseline boundary for a web page layout, housing supplementary links, legal documentation, and secondary branding reinforcing the endpoint of scrolling.
+
+## When To Use
+- Included natively at the bottom of all marketing webpages
+- As a minimized variant in documentation directories
+- Highly functional mega-footers acting as a massive sitemap for SEO
+
+## Structure
+- Branding Intro (Logo and catchphrase)
+- Link Directories (Columns organized categorically)
+- Newsletter Form (Optional capture method)
+- Canonical Terminals (Copyright string, privacy policy, social links)
+
+## Variants
+- Full Multi-Column: Expansive structure covering solutions, company info, and legal links.
+- Split Tone Minimal: A single dark bar emphasizing logo on left, standard links on right.
+- Subscription Driven: Upper half pushes an action (newsletter signup), lower half holds boilerplate context.
+
+## Design Notes
+- Can contrast sharply using dark modes (`bg-gray-900 text-white`) or remain lightweight (`bg-white border-t border-gray-200`).
+- Implement large vertical bounds to conclude the page, routinely `py-12` or `pt-16 pb-8`.
+- Hyperlinks must leverage muted sizing `text-sm` with delicate hover responses like `hover:text-gray-900`.
+- Category headings require robust distinction involving uppercase strings (`text-xs font-semibold tracking-widest uppercase`).
+
+## React Component
+// Footer — synthesised from AKR scraper data
+export default function Footer() {
+  return (
+    <footer className="w-full border-t border-gray-200 bg-white">
+      <div className="mx-auto max-w-7xl px-6 py-12 md:py-16">
+        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+          <div className="space-y-8 xl:col-span-1">
+            <div className="flex items-center gap-2">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-900 text-white font-bold">B</div>
+              <span className="text-xl font-bold tracking-tight text-gray-900">Brand</span>
+            </div>
+            <p className="text-sm leading-6 text-gray-500 max-w-xs">
+              Designing exceptional software ecosystems, offering premium utility to engineering squads on a global scale.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 transition-colors hover:text-gray-500">Twitter</a>
+              <a href="#" className="text-gray-400 transition-colors hover:text-gray-500">GitHub</a>
+              <a href="#" className="text-gray-400 transition-colors hover:text-gray-500">Discord</a>
+            </div>
+          </div>
+          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 className="text-sm font-semibold text-gray-900">Solutions</h3>
+                <ul className="mt-6 space-y-4">
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Marketing</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Analytics</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Commerce</a></li>
+                </ul>
+              </div>
+              <div className="mt-10 md:mt-0">
+                <h3 className="text-sm font-semibold text-gray-900">Support</h3>
+                <ul className="mt-6 space-y-4">
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Pricing</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Documentation</a></li>
+                </ul>
+              </div>
+            </div>
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 className="text-sm font-semibold text-gray-900">Company</h3>
+                <ul className="mt-6 space-y-4">
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">About</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Blog</a></li>
+                </ul>
+              </div>
+              <div className="mt-10 md:mt-0">
+                <h3 className="text-sm font-semibold text-gray-900">Legal</h3>
+                <ul className="mt-6 space-y-4">
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Privacy Policy</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Terms of Service</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="mt-16 flex flex-col items-center justify-between border-t border-gray-200 pt-8 sm:mt-20 sm:flex-row lg:mt-24">
+          <p className="text-sm text-gray-500">&copy; 2024 Brand Inc. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
+===FILE: knowledge-base/layouts/landing-page.md===
+# Landing Page Layout
+
+## Purpose
+This layout serves as the absolute external boundary for unregistered user interactions, prioritizing storytelling, product conceptualization, and aggressive funneling toward registration operations.
+
+## When To Use
+- Root marketing domains representing SaaS tools or consumer products
+- Distinct single-action campaign funnels aiming for high conversion
+- Pre-launch promotional pages
+
+## Page Structure
+1. Navbar
+   - Orienting layer driving primary user actions and housing global site map logic.
+   - Required
+2. Hero Section
+   - Main demonstrative area securing massive initial impact and communicating key product values precisely.
+   - Required
+3. Cards
+   - Discrete horizontal segments communicating distinct micro-features visually.
+   - Optional
+4. Footer
+   - Anchor resolution defining exact terminal boundaries.
+   - Required
+
+## Component Stack
+- Navbar
+- Hero
+- Cards
+- Footer
+
+## Design Notes
+- Focus rigidly on single-column responsive rhythms scaling to `max-w-7xl mx-auto`.
+- Embrace immense top-and-bottom structural whitespace (`py-24`, `py-32`) to enforce reading cadence.
+- Do not mix complex state modifications or tables on this layer; maintain read-only demonstrative flow logic.
+
+## Page Outline
+  Navbar
+    Brand Identifier
+    Internal Route Mapping
+    Sign In Directive
+  Hero
+    H1 Main Thesis Statement
+    Contextual Subheading
+    Primary Direct CTA
+  Cards Layout
+    Grid of 3 Feature Breakdowns
+    Icon Identifiers
+  Footer
+    Closing Sitemaps
+    Legal Boilerplate
+===FILE: knowledge-base/layouts/dashboard.md===
+# Dashboard Layout
+
+## Purpose
+The operational heart of authenticated web experiences. It maximizes screen estate by splitting navigational control structures from flexible dynamic content rendering areas.
+
+## When To Use
+- Data-dense environments displaying tables or metric analytics
+- Post-authentication environments for user account configurations
+- Control panels, administrative scopes, and command centers
+
+## Page Structure
+1. Sidebar
+   - The primary navigation engine locked to the viewport side driving main context swaps.
+   - Required
+2. Navbar (Mobile)
+   - Replaces the robust desktop sidebar entirely when horizontal space is crushed.
+   - Optional
+3. Main Document Space
+   - Houses dynamically switching content matrices taking up remaining screen percentages.
+   - Required
+
+## Component Stack
+- Sidebar
+- Cards
+- Tables
+- Forms
+
+## Design Notes
+- Discard horizontal bounding patterns (`max-w-7xl`) utilized on landing layouts and embrace `w-full h-screen` to monopolize pixel coverage.
+- Assign the Sidebar a static `w-64` value with fixed position capabilities. Give the Main Document Space `flex-1` and internal overflow triggers (`overflow-y-auto`).
+- Background values strictly segment operations. The Sidebar might adopt `bg-white border-r` while the Main Document Space rests behind in `bg-gray-50` causing central cards to cleanly pop.
+
+## Page Outline
+  Horizontal Container wrapper
+    Vertical Sidebar Matrix
+      Application Header
+      Route Anchors
+    Dynamic Render Matrix (Rest of screen)
+      Top contextual toolbar (Title)
+      Content Grids
+        Metric Cards (Top row)
+        Main Database Representation (Data Tables)
+===FILE: knowledge-base/design/color-palettes.md===
+# Color Palettes
+
+## Selection Rules
+- One palette per project, applied globally to all pages
+- Selected by LLM based on PRD keywords and product type
+- Manual override available via --palette CLI flag
+
+## Palettes
+
+### Palette P-1: Corporate SaaS
+- Primary: blue-600
+- Secondary: slate-800
+- Accent: indigo-500
+- Background: slate-50
+- Text: slate-900
+- Best for: B2B operations, enterprise scale software, financial tech, analytics
+- Mood: Hyper-professional, intensely structured, projecting supreme reliability.
+
+### Palette P-2: Neo-Brutalist
+- Primary: yellow-400
+- Secondary: neutral-950
+- Accent: pink-500
+- Background: white
+- Text: black
+- Best for: Creative studios, portfolio iterations, boundary-pushing consumer tech
+- Mood: Visually aggressive, extremely sharp contrasts, inherently modern.
+
+### Palette P-3: Nature Minimalist
+- Primary: emerald-600
+- Secondary: stone-700
+- Accent: teal-500
+- Background: neutral-50
+- Text: stone-800
+- Best for: E-commerce, sustainability platforms, healthcare mapping, organic tracking
+- Mood: Exceptionally calm, breathable layouts, reducing cognitive friction.
+
+### Palette P-4: Midnight Developer
+- Primary: violet-500
+- Secondary: slate-800
+- Accent: cyan-400
+- Background: slate-950
+- Text: slate-200
+- Best for: Web3 mechanics, developer frameworks, gaming applications, AI clients
+- Mood: Electric intensity, deeply focused, futuristic interface mechanics.
+
+## Tailwind Class Mapping
+
+| Role       | P-1 | P-2 | P-3 | P-4 |
+|------------|-----|-----|-----|-----|
+| Primary    | bg-blue-600 text-blue-600 | bg-yellow-400 text-black | bg-emerald-600 text-emerald-600 | bg-violet-500 text-violet-500 |
+| Secondary  | bg-slate-800 text-slate-800 | bg-neutral-950 text-white | bg-stone-700 text-stone-700 | bg-slate-800 text-slate-800 |
+| Accent     | text-indigo-500 | text-pink-500 border-pink-500 | text-teal-500 | border-cyan-400 text-cyan-400 |
+| Background | bg-slate-50 | bg-white | bg-neutral-50 | bg-slate-950 |
+| Text       | text-slate-900 | text-black | text-stone-800 | text-slate-200 |
+===FILE: knowledge-base/design/visual-effects.md===
+# Visual Effects
+
+## Global Rules
+- Maximum one effect per page
+- Opacity between 10% and 25% only
+- Must not overlap or obscure any content
+- Color must match selected palette primary or accent color
+- Must never be placed in the center of the layout
+
+## Effects
+
+### Background Glow
+
+**Purpose**
+Creates an immense soft-focus ambient lighting effect behind core content to anchor visuals without deploying massive images.
+
+**When To Use**
+- Backing a primary Hero section on a landing layout.
+- Subtle rendering behind distinct Card layouts.
+
+**Placement Options**
+- Absolute Top Left
+- Absolute Top Right
+
+**Tailwind Implementation**
+```html
+<div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+  <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-blue-300 to-indigo-300 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
+</div>
+```
+
+**Intensity Variants**
+
+| Level  | Tailwind Class |
+|--------|----------------|
+| Low    | opacity-10 blur-2xl |
+| Medium | opacity-20 blur-3xl |
+| High   | opacity-30 blur-3xl |
+
+### Glassmorphism Card
+
+**Purpose**
+Injects heavy modern aesthetics by allowing underlying layers to subtly bleed into floating top-layer elements via backdrop blurring.
+
+**When To Use**
+- Hero promotional metric overlay cards.
+- Sticky Navbar backgrounds passing over complex scrolling arrays.
+
+**Placement Options**
+- Sticky Top
+- Floating Center
+
+**Tailwind Implementation**
+```html
+<div className="rounded-2xl bg-white/60 backdrop-blur-md ring-1 ring-gray-900/5 shadow-xl"></div>
+```
+
+**Intensity Variants**
+
+| Level  | Tailwind Class |
+|--------|----------------|
+| Low    | bg-white/90 backdrop-blur-sm |
+| Medium | bg-white/70 backdrop-blur-md |
+| High   | bg-white/40 backdrop-blur-lg |
+===FILE: knowledge-base/design/text-animations.md===
+# Text Animations
+
+## Global Rules
+- Maximum one animated element per section
+- Must complete within 800ms
+- Must not reduce readability at any point
+- Must respect prefers-reduced-motion
+- Applied primarily to hero headings and page titles
+
+## Animations
+
+### Fade In Up
+
+**Purpose**
+Executes a highly organic entry dynamic for dense typography grids pulling attention immediately into focus lines.
+
+**Best Applied To**
+- H1 inside a Landing Page Hero Section
+- Major heading text appearing upon viewport scroll entry
+
+**Tailwind Implementation**
+```html
+<h1 className="animate-[fade-in-up_0.8s_ease-out_forwards] opacity-0 text-5xl font-extrabold text-gray-900 motion-reduce:animate-none motion-reduce:opacity-100">
+  Animated Headline
+</h1>
+
+<!-- Required tailwind.config.js extend payload -->
+// keyframes: {
+//   'fade-in-up': {
+//     '0%': { opacity: '0', transform: 'translateY(20px)' },
+//     '100%': { opacity: '1', transform: 'translateY(0)' },
+//   }
+// }
+```
+
+**Accessibility**
+Uses `motion-reduce:animate-none` to instantaneously mount the element, halting all animation processing for necessary audiences.
+
+### Typewriter Focus
+
+**Purpose**
+Manufactures extreme focal density exactly on specific action phrases inside headings simulating terminal input.
+
+**Best Applied To**
+- Highlighted subset spans enclosed within a larger static H1 (e.g., "Build your [next great app]").
+
+**Tailwind Implementation**
+```html
+<span className="inline-block animate-[pulse_1.5s_infinite] border-r-2 border-blue-600 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 pr-1 motion-reduce:animate-none">
+  next great app
+</span>
+```
+
+**Accessibility**
+Stops recursive pulsing entirely assuming `motion-reduce` environments detected to prevent strobe disorientation constraints.
+===FILE: knowledge-base/prompts/prompt-templates.md===
+# Prompt Templates
+
+## What Makes a Strong UI Prompt
+1. **Explicit Identification**: Strict naming of exact target demographic and product type up-front.
+2. **Structural Mapping**: Calling out exactly what components appear and in what vertical rhythm.
+3. **Palette Determination**: Clearly declaring Primary, Secondary, and Accent vectors using precise terminology.
+4. **Keyword Binding**: Deploying heavy descriptive nouns (e.g., "SaaS", "Glassmorphism") determining total visual attitude.
+5. **Data Expectations**: Declaring strictly what dummy data rows or table attributes must manifest.
+6. **Responsiveness Flags**: Consistently demanding mobile grid collapse behavior explicitly.
+7. **Animation Protocols**: Calling out exact singular visual interaction moments instead of generalized "make it move" requests.
+8. **Stack Lockdown**: Reinforcing React and Tailwind generation restraints strictly to prevent styling drift.
+
+## Template: Landing Page
+
+[PRODUCT_DESCRIPTION]
+Target audience: [TARGET_AUDIENCE]
+
+Layout:
+[SECTION_LIST]
+
+Design:
+- Color palette: Primary [PRIMARY] Secondary [SECONDARY] Accent [ACCENT]
+- Style: [STYLE_KEYWORDS]
+- Visual accent: [VISUAL_EFFECT or none]
+- Hero animation: [TEXT_ANIMATION or none]
+- Responsive: yes
+
+Stack: React, Tailwind CSS
+
+## Template: Dashboard
+
+[PRODUCT_DESCRIPTION]
+Target audience: [TARGET_AUDIENCE]
+
+Layout:
+[SECTION_LIST]
+
+Data displayed:
+[DATA_LIST]
+
+Design:
+- Color palette: Primary [PRIMARY] Secondary [SECONDARY] Accent [ACCENT]
+- Style: [STYLE_KEYWORDS]
+- Responsive: yes
+
+Stack: React, Tailwind CSS
+
+## Template: Auth Page
+
+[PRODUCT_DESCRIPTION]
+Page type: [login / register / onboarding]
+
+Layout:
+- Centered card
+- [FORM_FIELDS]
+- Submit button
+- [FOOTER_LINK]
+
+Design:
+- Color palette: Primary [PRIMARY] Secondary [SECONDARY] Accent [ACCENT]
+- Style: clean, minimal, trustworthy
+- Responsive: yes
+
+Stack: React, Tailwind CSS
+
+## High-Signal Keyword Reference
+
+| Category  | Keywords                                                        |
+|-----------|-----------------------------------------------------------------|
+| Style     | modern, minimal, clean, SaaS, bold, glassmorphism, editorial   |
+| Layout    | centered, split-screen, sidebar, full-width, card grid         |
+| Audience  | developers, students, enterprise, enterprise, consumers, creators |
+| Tone      | professional, playful, serious, approachable, premium          |
+| Component | navbar, hero, cards, sidebar, table, chart, form, footer       |
+===KNOWLEDGE BASE COMPLETE===

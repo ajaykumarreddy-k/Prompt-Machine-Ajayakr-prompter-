@@ -1,0 +1,104 @@
+============================================================
+  Ajay-Akr-Scrapper  —  Scraped Components
+  Sources : https://lightswind.com/components
+============================================================
+
+[1]  Stunning React Components for Modern Developers
+URL  : https://lightswind.com
+
+── CODE ─────────────────────────────────────────────────────
+width=device-width, initial-scale=1
+
+Lightswind UI – Beautifully Animated React Components & Modern UI Kits
+
+Accelerate your workflow with Lightswind UI. A library of 151+ high-performance, accessible, and beautifully animated React components and UI kits crafted for Modern Developers.
+
+animated react components,react component library,tailwind css components,react ui kit,framer motion components,modern web design,accessible ui components,frontend developer tools,lightswind ui,next.js components
+
+index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1
+
+Lightswind UI – Beautifully Animated React Components & UI Kits
+
+Build stunning web applications faster with our library of 151+ professional and animated React components. Designed for performance and aesthetics.
+
+Lightswind UI – Animated React Components Library
+
+Lightswind UI – Animated React Components for Modern Web Dev
+
+Stop building from scratch. Use Lightswind UI's animated React components to ship professional projects in record time.
+
+────────────────────────────────────────────────────────────
+[2]  Premium Website Templates & UI Kits | Lightswind UI | Lightswind Pro
+URL  : https://lightswind.com/templates
+
+── CODE ─────────────────────────────────────────────────────
+(function(c,l,a,r,i,t,y){
+                          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                      })(window, document, "clarity", "script", "vlwt101f5d");
+
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Lightswind Pro Templates","operatingSystem":"Web","applicationCategory":"DeveloperApplication","description":"Premium React & Next.js templates for SaaS, Portfolio, and Admin dashboards.","author":{"@type":"Organization","name":"Lightswind Pro"}}
+
+width=device-width, initial-scale=1
+
+Premium Website Templates & UI Kits | Lightswind UI | Lightswind Pro
+
+Discover and shop Lightswind Library’s premium website templates. Professionally designed Tailwind CSS, React, and Next.js templates crafted for modern businesses, portfolios, and startups.
+
+website templates,premium templates,React templates,Tailwind CSS templates,Next.js templates,UI components,responsive templates,portfolio templates,business website templates,Lightswind Library,Premium Website Templates & UI Kits,,animated react templates,Next.js website
+
+Premium Website Templates & UI Kits | Buy Professional Website Templates - Lightswind Library
+
+Shop the best professional website templates and UI kits at Lightswind Library. Tailwind CSS + React templates built for performance and design.
+
+Premium Website Templates & UI Kits - Lightswind Library
+
+Premium Website Templates & UI Kits | Lightswind Library
+
+Explore and purchase modern website templates from Lightswind Library. Tailwind CSS + React templates for startups, portfolios, and businesses.
+
+────────────────────────────────────────────────────────────
+[3]  Version History
+URL  : https://lightswind.com/versions
+
+── CODE ─────────────────────────────────────────────────────
+width=device-width, initial-scale=1
+
+Lightswind UI – Beautifully Animated React Components & Modern UI Kits
+
+Accelerate your workflow with Lightswind UI. A library of 133+ high-performance, accessible, and beautifully animated React components and UI kits crafted with Tailwind CSS.
+
+Lightswind UI – Beautifully Animated React Components & UI Kits
+
+Build stunning web applications faster with our library of 133+ professional and animated React components. Designed for performance and aesthetics.
+
+────────────────────────────────────────────────────────────
+[4]  SKIPPED — https://lightswind.com/components/installation
+────────────────────────────────────────────────────────────
+
+[5]  Pricing | Best React & Tailwind UI Components | Lightswind Pro
+URL  : https://lightswind.com/pricing
+
+── CODE ─────────────────────────────────────────────────────
+(function(c,l,a,r,i,t,y){
+                          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                      })(window, document, "clarity", "script", "vlwt101f5d");
+
+width=device-width, initial-scale=1
+
+Pricing | Best React & Tailwind UI Components | Lightswind Pro
+
+Simple, transparent pricing for unlimited access to Lightswind Pro. Download production-ready React components, Next.js templates, and Tailwind blocks. Start building faster today.
+
+Lightswind pro, react ui pricing, tailwind templates cost, unlimited access, lifetime deal, developer subscription, frontend tools pricing
+
+Get Unlimited Access | Lightswind Pro Pricing
+
+Stop paying per component. Get unlimited access to our entire library of React & Tailwind UI kits for one simple price. Perfect for freelancers and teams.
+
+Get instant access to 100+ production-ready React components. Simple pricing, unlimited projects, lifetime updates.
+
+────────────────────────────────────────────────────────────

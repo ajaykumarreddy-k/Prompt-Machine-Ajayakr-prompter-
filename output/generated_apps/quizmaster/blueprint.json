@@ -1,0 +1,195 @@
+{
+  "intent": {
+    "product_name": "QuizMaster",
+    "product_type": "tool",
+    "target_audience": "Students, Developers",
+    "key_features": [
+      "Quiz Selection",
+      "Timed Questions",
+      "Score Calculation",
+      "Instant Feedback",
+      "Results Dashboard"
+    ],
+    "tone": "professional",
+    "style_keywords": [
+      "modern",
+      "minimal",
+      "responsive"
+    ],
+    "pages": [
+      "home",
+      "quiz-selection",
+      "quiz-player",
+      "results"
+    ],
+    "palette_hint": "light and clean",
+    "complexity": "medium",
+    "industry": "education, development tools",
+    "custom_components": [
+      "AppContainer",
+      "Navbar",
+      "QuizList",
+      "QuizCard",
+      "QuizPlayer",
+      "QuestionCard",
+      "OptionButton",
+      "Timer",
+      "ProgressBar",
+      "ResultsPage",
+      "LoadingSpinner",
+      "ErrorMessage",
+      "Modal"
+    ],
+    "ui_interactions": [
+      "timer",
+      "progress-bar",
+      "instant-feedback"
+    ]
+  },
+  "layout": {
+    "layout_pattern": "multi-page",
+    "pages": [
+      {
+        "name": "Home",
+        "type": "landing",
+        "route": "/",
+        "priority": 1,
+        "sections": [
+          "Navbar",
+          "Hero",
+          "Features",
+          "Footer"
+        ],
+        "components": [
+          "navbar",
+          "hero",
+          "cards",
+          "footer"
+        ],
+        "custom_components": [
+          "QuizCard",
+          "Timer"
+        ]
+      },
+      {
+        "name": "Quiz Selection",
+        "type": "list",
+        "route": "/quiz-selection",
+        "priority": 2,
+        "sections": [
+          "Navbar",
+          "Hero",
+          "Sidebar",
+          "Footer"
+        ],
+        "components": [
+          "navbar",
+          "hero",
+          "cards",
+          "footer"
+        ],
+        "custom_components": [
+          "QuizList"
+        ]
+      },
+      {
+        "name": "Quiz Player",
+        "type": "detail",
+        "route": "/quiz-player/:quizId",
+        "priority": 3,
+        "sections": [
+          "Navbar",
+          "Hero",
+          "Sidebar",
+          "Footer"
+        ],
+        "components": [
+          "navbar",
+          "hero",
+          "cards",
+          "footer"
+        ],
+        "custom_components": [
+          "QuizPlayer",
+          "QuestionCard",
+          "OptionButton",
+          "Timer",
+          "ProgressBar"
+        ]
+      },
+      {
+        "name": "Results",
+        "type": "detail",
+        "route": "/results/:quizId",
+        "priority": 4,
+        "sections": [
+          "Navbar",
+          "Hero",
+          "Sidebar",
+          "Footer"
+        ],
+        "components": [
+          "navbar",
+          "hero",
+          "cards",
+          "footer"
+        ],
+        "custom_components": [
+          "ResultsPage"
+        ]
+      }
+    ],
+    "global_components": [
+      "navbar",
+      "footer"
+    ]
+  },
+  "hierarchy": {
+    "primary_section": "Hero",
+    "secondary_sections": [
+      "Navbar",
+      "Features"
+    ],
+    "supporting_sections": [
+      "Footer"
+    ],
+    "cta_text": "Get Started Now",
+    "hero_headline_style": "impactful",
+    "scroll_flow": [
+      "Hero",
+      "Navbar",
+      "Features",
+      "Footer"
+    ],
+    "focal_point": "Hero section headline and CTA button",
+    "visual_weight": {
+      "Hero": "high",
+      "Navbar": "medium",
+      "Features": "medium",
+      "Footer": "low"
+    }
+  },
+  "design": {
+    "palette_id": "P-5",
+    "tailwind": {
+      "container": "max-w-7xl mx-auto px-6",
+      "section": "py-16 md:py-24",
+      "card": "bg-zinc-50 rounded-lg border border-zinc-200 shadow-md p-6",
+      "btn_primary": "bg-zinc-900 hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold transition-all",
+      "btn_secondary": "border border-zinc-300 text-zinc-700 px-6 py-3 rounded-lg hover:bg-zinc-50 transition-all",
+      "text_heading": "text-zinc-900",
+      "text_body": "text-zinc-900 opacity-70",
+      "bg_page": "bg-white",
+      "accent_text": "text-red-500",
+      "accent_bg": "bg-red-500/10",
+      "input": "w-full px-4 py-3 rounded-lg border border-zinc-200 bg-zinc-50 text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-500"
+    },
+    "visual_effect": "none",
+    "effect_placement": "top-right",
+    "text_animation": "typewriter",
+    "border_radius": "rounded-lg",
+    "shadow_style": "shadow-md",
+    "font_pair": "Inter",
+    "dark_mode": false
+  }
+}

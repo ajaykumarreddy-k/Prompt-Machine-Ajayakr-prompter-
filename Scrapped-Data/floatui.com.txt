@@ -1,0 +1,204 @@
+============================================================
+  Ajay-Akr-Scrapper  —  Scraped Components
+  Sources : https://floatui.com
+============================================================
+
+[1]  What is Float UI?
+URL  : https://floatui.com/components
+
+── CODE ─────────────────────────────────────────────────────
+Best shadcn/ui blocks and components for your next project.
+
+Float UI is a collection of modern UI components and website templates, built on top of React/Nextjs with Tailwind CSS, the components are beautiful designed, expertly crafted, allow you to build beautiful websites.
+
+First, Float UI is fully free, and open source, you don't need to pay anything to use it, and we are working on it full-time, so we'll keep improving, and adding more UIs, the second thing if you’re working on a large project that requires a high level of UI customization or you find yourself repeating the same UI patterns across projects, consider creating an internal UI library, and in this case Float UI is a great choice. You should definitely use it.
+
+We Provide Support for Components Developed Using React, Vue.js, Svelte, HTML, and Alpine.js.
+And for the interactive components we use the following Libraries:
+
+Unstyled, accessible, open source React primitives for high-quality web apps and design systems.
+
+Unstyled, accessible components for building high‑quality design systems and web apps in Vue.
+
+An open-source Svelte library for building high-quality, accessible design systems and web apps.
+
+Alpine is a rugged, minimal tool for composing behavior directly in your markup.
+
+────────────────────────────────────────────────────────────
+[2]  Tailwind CSS website templates for your next project
+URL  : https://floatui.com/templates
+
+── CODE ─────────────────────────────────────────────────────
+absolute inset-x-0 mx-auto duration-500 top-0 -translate-x-32 sm:-translate-x-10 w-full sm:w-[653px]
+
+M229.488 -100.921L557.588 270.669L419.698 348.86L95.3076 17.5558L229.488 -100.921Z
+
+mt-32 space-y-7 divide-y divide-zinc-800 gap-14 grid-cols-2 lg:grid lg:space-y-0 lg:divide-y-0
+
+────────────────────────────────────────────────────────────
+[3]  Discover the power of our Tailwind UI Components with live demos
+URL  : https://floatui.com/demo
+
+── CODE ─────────────────────────────────────────────────────
+Best shadcn/ui blocks and components for your next project.
+
+Discover the power of our Tailwind UI Components with live demos
+
+Take a closer look at our UI components and see how they can elevate your website or web application
+
+────────────────────────────────────────────────────────────
+[4]  License
+URL  : https://floatui.com/license
+
+── CODE ─────────────────────────────────────────────────────
+text-4xl heading tracking-tight mb-4 sm:text-4.5xl
+
+prose prose-invert mt-12 mx-4 sm:mx-auto
+
+────────────────────────────────────────────────────────────
+[5]  Privacy Policy
+URL  : https://floatui.com/privacy-policy
+
+── CODE ─────────────────────────────────────────────────────
+Best shadcn/ui blocks and components for your next project.
+
+When you visit the Website our servers automatically record information that your browser sends. This data may include information such as your device's IP address, browser type and version, operating system type and version, language preferences or the webpage you were visiting before you came to our Website, pages of our Website that you visit, the time spent on those pages, information you search for on our Website, access times and dates, and other statistics.
+
+Depending on your location, data transfers may involve transferring and storing your information in a country other than your own. You are entitled to learn about the legal basis of information transfers to a country outside the European Union or to any international organization governed by public international law or set up by two or more countries, such as the UN, and about the security measures taken by us to safeguard your information. If any such transfer takes place, you can find out more by checking the relevant sections of this document or inquire with us using the information provided in the Contact section.
+
+We offer electronic newsletters which you may voluntarily subscribe to. You may choose to stop receiving our newsletter or marketing emails by following the unsubscribe instructions included in these emails or by contacting us. However, you will continue to receive essential transactional emails.
+
+The Website uses "cookies" to help personalize your online experience. A cookie is a text file that is placed on your hard disk by a web page server. Cookies cannot be used to run programs or deliver viruses to your computer. Cookies are uniquely assigned to you, and can only be read by a web server in the domain that issued the cookie to you. We may use cookies to collect, store, and track information for statistical purposes to operate our Website. You have the ability to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer.
+
+In addition to using cookies and related technologies as described above, we also may permit certain third-party companies to help us tailor advertising that we think may be of interest to users and to collect and use other data about user activities on the Website. These companies may deliver ads that might also place cookies and otherwise track user behavior.
+
+────────────────────────────────────────────────────────────
+[6]  Blog
+URL  : https://floatui.com/blog
+
+── CODE ─────────────────────────────────────────────────────
+Best shadcn/ui blocks and components for your next project.
+
+The latest about Float UI, and some technical stuff.
+
+Sunday, February 9, 2025 Tailwind CSS Dashboard Templates for Your Projects Explore top Tailwind CSS dashboard templates that cater to various project needs, from enterprise solutions to budget-friendly options. READ MORE
+
+## Tailwind CSS Dashboard Templates for Your Projects
+
+Explore top Tailwind CSS dashboard templates that cater to various project needs, from enterprise solutions to budget-friendly options.
+
+Sunday, February 9, 2025 Build Beautiful GUIs With Reactjs Explore how ReactJS simplifies UI development with reusable components, efficient data management, and powerful styling options for modern applications. READ MORE
+
+Explore how ReactJS simplifies UI development with reusable components, efficient data management, and powerful styling options for modern applications.
+
+Tuesday, December 24, 2024 Best Graphic Design Tools for 2025 Best Graphic Design Tools for 2025 READ MORE
+
+Wednesday, September 4, 2024 10 Best Vue 3 UI Component Libraries 2024 Explore the top 10 Vue 3 UI component libraries of 2024 to enhance your projects with versatile and customizable options. READ MORE
+
+## 10 Best Vue 3 UI Component Libraries 2024
+
+Explore the top 10 Vue 3 UI component libraries of 2024 to enhance your projects with versatile and customizable options.
+
+Tuesday, September 3, 2024 Stale-If-Error, Stale-While-Revalidate: HTTP Caching Discover how Stale-If-Error and Stale-While-Revalidate enhance HTTP caching, ensuring fast and reliable web experiences even during server issues. READ MORE
+
+## Stale-If-Error, Stale-While-Revalidate: HTTP Caching
+
+Discover how Stale-If-Error and Stale-While-Revalidate enhance HTTP caching, ensuring fast and reliable web experiences even during server issues.
+
+Sunday, September 1, 2024 15 Free Bootstrap UI Kits 2024 Discover 15 free Bootstrap UI kits for 2024 to enhance your web development projects with responsive design and customizable components. READ MORE
+
+Discover 15 free Bootstrap UI kits for 2024 to enhance your web development projects with responsive design and customizable components.
+
+Saturday, August 31, 2024 14 High-Converting Webinar Landing Page Templates [2024] Discover 14 high-converting webinar landing page templates to boost sign-ups and maximize engagement for your events. READ MORE
+
+## 14 High-Converting Webinar Landing Page Templates [2024]
+
+Discover 14 high-converting webinar landing page templates to boost sign-ups and maximize engagement for your events.
+
+Friday, August 30, 2024 10 Best Portfolio Landing Page Templates 2024 Discover the top 10 portfolio landing page templates for 2024, featuring versatile designs and essential features to elevate your online presence. READ MORE
+
+## 10 Best Portfolio Landing Page Templates 2024
+
+Discover the top 10 portfolio landing page templates for 2024, featuring versatile designs and essential features to elevate your online presence.
+
+Thursday, August 29, 2024 Top 10 Customizable UI Component Libraries 2024 Discover the top customizable UI component libraries for 2024, featuring options for React and Vue.js with extensive customization and accessibility. READ MORE
+
+## Top 10 Customizable UI Component Libraries 2024
+
+Discover the top customizable UI component libraries for 2024, featuring options for React and Vue.js with extensive customization and accessibility.
+
+Wednesday, August 28, 2024 Responsive SVG UI Components: How-To Guide Learn how to create scalable SVG UI components that adapt to any screen size, ensuring fast loading and crisp graphics across devices. READ MORE
+
+## Responsive SVG UI Components: How-To Guide
+
+Learn how to create scalable SVG UI components that adapt to any screen size, ensuring fast loading and crisp graphics across devices.
+
+────────────────────────────────────────────────────────────
+[7]  Tailwind UI Free
+URL  : https://floatui.com/tailwind-ui-free
+
+── CODE ─────────────────────────────────────────────────────
+Best shadcn/ui blocks and components for your next project.
+
+At Float UI, we believe in making web development faster and more accessible for everyone. Explore our collection of handcrafted, open-source Tailwind CSS components that you can use in your projects without any cost.
+
+Float UI is a collection of modern UI components and website templates built on top of React/Nextjs with Tailwind CSS. It offers several benefits for web development, including:
+
+Consistent and polished designs: Float UI provides a cohesive set of components with a unified visual language, ensuring consistency in design and enhancing the overall user experience.
+
+Increased productivity: With Float UI's intuitive customizable styles, developers can work more efficiently, iterate quickly, and focus on implementing business logic and user interactions.
+
+Lightweight and performant: Float UI is designed to prioritize performance without sacrificing functionality. The library is optimized for speed and efficiency, enabling faster load times and smooth interactions, resulting in a snappy and delightful user experience.
+
+Saves development time and effort: Float UI's extensive collection of pre-designed components significantly reduces the time and effort required for visual design, allowing developers to focus on implementing business logic.
+
+Extensible: Float UI is not only powerful out of the box but also highly extensible. Developers can extend its functionality with custom modifiers and integrate it with other libraries.
+
+Overall, Float UI is a versatile and powerful tool for creating dynamic, responsive, and engaging web interfaces. It is free, open-source, and backed by a helpful community support.
+
+Float UI offer components created with React, Vue.js, Svelte, HTML, and Alpine.js. Additionally, we leverage the following libraries for interactive components:
+
+Unstyled, accessible, open source React primitives for high-quality web apps and design systems.
+
+Unstyled, accessible components for building high‑quality design systems and web apps in Vue.
+
+An open-source Svelte library for building high-quality, accessible design systems and web apps.
+
+Alpine is a rugged, minimal tool for composing behavior directly in your markup.
+
+────────────────────────────────────────────────────────────
+[8]  Tailwind Templates
+URL  : https://floatui.com/tailwind-templates
+
+── CODE ─────────────────────────────────────────────────────
+absolute inset-x-0 mx-auto duration-500 top-0 -translate-x-32 sm:-translate-x-10 w-full sm:w-[653px]
+
+M229.488 -100.921L557.588 270.669L419.698 348.86L95.3076 17.5558L229.488 -100.921Z
+
+mt-32 space-y-7 divide-y divide-zinc-800 gap-14 grid-cols-2 lg:grid lg:space-y-0 lg:divide-y-0
+
+────────────────────────────────────────────────────────────
+[9]  Tailwind Components Free
+URL  : https://floatui.com/tailwind-components-free
+
+── CODE ─────────────────────────────────────────────────────
+Best shadcn/ui blocks and components for your next project.
+
+At Float UI, we believe in making web development faster and more accessible for everyone. Explore our collection of handcrafted, open-source Tailwind CSS components that you can use in your projects without any cost.
+
+Float UI is a collection of modern UI components and website templates, built on top of React/Nextjs with Tailwind CSS, the components are beautiful designed, expertly crafted, allow you to build beautiful websites.
+
+First, Float UI is fully free, and open source, you don't need to pay anything to use it, and we are working on it full-time, so we'll keep improving, and adding more UIs, the second thing if you’re working on a large project that requires a high level of UI customization or you find yourself repeating the same UI patterns across projects, consider creating an internal UI library, and in this case Float UI is a great choice. You should definitely use it.
+
+We Provide Support for Components Developed Using React, Vue.js, Svelte, HTML, and Alpine.js.
+And for the interactive components we use the following Libraries:
+
+Unstyled, accessible, open source React primitives for high-quality web apps and design systems.
+
+Unstyled, accessible components for building high‑quality design systems and web apps in Vue.
+
+An open-source Svelte library for building high-quality, accessible design systems and web apps.
+
+Alpine is a rugged, minimal tool for composing behavior directly in your markup.
+
+────────────────────────────────────────────────────────────

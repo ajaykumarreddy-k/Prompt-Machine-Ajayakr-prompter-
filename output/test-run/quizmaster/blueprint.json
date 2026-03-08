@@ -1,0 +1,394 @@
+{
+  "intent": {
+    "product_name": "QuizMaster",
+    "product_type": "saas",
+    "target_audience": "educators and students",
+    "key_features": [
+      "Create custom quizzes with multiple choice questions",
+      "Real-time leaderboard for students",
+      "Dashboard for educators to track performance",
+      "Search and browse public quizzes"
+    ],
+    "tone": "professional",
+    "style_keywords": [
+      "clean",
+      "educational",
+      "trust-inspiring",
+      "soft blue",
+      "neutral palette"
+    ],
+    "pages": [
+      "home",
+      "quiz-selection",
+      "quiz-player",
+      "results",
+      "dashboard"
+    ],
+    "palette_hint": "soft blue and neutral palette",
+    "complexity": "medium",
+    "industry": "education",
+    "custom_components": [],
+    "ui_interactions": [
+      "timer"
+    ]
+  },
+  "ontology": {
+    "domain": "quiz",
+    "required_components": [
+      "QuizCard",
+      "Timer",
+      "Footer",
+      "OptionButton",
+      "ResultsSummary",
+      "ProgressBar",
+      "FlashcardComponent",
+      "QuizList",
+      "QuizPlayer",
+      "ScoreSummary",
+      "Navbar",
+      "QuestionCard"
+    ]
+  },
+  "layout": {
+    "pages": [
+      {
+        "name": "Home",
+        "route": "/",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar"
+            },
+            {
+              "type": "QuizList"
+            },
+            {
+              "type": "Footer"
+            }
+          ]
+        }
+      },
+      {
+        "name": "QuizSelection",
+        "route": "/quiz-selection",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar"
+            },
+            {
+              "type": "QuizList"
+            },
+            {
+              "type": "Footer"
+            }
+          ]
+        }
+      },
+      {
+        "name": "QuizPlayer",
+        "route": "/quiz-player",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar"
+            },
+            {
+              "type": "ProgressBar"
+            },
+            {
+              "type": "Timer"
+            },
+            {
+              "type": "QuestionCard"
+            },
+            {
+              "type": "OptionButton"
+            },
+            {
+              "type": "Footer"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Results",
+        "route": "/results",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar"
+            },
+            {
+              "type": "ScoreSummary"
+            },
+            {
+              "type": "ResultsSummary"
+            },
+            {
+              "type": "Footer"
+            }
+          ]
+        }
+      },
+      {
+        "name": "FlashcardStudy",
+        "route": "/flashcards",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar"
+            },
+            {
+              "type": "FlashcardComponent"
+            },
+            {
+              "type": "Footer"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ast": {
+    "pages": [
+      {
+        "name": "Home",
+        "route": "/",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "display navigation options"
+              ]
+            },
+            {
+              "type": "QuizList",
+              "props": [],
+              "responsibilities": [
+                "list available quizzes"
+              ]
+            },
+            {
+              "type": "Footer",
+              "props": [],
+              "responsibilities": [
+                "display footer content"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "QuizSelection",
+        "route": "/quiz-selection",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "display navigation options"
+              ]
+            },
+            {
+              "type": "QuizList",
+              "props": [],
+              "responsibilities": [
+                "list available quizzes"
+              ]
+            },
+            {
+              "type": "Footer",
+              "props": [],
+              "responsibilities": [
+                "display footer content"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "QuizPlayer",
+        "route": "/quiz-player",
+        "state_contract": {
+          "currentQuestion": "number",
+          "score": "number",
+          "timeLeft": "number"
+        },
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "display navigation options"
+              ]
+            },
+            {
+              "type": "ProgressBar",
+              "props": [
+                "progress"
+              ],
+              "responsibilities": [
+                "display progress bar"
+              ]
+            },
+            {
+              "type": "Timer",
+              "props": [
+                "timeLeft",
+                "onTimeUp"
+              ],
+              "responsibilities": [
+                "display formatted time remaining",
+                "trigger onTimeUp when reaching zero"
+              ]
+            },
+            {
+              "type": "QuestionCard",
+              "props": [
+                "data",
+                "selected",
+                "onSelect"
+              ],
+              "responsibilities": [
+                "display current question text",
+                "render options list"
+              ]
+            },
+            {
+              "type": "OptionButton",
+              "props": [
+                "option",
+                "onClick"
+              ],
+              "responsibilities": [
+                "handle option selection"
+              ]
+            },
+            {
+              "type": "Footer",
+              "props": [],
+              "responsibilities": [
+                "display footer content"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "Results",
+        "route": "/results",
+        "state_contract": {
+          "score": "number"
+        },
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "display navigation options"
+              ]
+            },
+            {
+              "type": "ScoreSummary",
+              "props": [
+                "score"
+              ],
+              "responsibilities": [
+                "display user score"
+              ]
+            },
+            {
+              "type": "ResultsSummary",
+              "props": [
+                "details"
+              ],
+              "responsibilities": [
+                "display detailed results"
+              ]
+            },
+            {
+              "type": "Footer",
+              "props": [],
+              "responsibilities": [
+                "display footer content"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "FlashcardStudy",
+        "route": "/flashcards",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "display navigation options"
+              ]
+            },
+            {
+              "type": "FlashcardComponent",
+              "props": [
+                "flashcard"
+              ],
+              "responsibilities": [
+                "display flashcard content"
+              ]
+            },
+            {
+              "type": "Footer",
+              "props": [],
+              "responsibilities": [
+                "display footer content"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "design": {
+    "palette_id": "P-5",
+    "tailwind": {
+      "container": "max-w-7xl mx-auto px-6",
+      "section": "py-16 md:py-24",
+      "card": "bg-zinc-50 rounded-lg border border-zinc-200 shadow-md p-6",
+      "btn_primary": "bg-zinc-900 hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold transition-all",
+      "btn_secondary": "border border-zinc-300 text-zinc-700 px-6 py-3 rounded-lg hover:bg-zinc-50 transition-all",
+      "text_heading": "text-zinc-900",
+      "text_body": "text-zinc-900 opacity-70",
+      "bg_page": "bg-white",
+      "accent_text": "text-red-500",
+      "accent_bg": "bg-red-500/10",
+      "input": "w-full px-4 py-3 rounded-lg border border-zinc-200 bg-zinc-50 text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-500"
+    },
+    "visual_effect": "none",
+    "effect_placement": "top-right",
+    "text_animation": "typewriter",
+    "border_radius": "rounded-lg",
+    "shadow_style": "shadow-md",
+    "font_pair": "Inter",
+    "dark_mode": false
+  }
+}

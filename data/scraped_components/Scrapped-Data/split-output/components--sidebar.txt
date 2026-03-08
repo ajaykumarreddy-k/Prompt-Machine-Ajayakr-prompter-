@@ -1,0 +1,31 @@
+[218]  Dashboard With Collapsible Sidebar
+URL  : https://21st.dev/community/components/dashboard-with-collapsible-sidebar
+
+── TSX (React)
+
+[255]  Sidebar Component
+URL  : https://21st.dev/community/components/sidebar-component
+
+── TSX (React)
+
+npx shadcn@latest add @aceternity/sidebar-demo
+
+npx shadcn@latest add @aceternity/sidebarCopy
+
+npx shadcn@latest add @aceternity/sidebar
+
+npx shadcn@latest add @aceternity/sidebar-demo-2
+
+React.Dispatch<React.SetStateAction<boolean>>
+
+React.Dispatch<React.SetStateAction<boolean>>
+
+React.ComponentProps<typeof motion.div>
+
+React.ComponentProps<typeof motion.div>
+
+React.ComponentProps<"div">
+
+React.JSX.Element | React.ReactNode
+
+React.Dispatch<React.SetStateAction<boolean>>

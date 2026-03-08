@@ -1,0 +1,1184 @@
+<div class="modal">
+  <form class="form">
+    <div class="banner"></div>
+    <label class="title">Get New customers faster</label>
+    <p class="description">Grow your customer base with our tools, you can reach a much bigger and better fan community. Go PRO now! </p>
+    <div class="tab-container">
+      <button class="tab tab--1">Monthly</button>
+      <button class="tab tab--2">Annual</button>
+      <div class="indicator"></div>
+    </div>
+
+    <div class="benefits">
+      <span>What we offer</span>
+      <ul>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+            <rect fill="black" rx="8" height="16" width="16"></rect>
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+          </svg>
+          <span>Grow your customer with our social network tools</span>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+            <rect fill="black" rx="8" height="16" width="16"></rect>
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+          </svg>
+          <span>Use E-mail automations to promote your products.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="modal--footer">
+      <label class="price"><sup>$</sup>9<sub>/mo</sub></label>
+      <button class="upgrade-btn">Upgrade to PRO</button>
+    </div>
+  </form>
+</div>
+
+── CSS
+
+[12]  Shape Landing Hero
+URL  : https://21st.dev/community/components/shape-landing-hero
+
+── TSX (React)
+
+[25]  Neural Network Hero
+URL  : https://21st.dev/community/components/neural-network-hero
+
+── TSX (React)
+
+[36]  Scroll Media Expansion Hero
+URL  : https://21st.dev/community/components/scroll-expansion-hero
+
+── TSX (React)
+
+[67]  Hero Section Dark
+URL  : https://21st.dev/community/components/hero-section-dark
+
+── TSX (React)
+
+[137]  Horizon Hero Section
+URL  : https://21st.dev/community/components/horizon-hero-section
+
+── TSX (React)
+
+[149]  Animated Shader Hero
+URL  : https://21st.dev/community/components/animated-shader-hero
+
+── TSX (React)
+
+[259]  Hero Video Dialog
+URL  : https://21st.dev/community/components/hero-video-dialog
+
+── TSX (React)
+
+[264]  Hero Section With Smooth Bg Shader
+URL  : https://21st.dev/community/components/hero-section-with-smooth-bg-shader
+
+── TSX (React)
+
+[266]  Hero With Group Of Images, Text And Two Buttons
+URL  : https://21st.dev/community/components/hero-with-group-of-images-text-and-two-buttons
+
+── CSS
+
+https://cdn.21st.dev/user_tommyjepsen/hero-with-group-of-images-text-and-two-buttons.compiled.css
+
+── TSX (React)
+
+import { MoveRight, PhoneCall } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+
+function Hero() {
+  return (
+    <div className="w-full py-20 lg:py-40">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 gap-8 items-center md:grid-cols-2">
+          <div className="flex gap-4 flex-col">
+            <div>
+              <Badge variant="outline">We&apos;re live!</Badge>
+            </div>
+            <div className="flex gap-4 flex-col">
+              <h1 className="text-5xl md:text-7xl max-w-lg tracking-tighter text-left font-regular">
+                This is the start of something!
+              </h1>
+              <p className="text-xl leading-relaxed tracking-tight text-muted-foreground max-w-md text-left">
+                Managing a small business today is already tough. Avoid further
+                complications by ditching outdated, tedious trade methods. Our
+                goal is to streamline SMB trade, making it easier and faster than
+                ever.
+              </p>
+            </div>
+            <div className="flex flex-row gap-4">
+              <Button size="lg" className="gap-4" variant="outline">
+                Jump on a call <PhoneCall className="w-4 h-4" />
+              </Button>
+              <Button size="lg" className="gap-4">
+                Sign up here <MoveRight className="w-4 h-4" />
+              </Button>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-8">
+            <div className="bg-muted rounded-md aspect-square"></div>
+            <div className="bg-muted rounded-md row-span-2"></div>
+            <div className="bg-muted rounded-md aspect-square"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export { Hero };
+
+[295]  Hero With Image, Text And Two Buttons
+URL  : https://21st.dev/community/components/hero-with-image-text-and-two-buttons
+
+── CSS
+
+https://cdn.21st.dev/user_tommyjepsen/hero-with-image-text-and-two-buttons.compiled.css
+
+── TSX (React)
+
+import { MoveRight, PhoneCall } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+
+function Hero() {
+  return (
+    <div className="w-full  py-20 lg:py-40">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 gap-8 items-center lg:grid-cols-2">
+          <div className="flex gap-4 flex-col">
+            <div>
+              <Badge variant="outline">We&apos;re live!</Badge>
+            </div>
+            <div className="flex gap-4 flex-col">
+              <h1 className="text-5xl md:text-7xl max-w-lg tracking-tighter text-left font-regular">
+                This is the start of something!
+              </h1>
+              <p className="text-xl leading-relaxed tracking-tight text-muted-foreground max-w-md text-left">
+                Managing a small business today is already tough. Avoid further
+                complications by ditching outdated, tedious trade methods. Our
+                goal is to streamline SMB trade, making it easier and faster than
+                ever.
+              </p>
+            </div>
+            <div className="flex flex-row gap-4">
+              <Button size="lg" className="gap-4" variant="outline">
+                Jump on a call <PhoneCall className="w-4 h-4" />
+              </Button>
+              <Button size="lg" className="gap-4">
+                Sign up here <MoveRight className="w-4 h-4" />
+              </Button>
+            </div>
+          </div>
+          <div className="bg-muted rounded-md aspect-square"></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export { Hero };
+
+[311]  Scroll Morph Hero
+URL  : https://21st.dev/community/components/scroll-morph-hero
+
+── TSX (React)
+
+[323]  Futurastic Hero Section
+URL  : https://21st.dev/community/components/futurastic-hero-section
+
+── TSX (React)
+
+[355]  Hero Dithering Card
+URL  : https://21st.dev/community/components/hero-dithering-card
+
+── TSX (React)
+
+[361]  Ethereal Beams Hero
+URL  : https://21st.dev/community/components/ethereal-beams-hero
+
+── TSX (React)
+
+[370]  Galaxy Interactive Hero Section
+URL  : https://21st.dev/community/components/galaxy-interactive-hero-section
+
+── TSX (React)
+
+[406]  Floating Icons Hero Section
+URL  : https://21st.dev/community/components/floating-icons-hero-section
+
+── TSX (React)
+
+[421]  Hero Section - Nexus 
+URL  : https://21st.dev/community/components/hero-section-nexus
+
+── TSX (React)
+
+import { Warp } from "@paper-design/shaders-react"
+
+export default function WarpShaderHero() {
+  return (
+    <main className="relative min-h-screen overflow-hidden">
+      <div className="absolute inset-0">
+        <Warp
+          style={{ height: "100%", width: "100%" }}
+          proportion={0.45}
+          softness={1}
+          distortion={0.25}
+          swirl={0.8}
+          swirlIterations={10}
+          shape="checks"
+          shapeScale={0.1}
+          scale={1}
+          rotation={0}
+          speed={1}
+          colors={["hsl(200, 100%, 20%)", "hsl(160, 100%, 75%)", "hsl(180, 90%, 30%)", "hsl(170, 100%, 80%)"]}
+        />
+      </div>
+
+      <div className="relative z-10 min-h-screen flex items-center justify-center px-8">
+        <div className="max-w-4xl w-full text-center space-y-8">
+          <h1 className="text-white text-5xl md:text-7xl font-sans font-light text-balance">
+            Elegant Shader Backgrounds
+          </h1>
+
+          <p className="text-white/90 text-xl md:text-2xl font-sans font-light leading-relaxed max-w-3xl mx-auto">
+            Beautiful, performant shader effects that enhance your content without overwhelming it. Perfect for hero
+            sections, landing pages, and modern web experiences.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+            <button className="px-8 py-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white font-medium hover:bg-white/30 transition-all duration-300 hover:scale-105">
+              Get Started
+            </button>
+            <button className="px-8 py-4 bg-white rounded-full text-gray-800 font-medium hover:scale-105 transition-transform duration-300">
+              View Examples
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  )
+}
+
+[463]  Hero With Text And Two Button
+URL  : https://21st.dev/community/components/hero-with-text-and-two-button
+
+── CSS
+
+import { MoveRight, PhoneCall } from "lucide-react";
+import { Button } from "@/components/ui/button"
+
+function Hero1() {
+  return (
+    <div className="w-full">
+      <div className="container mx-auto">
+        <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col">
+          <div>
+            <Button variant="secondary" size="sm" className="gap-4">
+              Read our launch article <MoveRight className="w-4 h-4" />
+            </Button>
+          </div>
+          <div className="flex gap-4 flex-col">
+            <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
+              This is the start of something new
+            </h1>
+            <p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center">
+              Managing a small business today is already tough. Avoid further
+              complications by ditching outdated, tedious trade methods. Our goal
+              is to streamline SMB trade, making it easier and faster than ever.
+            </p>
+          </div>
+          <div className="flex flex-row gap-3">
+            <Button size="lg" className="gap-4" variant="outline">
+              Jump on a call <PhoneCall className="w-4 h-4" />
+            </Button>
+            <Button size="lg" className="gap-4">
+              Sign up here <MoveRight className="w-4 h-4" />
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export { Hero1 };
+
+[479]  Responsive Hero Banner
+URL  : https://21st.dev/community/components/responsive-hero-banner
+
+── TSX (React)
+
+[36]  HTML5 Canvas Stick Hero Game
+URL  : https://freefrontend.com/code/html5-canvas-stick-hero-game-2026-02-26/
+By   : anon
+Tags : HTML36, CSS282, JavaScript218, Bootstrap65, Tailwind CSS78, js games, html canvas api
+
+── HTML
+
+<div class="container">
+  <div id="score"></div>
+  <canvas id="game" width="375" height="375"></canvas>
+  <div id="introduction">Hold down the mouse to stretch out a stick</div>
+  <div id="perfect">DOUBLE SCORE</div>
+  <button id="restart">RESTART</button>
+</div>
+
+<a id="youtube" href="https://youtu.be/eue3UdFvwPo" target="_top">
+  <span>See how this game was made</span>
+</a>
+<div id="youtube-card">
+  How to create a Stick Hero game with JavaScript and HTML Canvas
+</div>
+
+── CSS
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS Grid: Coupons!</title>
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Montserrat:500,700,900|Quicksand:400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://public.codepenassets.com/css/reset-2.0.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css'><link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <main>
+  <div class="name">
+    <div class="logo"><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span><span class="cookie-bit"></span>
+    </div>
+    <h1>Techfood.</h1>
+    <h5 class="headline">Always stocked for your all-nighters and hackathons.</h5>
+    <p>Offers end June 14</p>
+  </div>
+  <div class="callout">
+    <h4>Save 20% off all items.</h4>
+    <h5>Exclusive for tech field enthusiasts!</h5>
+  </div>
+  <div class="sale-items">
+    <div class="item">
+      <div class="quote"> 
+        <h2>From healthy food to complete junk.<small>Don't code with an empty stomach.</small></h2>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/fruit.png"/></div>
+      <div class="item__text"> <strong>Dried Mangoes, Dried Apricots</strong><small>200g</small></div>
+      <div class="item__price">
+        <div class="discount half-off">
+          <p>Buy 1 Get 1</p>
+          <h3>50</h3>
+          <h4>%</h4>
+          <h5>off</h5>
+          <p class="tiny">Equal or lesser value</p>
+          <p class="small">With card</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/chips.png"/></div>
+      <div class="item__text"> <strong>Pringles</strong><small>147g</small><strong>Cheetos</strong><small>226g</small><strong>Doritos</strong><small>198g</small></div>
+      <div class="item__price">
+        <div class="discount default">
+          <h4> <span>$</span>2.49</h4>
+          <p class="small">with card</p>
+        </div>
+        <div class="discount more-saves">
+          <p class="small divider">Also save</p>
+          <h5><span>$</span>1 off</h5>
+          <p class="tiny">With retweet of store's latest tweet</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/tea.png"/></div>
+      <div class="item__text"> <strong>Twinings Tea</strong><small> 20 per pack</small></div>
+      <div class="item__price">
+        <div class="discount default">
+          <h4> <span>$</span>9.99</h4>
+          <p class="small">with card</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/nuts.png"/></div>
+      <div class="item__text"> <strong>Nature's Wonders Nuts</strong><small>220g-330g</small></div>
+      <div class="item__price">
+        <div class="discount half-off">
+          <p>Buy 1 Get 1</p>
+          <h3>50</h3>
+          <h4>%</h4>
+          <h5>off</h5>
+          <p class="tiny">Equal or lesser value</p>
+        </div>
+        <div class="discount more-saves">
+          <p class="small divider">Also save</p>
+          <p class="tiny">When you show us your GitHub profile</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/chobani.png"/></div>
+      <div class="item__text"> <strong>Chobani Greek Style Yogurt</strong><small>170g</small></div>
+      <div class="item__price">
+        <div class="discount default">
+          <h4> <span>$</span>1.65</h4>
+          <p class="small">with card</p>
+        </div>
+      </div>
+    </div>
+    <div class="item"> 
+      <div class="item__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/chocs.png"/></div>
+      <div class="item__text"> <strong>M&M's, Snickers, Kinder Bueno</strong><small>170-220g</small></div>
+      <div class="item__price">
+        <div class="discount default">
+          <h4> <span>$</span>5.99</h4>
+          <p class="small">with card</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="coupons">
+    <div class="item horizontal"> 
+      <div class="item__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/wine.png"/></div>
+      <div class="item__text"> <strong>Wolf Blass Yellow Label, Red or White</strong><small>750ml</small></div>
+      <div class="item__price">
+        <div class="discount default">
+          <h4> <span>$</span>21.99</h4>
+          <p class="small">with card</p>
+        </div>
+      </div>
+    </div>
+    <div class="item alternate">
+      <div class="item__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/bjs.png"/></div>
+      <div class="item__text"><strong>Ben & Jerry's</strong><small>453ml-478ml</small></div>
+      <div class="item__price">
+        <div class="discount half-off">
+          <p>Buy 1 Get 1</p>
+          <h3>50</h3>
+          <h4>%</h4>
+          <h5>off</h5>
+          <p class="tiny">Equal or lesser value</p>
+        </div>
+        <div class="discount more-saves">
+          <p class="small divider">Also save</p>
+          <h5><span>$</span>2 off</h5>
+          <p class="tiny">With any social media follow</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/ramen.png"/></div>
+      <div class="item__text"> <strong>Samyang Ramen</strong><small>135g-140g</small></div>
+      <div class="item__price">
+        <div class="discount bulk">
+          <h4>3</h4>
+          <p class="small">for</p>
+          <h4>$</h4>
+          <h3>9</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sale-items-2">
+    <div class="quote"> 
+      <p>For your caffeine needs.</p><small>Remember to drink responsibly.</small>
+    </div>
+    <div class="item horizontal">
+      <div class="item__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/coffee.png"/></div>
+      <div class="item__text"> <strong>Starbucks Frappuccino Chilled Coffee Drink </strong><small>281ml</small></div>
+      <div class="item__price">
+        <div class="discount bulk">
+          <h4>2</h4>
+          <p class="small">for</p>
+          <h4>$</h4>
+          <h3>8</h3>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/coke.png"/></div>
+      <div class="item__text"><strong>Coca Cola Classic, Sprite Lemon-Lime</strong><small>12 x 320ml</small></div>
+      <div class="item__price">
+        <div class="discount bulk">
+          <h4>2</h4>
+          <p class="small">for</p>
+          <h4>$</h4>
+          <h3>8</h3>
+        </div>
+      </div>
+    </div>
+    <div class="item"> 
+      <div class="item__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/monster.png"/></div>
+      <div class="item__text"><strong>Monster Energy Drink</strong><small>500ml</small></div>
+      <div class="item__price">
+        <div class="discount bulk">
+          <h4>4</h4>
+          <p class="small">for</p>
+          <h4>$</h4>
+          <h3>4</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<aside class="context">
+  <div class="explanation">Part of the <a href="https://codepen.io/collection/DQvYpQ/" target="_blank">CSS Grid collection!</a></div>
+</aside>
+<footer><a href="https://twitter.com/meowlivia_" target="_blank"><i class="icon-social-twitter icons"></i></a><a href="https://github.com/oliviale" target="_blank"><i class="icon-social-github icons"></i></a><a href="https://dribbble.com/oliviale" target="_blank"><i class="icon-social-dribbble icons"></i></a></footer>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  </body>
+  
+</html>
+
+
+── CSS
+
+body {
+	background: #fff;
+	color: #222;
+	font-family: "Quicksand", sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+strong {
+	font-weight: 700;
+}
+
+aside.context {
+	text-align: center;
+	color: #333;
+	line-height: 1.7;
+	a {
+		text-decoration: none;
+		color: #333;
+		padding: 3px 0;
+		border-bottom: 1px dashed;
+		&:hover {
+			border-bottom: 1px solid;
+		}
+	}
+	.explanation {
+		max-width: 700px;
+		margin: 6em auto 0;
+	}
+}
+
+footer {
+	text-align: center;
+	margin: 4em auto;
+	width: 100%;
+	a {
+		text-decoration: none;
+		display: inline-block;
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		background: transparent;
+		border: 1px dashed #333;
+		color: #333;
+		margin: 5px;
+		&:hover {
+			background: rgba(255, 255, 255, 0.1);
+		}
+		.icons {
+			margin-top: 12px;
+			display: inline-block;
+			font-size: 20px;
+		}
+	}
+}
+
+$main-color: #4aafbc;
+$red-color: #c13458;
+$yellow-color: #ffd33c;
+
+main {
+	width: 990px;
+	display: grid;
+	grid: max-content 1fr 25% / 76% 24%;
+	background: #f9f9f9;
+	margin: 4em auto;
+	padding: 15px 15px 22px;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15), 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+	display: grid;
+	grid: repeat(2, max-content) / max-content 1fr max-content;
+	h1 {
+		font: 900 100px/1 "Montserrat", sans-serif;
+		text-transform: uppercase;
+		grid-column: 2 / 4;
+		letter-spacing: -1px;
+	}
+	p {
+		font: 900 16px "Montserrat", sans-serif;
+		text-transform: uppercase;
+		margin: 0 0 10px;
+		grid-row: 2;
+		grid-column: 1 / 3;
+	}
+	h5.headline {
+		font-weight: 700;
+	}
+}
+
+.callout {
+	margin-left: 10px;
+	color: #fff;
+	text-align: center;
+	h4 {
+		background: $red-color;
+		padding: 15px;
+		font: 700 24px/1 Montserrat;
+		text-transform: uppercase;
+	}
+	h5 {
+		background: $main-color;
+		padding: 10px;
+		font-size: 12px;
+		font-weight: 700;
+	}
+}
+
+.sale-items {
+	display: grid;
+	grid: repeat(2, 1fr) / 25% 8% 1fr 1fr 8% 25%;
+	grid-auto-flow: dense;
+	grid-row-gap: 12px;
+	border: 6px solid $main-color;
+	.item {
+		padding: 0 8px;
+		margin: 0 0 8px;
+		&:nth-child(1) {
+			grid-column: 3 / 5;
+			background: $main-color;
+			margin: 0;
+		}
+		&:nth-child(2) {
+			grid-column: 1 / 3;
+		}
+		&:nth-child(3) {
+			grid-column: 5 / 7;
+			border-bottom: 0.5px solid #ddd;
+		}
+		&:nth-child(4) {
+			border-right: 0.5px solid #ddd;
+		}
+		&:nth-child(5) {
+			grid-column: span 2;
+			border-right: 0.5px solid #ddd;
+		}
+		&:nth-child(6) {
+			grid-column: span 2;
+			border-right: 0.5px solid #ddd;
+		}
+		&:nth-child(2),
+		&:nth-child(3) {
+			border-bottom: 0.5px solid #ddd;
+			margin: 0 8px;
+			padding: 8px 0;
+		}
+	}
+	.quote {
+		grid-column: 1 / span 2;
+		grid-row: 1 / span 3;
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+		padding: 10px;
+		h2 {
+			font: 900 34px/1 Montserrat;
+			text-transform: uppercase;
+			small {
+				margin-top: 10px;
+				display: block;
+				text-transform: none;
+				font: 16px/1.1 "Quicksand";
+			}
+		}
+	}
+}
+
+.coupons {
+	display: grid;
+	max-height: 100%;
+	grid: repeat(3, 33.3333%) / 100%;
+	padding: 0 0 15px 10px;
+	.item {
+		border: 3px dashed #111;
+		&:nth-child(n + 2) {
+			border-top: 0;
+		}
+		&:nth-child(1) {
+			.item__text {
+				margin: 0 0 4px 4px;
+			}
+		}
+		&:nth-child(3) {
+			.item__price {
+				margin-right: 15px;
+			}
+			.item__text {
+				margin-bottom: 5px;
+			}
+		}
+	}
+}
+
+.sale-items-2 {
+	grid-column: span 2;
+	display: grid;
+	grid: 100% / 20% repeat(3, 1fr);
+	border: 6px solid $main-color;
+	margin-top: -6px;
+	.item {
+		margin: 8px 0;
+		&:nth-child(2),
+		&:nth-child(3) {
+			border-right: 0.5px solid #ddd;
+		}
+		&:nth-child(4) img {
+			width: 70%;
+			margin-top: 0;
+		}
+		&__price {
+			justify-self: center;
+		}
+		&__text {
+			margin-left: 12px;
+			margin-bottom: 5px;
+		}
+	}
+	.quote {
+		background: $main-color;
+		color: #fff;
+		padding: 8px;
+		p {
+			font: 900 32px/1"Montserrat", sans-serif;
+			text-transform: uppercase;
+			margin: 5px 0 8px;
+		}
+	}
+}
+
+.discount {
+	text-align: center;
+	width: 95px;
+	font-family: "Montserrat";
+	text-transform: uppercase;
+	padding: 6px 8px;
+	line-height: 1;
+	h3 {
+		font: 900 40px/1 "Montserrat";
+	}
+	h4 {
+		font: 900 22px/1 "Montserrat";
+		margin: 3px 0;
+	}
+	h5 {
+		font: 900 20px/1 "Montserrat";
+		letter-spacing: 1px;
+		margin: 3px 0;
+	}
+	h4,
+	h5 {
+		span {
+			font-size: 60%;
+			font-weight: 700;
+			display: inline-block;
+			margin-right: 4px;
+			vertical-align: middle;
+		}
+	}
+	p {
+		font: 700 12px "Montserrat";
+		&.small {
+			font-size: 70%;
+			margin: 3px 0;
+		}
+		&.tiny {
+			font-size: 7px;
+			font-weight: 500;
+			text-transform: none;
+			margin: 1px 0;
+		}
+	}
+	&.default {
+		background: #f9f9f9;
+		border: 3px solid $yellow-color;
+	}
+	&.half-off {
+		background: $red-color;
+		color: #fff;
+		display: grid;
+		grid: repeat(4, min-content) / min-content 1fr;
+		grid-auto-flow: dense;
+		align-items: center;
+		h3 {
+			&:nth-of-type(1) {
+				grid-row: span 2;
+			}
+		}
+		h5 {
+			font-size: 13px;
+			margin-top: -4px;
+		}
+		p {
+			grid-column: span 2;
+		}
+	}
+	&.bulk {
+		display: grid;
+		grid: repeat(3, min-content) / repeat(3, 1fr);
+		grid-auto-flow: dense;
+
+		p {
+			&.small {
+				grid-row: 2 / 3;
+				grid-column: 1;
+				margin-top: -3px;
+				margin-right: 6px;
+			}
+		}
+		h3 {
+			grid-row: 1 / span 3;
+			font-size: 60px;
+			margin-top: -4px;
+		}
+		h4:nth-child(1) {
+			font-size: 35px;
+			margin-right: 6px;
+		}
+		h4:nth-child(3) {
+			grid-row: 1 / span 2;
+			font-size: 35px;
+			font-weight: 700;
+			margin-right: 4px;
+		}
+	}
+	&.more-saves {
+		background: $yellow-color;
+		padding: 3px 2px 5px;
+	}
+}
+
+.item {
+	display: grid;
+	grid: 80px 1fr / 1fr 1fr;
+	grid-auto-flow: dense;
+	padding: 8px;
+	&__image {
+		grid-column: span 2;
+		overflow: visible;
+		text-align: center;
+		img {
+			width: 80%;
+			margin: auto;
+			margin-top: 5px;
+		}
+	}
+	&__text {
+		padding-right: 8px;
+		align-self: flex-end;
+		font-size: 13px;
+		line-height: 1.1;
+		strong {
+			vertical-align: middle;
+			display: inline-block;
+			margin-right: 5px;
+		}
+		small {
+			color: #999;
+			font-size: 10px;
+			vertical-align: middle;
+		}
+	}
+	&__price {
+		align-self: end;
+		justify-self: end;
+	}
+	&.horizontal {
+		grid: 1fr max-content / 1fr 1fr;
+		.item__image {
+			grid-row: 1 / 3;
+			grid-column-start: 1;
+		}
+		.item__text {
+			grid-row: 1 / 2;
+			grid-column-start: 2;
+		}
+		.item__price {
+			grid-row: 2 / 3;
+			grid-column-start: 2;
+		}
+	}
+	&.alternate {
+		.item__image {
+			grid-column: 1 / 2;
+		}
+		.item__text {
+			grid-column: 1 / 2;
+		}
+		.item__price {
+			grid-row: 1 / 3;
+			grid-column: 2 / 3;
+		}
+	}
+}
+
+.logo {
+	display: grid;
+	margin: 10px 15px 0 0;
+	grid: repeat(7, 11px) / repeat(8, 11px);
+	grid-auto-flow: dense;
+	.cookie-bit {
+		background: #d1a37c;
+		&:nth-child(5n + 18) {
+			background: #7b572f;
+		}
+		&:nth-child(-n + 12) {
+			background: #f9f9f9;
+		}
+		&:nth-child(3) {
+			grid-column: 7;
+		}
+		&:nth-child(4) {
+			grid-column: 8;
+		}
+		&:nth-child(5) {
+			grid-column: 1;
+			grid-row: 2;
+		}
+		&:nth-child(6) {
+			grid-column: 8;
+			grid-row: 2;
+		}
+		&:nth-child(7) {
+			grid-column: 1;
+			grid-row: 6;
+		}
+		&:nth-child(8) {
+			grid-column: 1;
+			grid-row: 7;
+		}
+		&:nth-child(9) {
+			grid-column: 2;
+			grid-row: 7;
+		}
+		&:nth-child(10) {
+			grid-column: 8;
+			grid-row: 6;
+		}
+		&:nth-child(11) {
+			grid-column: 7;
+			grid-row: 7;
+		}
+		&:nth-child(12) {
+			grid-column: 8;
+			grid-row: 7;
+		}
+		&:nth-last-child(-n + 7) {
+			background: #ba8046;
+		}
+		&:nth-last-child(7) {
+			grid-column: 6;
+			grid-row: 1;
+		}
+		&:nth-last-child(6) {
+			grid-column: 7;
+			grid-row: 2;
+		}
+		&:nth-last-child(5) {
+			grid-column: 8;
+			grid-row: 3;
+		}
+		&:nth-last-child(4) {
+			grid-column: 8;
+			grid-row: 4;
+		}
+		&:nth-last-child(3) {
+			grid-column: 8;
+			grid-row: 5;
+		}
+		&:nth-last-child(2) {
+			grid-column: 7;
+			grid-row: 6;
+		}
+	}
+}
+
+[64]  Vibrant OKLCH Conic Hero
+URL  : https://freefrontend.com/code/vibrant-oklch-conic-hero-2026-02-16/
+By   : anon
+Tags : HTML36, CSS282, JavaScript218, Bootstrap65, Tailwind CSS78, css oklch, css gradient, css conic gradient, css hero sections, css open props, css custom property variables
+
+── HTML
+
+@import "https://unpkg.com/open-props" layer(design.system);
+@import "https://unpkg.com/open-props/normalize.min.css" layer(demo.support);
+@import url("https://fonts.googleapis.com/css2?family=Marko+One&display=swap");
+
+:root {
+  --space: ;
+  --op-gradient: conic-gradient(
+    from 0deg at 50% 100% var(--space),
+    oklch(29% 0.06 237) 0%,
+    oklch(65% 0.11 219) 25%,
+    oklch(81% 0.07 229) 50%,
+    oklch(83% 0.17 80) 75%,
+    oklch(73% 0.18 56) 100%
+  );
+}
+
+@supports (background: linear-gradient(to right in oklab, #000, #fff)) {
+  :root {
+    --space: in oklab;
+  }
+}
+
+
+.hero {
+  min-block-size: 100dvh;
+  background-image: var(--op-gradient);
+
+  display: grid;
+  place-content: center;
+
+  & h1 {
+    font-family: "Marko One", serif;
+    color: white;
+    font-size: clamp(2.2rem, 10vw, 6rem);
+    text-align: center;
+  }
+}
+
+[82]  Mouse-Driven Split Reveal
+URL  : https://freefrontend.com/code/mouse-driven-split-reveal-2026-02-13/
+By   : anon
+Tags : HTML36, CSS282, JavaScript218, Bootstrap65, Tailwind CSS78, js split screen, js hero effects, js mouse interaction, css grid
+
+── HTML
+
+<div id="app">
+  <canvas id="canvas"></canvas>
+  <div class="hero">
+    <h1>Tubes</h1>
+    <h2>Cursor</h2>
+    <a target="_blank" href="https://www.framer.com/@kevin-levron/">Framer Component</a>
+  </div>
+</div>
+
+
+── CSS
+
+body, html, #app {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  touch-action: none;
+}
+
+#app {
+  height: 100%;
+  font-family: "Montserrat", serif;
+}
+
+#app a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.hero {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+h1, h2, p {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 1);
+  line-height: 100%;
+  user-select: none;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#canvas {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+
+── TSX (React)
+
+npx shadcn@latest add @aceternity/parallax-hero-images-demo
+
+npx shadcn@latest add @aceternity/parallax-hero-imagesCopy
+
+npx shadcn@latest add @aceternity/parallax-hero-images
+
+npx shadcn@latest add @aceternity/parallax-hero-images-edge-focus-demo
+
+npx shadcn@latest add @aceternity/hero-parallax-demo
+
+npx shadcn@latest add @aceternity/hero-parallaxCopy
+
+npx shadcn@latest add @aceternity/hero-parallax
+
+npx shadcn@latest add @aceternity/hero-highlight-demo
+
+npx shadcn@latest add @aceternity/hero-highlightCopy
+
+npx shadcn@latest add @aceternity/hero-highlight
+
+npx shadcn@latest add @aceternity/sticky-banner-demo
+
+npx shadcn@latest add @aceternity/sticky-bannerCopy
+
+npx shadcn@latest add @aceternity/sticky-banner
+
+npx shadcn@latest add @aceternity/sticky-banner-demo
+
+npx shadcn@latest add @aceternity/hero-section-demo-1Copy
+
+npx shadcn@latest add @aceternity/hero-section-demo-1
+
+npx shadcn@latest add @aceternity/hero-section-demo-1

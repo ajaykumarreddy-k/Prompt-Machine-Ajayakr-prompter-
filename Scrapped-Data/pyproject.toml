@@ -1,0 +1,20 @@
+[project]
+name = "akr-scraper-splitter"
+version = "1.0.0"
+description = "Splits scraped UI component text files into categorized knowledge base files for Antigravity."
+authors = [
+{name = "AKR"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+akr-splitter = "splitter:main"
+
+[tool.setuptools]
+py-modules = ["splitter"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

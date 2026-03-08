@@ -1,0 +1,14 @@
+[project]
+name = "prompt-machine"
+version = "3.0.0"
+description = "Frontend Blueprint Engine — PRD to UI Architecture"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "faiss-cpu>=1.13.2",
+    "rich>=14.3.3",
+    "sentence-transformers>=5.2.3",
+]
+
+[project.scripts]
+machine = "machine:main"

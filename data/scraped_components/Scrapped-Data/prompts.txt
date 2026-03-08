@@ -1,0 +1,1832 @@
+============================================================
+  Ajay-Akr-Scrapper  —  Scraped Components
+  Sources : https://promptbuilder.cc/prompts
+============================================================
+
+[1]  CraftPerfect AI PromptsAI Promptsin Seconds, Not Hours
+URL  : https://promptbuilder.cc
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content font-semibold
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+relative pt-28 pb-16 sm:pt-36 sm:pb-20 lg:pt-44 lg:pb-28
+
+from-primary/5 absolute inset-0 bg-gradient-to-b via-transparent to-transparent
+
+grid items-center gap-12 lg:grid-cols-2 lg:gap-16
+
+text-base-content/60 mb-8 text-center text-sm
+
+flex flex-wrap items-center justify-center gap-6 sm:gap-10 lg:gap-12
+
+opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 [&_svg]:inline
+
+mx-auto mb-12 max-w-3xl text-center sm:mb-16
+
+text-2xl font-bold text-base-content/90 sm:text-3xl lg:text-4xl
+
+Get a solid first draft in seconds, refine it in chat, and reuse your best versions anytime.
+
+mx-auto grid max-w-5xl gap-8 lg:grid-cols-2 lg:gap-12
+
+text-2xl font-bold sm:text-3xl lg:text-4xl
+
+Generate, Test, and Reuse Prompts in One Place
+
+Create prompts tuned for Gemini, Claude, ChatGPT and more. Run them in Assistant, save your best versions, and build a reusable prompt library.
+
+grid items-center gap-8 lg:grid-cols-2 lg:gap-16
+
+grid items-center gap-8 lg:grid-cols-2 lg:gap-16 lg:flex-row-reverse
+
+mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16
+
+grid grid-cols-2 gap-4 sm:grid-cols-4
+
+bg-base-200 scroll-mt-20 py-16 sm:py-24
+
+Prompts for Marketing, SEO, Coding, Support & More
+
+Generate prompts for real work, from SEO briefs to code reviews, and reuse your best versions anytime.
+
+mx-auto grid max-w-5xl grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4
+
+card bg-base-100 border-base-300 hover:border-primary/50 border transition-all hover:shadow-lg
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+text-base-content/60 mt-4 text-sm
+
+25 assistant requests/month. No credit card required.
+
+accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture
+
+text-base-content/60 mb-4 text-sm
+
+Pick a target model → Generate → Refine → Save/Pin → Run
+
+text-success mt-0.5 size-5 shrink-0
+
+Save, pin, and organize prompts in your Library
+
+Run prompts inside Prompt Builder with Assistant (Grok, Gemini, GPT, DeepSeek, and more)
+
+mx-auto mt-12 max-w-3xl text-center sm:mt-16
+
+text-base-content/60 mt-4 text-xs
+
+text-base-content/60 group-hover:font-semibold mt-2 text-xs transition-colors
+
+hover:bg-base-200 group flex flex-col items-center justify-center rounded-lg p-4 transition-all hover:scale-105
+
+From marketers and founders to developers and researchers Prompt Builder helps teams get clearer prompts, better outputs, and faster workflows.
+
+grid gap-6 sm:grid-cols-2 lg:grid-cols-3
+
+card bg-base-100 border-base-300 hover:border-primary/30 border transition-colors
+
+card-title text-base sm:text-lg
+
+card-body items-center p-4 text-center sm:p-6
+
+M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z
+
+m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z
+
+M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0
+
+M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5
+
+Write product specs, roadmaps, and PRDs
+
+Prompt Builder helps you generate, refine, test, and save prompts that work, all in one workflow.
+
+Which AI models do you support?
+
+Prompt Generator can create prompts for GPT, Claude, Gemini, Llama, Mistral, DeepSeek, Perplexity, Grok, and Cohere. Assistant lets you run prompts inside Prompt Builder with supported assistant models.
+
+Can I test my prompts without leaving Prompt Builder?
+
+Yes. Use Prompt Assistant to run prompts, iterate with follow-ups, and save the best versions to your Library.
+
+What's the difference between "target model" and "assistant model"?
+
+Target model is what your prompt is built for. Assistant model is what helps you refine (and run) prompts in chat.
+
+What do I get on the free plan?
+
+25 assistant requests/month. No credit card required. Free plan does not include premium generations.
+
+Yes. Save, pin, search, and run prompts from your Library anytime.
+
+Do you have templates or community prompts?
+
+Yes. Browse Community Prompts and add favorites to your Library.
+
+Is team collaboration available?
+
+Team collaboration is on the roadmap.
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+text-base-content/60 text-center
+
+Prompt Builder. All rights reserved.
+
+text-base-content/60 flex items-center gap-4
+
+text-base-content/80 text-sm leading-relaxed
+
+Great product. Simple to use and quick to produce results. Excellent for anyone seeking dependable, polished results.
+
+Nice product. The best software to create prompt to video, stories, content, etc.
+
+Prompt Builder is a great prompt refinement tool. I've been using it to boost my productivity and save time on crafting prompts. Sometimes getting the right prompt can be tricky, but that's where Prompt Builder comes in and takes the stress away. Nothing is perfect, but it's a lot better than doing it manually. The tool is still being improved and developed. I think it's really helpful, and remember that these tools are the building blocks and kickstarters for new emerging SaaS.
+
+Turn an idea into a model-optimized prompt in seconds. Generate, refine, test, and save reusable prompts for Gemini, Claude, ChatGPT, and more.
+
+────────────────────────────────────────────────────────────
+[2]  Create Perfect Prompts forAny AI Model
+URL  : https://promptbuilder.cc/ai-prompt-generator
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+width=device-width, initial-scale=1
+
+────────────────────────────────────────────────────────────
+[3]  Prompt Libraries: Templates, Examples & How to Build Yours
+URL  : https://promptbuilder.cc/prompt-libraries
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+{"@context":"https://schema.org","@type":"Article","headline":"Prompt Libraries: Templates, Examples & How to Build Yours","description":"Build a reusable prompt library: save, pin, categorize, and run prompts across models.","url":"https://promptbuilder.cc/prompt-libraries","datePublished":"2025-01-01","dateModified":"2026-01-17","author":{"@type":"Organization","name":"Prompt Builder"},"publisher":{"@type":"Organization","name":"Prompt Builder","logo":{"@type":"ImageObject","url":"https://promptbuilder.cc/images/logo/logo-light.svg"}}}
+
+text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl
+
+Prompt Libraries: Templates, Examples & How to Build Yours
+
+text-base-content/70 mt-6 text-lg sm:text-xl
+
+Stop rewriting the same prompts. Build a reusable prompt library that saves time, improves consistency, and makes your best work easy to find and run.
+
+lg:grid lg:grid-cols-[280px_1fr] lg:gap-10
+
+Save your best prompts, explore community templates, and run any prompt with one click. Your library grows with you.
+
+25 assistant requests/month. No credit card required.
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+text-base-content/60 text-center
+
+Prompt Builder. All rights reserved.
+
+text-base-content/60 flex items-center gap-4
+
+mt-0 mb-6 text-2xl font-bold sm:text-3xl
+
+text-base-content/80 text-lg leading-relaxed
+
+Every time you craft a great prompt, you're solving a problem. But without a system to save and organize those solutions, you end up solving the same problems over and over. A prompt library fixes that.
+
+not-prose my-8 grid gap-4 sm:grid-cols-2
+
+card bg-base-200 border-base-300 hover:border-primary/30 border transition-colors
+
+Write once, use forever. Stop recreating prompts for recurring tasks.
+
+Get predictable outputs across projects, team members, and time.
+
+Skip the blank page. Start with a proven prompt and customize as needed.
+
+Iterate on saved prompts to continuously improve output quality.
+
+New team members can use proven prompts from day one.
+
+Browse community prompts to find solutions you hadn't thought of.
+
+mb-6 text-2xl font-bold sm:text-3xl
+
+text-base-content/80 mb-8 text-lg leading-relaxed
+
+A useful prompt library is more than a text dump. Each saved prompt should include metadata that makes it findable, understandable, and maintainable.
+
+Prompt Builder automatically tracks category, model, timestamps, and pinned status. You can add titles and descriptions when saving prompts from the Generator, Optimizer, or Assistant.
+
+How Prompt Builder's Library Works
+
+Prompt Builder includes a built-in library with two sections: your personal prompts and community-shared prompts.
+
+Not sure how to organize prompts? Here's a suggested category structure that works for most teams and individuals:
+
+not-prose my-8 grid gap-3 sm:grid-cols-2
+
+bg-base-200 border-base-300 hover:border-primary/30 flex items-center gap-3 rounded-xl border p-4 transition-colors
+
+not-prose my-8 grid gap-6 sm:grid-cols-2
+
+Browse prompts shared by other Prompt Builder users. Same search and filter options, plus the ability to add prompts to your personal library.
+
+from-primary/10 to-primary/5 border-primary/20 rounded-sm border bg-gradient-to-r p-6
+
+text-base-content/70 mb-4 text-sm
+
+text-base-content/70 mb-3 text-sm
+
+Consistent naming makes prompts easier to find. Consider a pattern like:
+
+→ [SEO] Meta Description - E-commerce
+
+→ [Coding] Code Review - TypeScript
+
+→ [Marketing] Email - Follow-up
+
+M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z
+
+Pin your top 5-10 most-used prompts. These appear first in your library, so you can grab them without scrolling or searching. Update pins as your workflow evolves.
+
+Start your library with these ready-to-use templates. Each follows
+
+and works across major AI models.
+
+Want to generate custom templates?
+
+Prompt Libraries: Templates, Examples & How to Build Yours | Prompt Builder
+
+Build a reusable prompt library: save, pin, categorize, and run prompts across models. Browse community prompts and start faster with Prompt Builder.
+
+Build a reusable prompt library: save, pin, categorize, and run prompts across models.
+
+────────────────────────────────────────────────────────────
+[4]  Free Claude Prompt Generator (2026)
+URL  : https://promptbuilder.cc/claude-prompt-generator
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+────────────────────────────────────────────────────────────
+[5]  Free Gemini Prompt Generator (2026)
+URL  : https://promptbuilder.cc/gemini-prompt-generator
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+────────────────────────────────────────────────────────────
+[6]  Free Grok Prompt Generator (2026)
+URL  : https://promptbuilder.cc/grok-prompt-generator
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+────────────────────────────────────────────────────────────
+[7]  Gemini Prompt Templates
+URL  : https://promptbuilder.cc/prompts/gemini
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+text-primary mt-0.5 h-5 w-5 flex-shrink-0
+
+Gemini handles JSON, markdown tables, and formatted responses reliably
+
+card bg-base-200 border-base-300 hover:border-primary/30 hover:bg-base-200/80 group block border transition-all
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+text-base-content/60 text-center
+
+Prompt Builder. All rights reserved.
+
+text-base-content/60 flex items-center gap-4
+
+card-title  text-lg transition-colors
+
+text-base-content/70 mt-1 text-sm
+
+Outlines, rewrites, and long-form drafts
+
+width=device-width, initial-scale=1
+
+Gemini Prompt Templates (2026): Copy & Paste Prompts | Prompt Builder
+
+Browse prompt templates optimized for Google Gemini. Copy ready-to-use prompts for marketing, coding, SEO, writing, analysis, research, customer support, and…
+
+Gemini Prompt Templates (2026): Copy & Paste Prompts
+
+Browse prompt templates optimized for Google Gemini across common use cases.
+
+────────────────────────────────────────────────────────────
+[8]  Claude Prompt Templates
+URL  : https://promptbuilder.cc/prompts/claude
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+Our Claude prompt generator creates tailored prompts for your specific use case. Describe your task and get an optimized prompt in seconds.
+
+25 assistant requests/month. No credit card required.
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+card bg-base-200 border-base-300 hover:border-primary/30 hover:bg-base-200/80 group block border transition-all
+
+text-base-content/30  h-5 w-5 flex-shrink-0 transition-all group-hover:translate-x-1
+
+width=device-width, initial-scale=1
+
+Claude Prompt Templates (2026): Copy & Paste Prompts | Prompt Builder
+
+Browse prompt templates optimized for Anthropic Claude. Copy ready-to-use prompts for marketing, coding, SEO, writing, analysis, research, customer support,…
+
+Claude Prompt Templates (2026): Copy & Paste Prompts
+
+Browse prompt templates optimized for Anthropic Claude across common use cases.
+
+────────────────────────────────────────────────────────────
+[9]  ChatGPT Prompt Templates
+URL  : https://promptbuilder.cc/prompts/chatgpt
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+ChatGPT handles a wide range of tasks reliably, from creative writing to technical explanations
+
+Our ChatGPT prompt generator creates tailored prompts for your specific use case. Describe your task and get an optimized prompt in seconds.
+
+25 assistant requests/month. No credit card required.
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+card bg-base-200 border-base-300 hover:border-primary/30 hover:bg-base-200/80 group block border transition-all
+
+text-base-content/30  h-5 w-5 flex-shrink-0 transition-all group-hover:translate-x-1
+
+width=device-width, initial-scale=1
+
+ChatGPT Prompt Templates (2026): Copy & Paste Prompts | Prompt Builder
+
+Browse prompt templates optimized for OpenAI ChatGPT. Copy ready-to-use prompts for marketing, coding, SEO, writing, analysis, research, customer support, and…
+
+ChatGPT Prompt Templates (2026): Copy & Paste Prompts
+
+Browse prompt templates optimized for OpenAI ChatGPT across common use cases.
+
+────────────────────────────────────────────────────────────
+[10]  Grok Prompt Templates
+URL  : https://promptbuilder.cc/prompts/grok
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+Grok generates creative options quickly, making it ideal for brainstorming sessions and angle exploration
+
+text-primary mt-0.5 h-5 w-5 flex-shrink-0
+
+Outputs tend to be direct and attention-grabbing, perfect for headlines, taglines, and social content
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+text-base-content/60 text-center
+
+Prompt Builder. All rights reserved.
+
+text-base-content/60 flex items-center gap-4
+
+width=device-width, initial-scale=1
+
+Grok Prompt Templates (2026): Copy & Paste Prompts | Prompt Builder
+
+Browse prompt templates optimized for xAI Grok. Copy ready-to-use prompts for marketing, coding, SEO, writing, analysis, research, customer support, and…
+
+Grok Prompt Templates (2026): Copy & Paste Prompts
+
+Browse prompt templates optimized for xAI Grok across common use cases.
+
+────────────────────────────────────────────────────────────
+[11]  Marketing Prompt Templates
+URL  : https://promptbuilder.cc/prompts/marketing
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+Headlines, body copy, and creative variations for paid campaigns
+
+text-primary mt-0.5 h-5 w-5 flex-shrink-0
+
+Welcome series, nurture campaigns, and promotional emails
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+text-base-content/60 text-center
+
+Prompt Builder. All rights reserved.
+
+text-base-content/60 flex items-center gap-4
+
+width=device-width, initial-scale=1
+
+Marketing Prompt Templates: Copy & Paste for AI Models | Prompt Builder
+
+Browse marketing prompt templates for landing pages, ad copy, email sequences, and conversion content. Optimized for Gemini, ChatGPT, Claude, Grok, Cohere,…
+
+Marketing Prompt Templates: Copy & Paste for AI Models
+
+Browse marketing prompt templates for landing pages, ad copy, email sequences, and conversion content.
+
+Browse marketing prompt templates for landing pages, ad copy, and email sequences.
+
+────────────────────────────────────────────────────────────
+[12]  Coding Prompt Templates
+URL  : https://promptbuilder.cc/prompts/coding
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+text-primary mt-0.5 h-5 w-5 flex-shrink-0
+
+Comprehensive test suite generators for unit, integration, and E2E tests
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+text-base-content/60 text-center
+
+Prompt Builder. All rights reserved.
+
+text-base-content/60 flex items-center gap-4
+
+card-title  text-lg transition-colors
+
+width=device-width, initial-scale=1
+
+Coding Prompt Templates: Copy & Paste for AI Models | Prompt Builder
+
+Browse coding prompt templates for code review, debugging, refactoring, tests, and documentation. Optimized for Gemini, ChatGPT, Claude, Grok, Cohere, Llama,…
+
+Coding Prompt Templates: Copy & Paste for AI Models
+
+Browse coding prompt templates for code review, debugging, refactoring, tests, and documentation.
+
+Browse coding prompt templates for code review, debugging, refactoring, and tests.
+
+────────────────────────────────────────────────────────────
+[13]  SEO Prompt Templates
+URL  : https://promptbuilder.cc/prompts/seo
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+Comprehensive outlines with headers, word counts, and target keywords
+
+text-primary mt-0.5 h-5 w-5 flex-shrink-0
+
+Title tags, meta descriptions, and structured data recommendations
+
+Site audits, crawl analysis, and performance recommendations
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+text-base-content/60 text-center
+
+Prompt Builder. All rights reserved.
+
+text-base-content/60 flex items-center gap-4
+
+width=device-width, initial-scale=1
+
+SEO Prompt Templates: Copy & Paste for AI Models | Prompt Builder
+
+Browse SEO prompt templates for keyword research, content briefs, meta tags, and technical SEO. Optimized for Gemini, ChatGPT, Claude, Grok, Cohere, Llama,…
+
+SEO Prompt Templates: Copy & Paste for AI Models
+
+Browse SEO prompt templates for keyword research, content briefs, meta tags, and technical SEO.
+
+Browse SEO prompt templates for keyword research, content briefs, and meta tags.
+
+────────────────────────────────────────────────────────────
+[14]  Writing Prompt Templates
+URL  : https://promptbuilder.cc/prompts/writing
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+Tone adjustments, formality shifts, and voice adaptations
+
+text-primary mt-0.5 h-5 w-5 flex-shrink-0
+
+Grammar fixes, clarity improvements, and conciseness edits
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+text-base-content/60 text-center
+
+Prompt Builder. All rights reserved.
+
+text-base-content/60 flex items-center gap-4
+
+width=device-width, initial-scale=1
+
+Writing Prompt Templates: Copy & Paste for AI Models | Prompt Builder
+
+Browse writing prompt templates for outlines, rewrites, style transforms, and long-form content. Optimized for Gemini, ChatGPT, Claude, Grok, Cohere, Llama,…
+
+Writing Prompt Templates: Copy & Paste for AI Models
+
+Browse writing prompt templates for outlines, rewrites, style transforms, and long-form content.
+
+Browse writing prompt templates for outlines, rewrites, and long-form content.
+
+────────────────────────────────────────────────────────────
+[15]  Data Analysis Prompt Templates
+URL  : https://promptbuilder.cc/prompts/analysis
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+Key findings, anomaly detection, and trend analysis
+
+text-primary mt-0.5 h-5 w-5 flex-shrink-0
+
+Executive summaries, detailed reports, and stakeholder updates
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+text-base-content/60 text-center
+
+Prompt Builder. All rights reserved.
+
+text-base-content/60 flex items-center gap-4
+
+width=device-width, initial-scale=1
+
+Data Analysis Prompt Templates: Copy & Paste for AI Models | Prompt Builder
+
+Browse data analysis prompt templates for CSV analysis, key findings, reports, and visualization narration. Optimized for Gemini, ChatGPT, Claude, Grok,…
+
+Data Analysis Prompt Templates: Copy & Paste for AI Models
+
+Browse data analysis prompt templates for CSV analysis, insights extraction, reports, and visualization narration.
+
+Browse data analysis prompt templates for CSV analysis, insights extraction, and reports.
+
+────────────────────────────────────────────────────────────
+[16]  Customer Support Prompt Templates
+URL  : https://promptbuilder.cc/prompts/customer-support
+
+── CODE ─────────────────────────────────────────────────────
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+text-primary mt-0.5 h-5 w-5 flex-shrink-0
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+text-base-content/60 text-center
+
+Prompt Builder. All rights reserved.
+
+text-base-content/60 flex items-center gap-4
+
+card-title  text-lg transition-colors
+
+width=device-width, initial-scale=1
+
+Customer Support Prompt Templates: Copy & Paste for AI Models | Prompt Builder
+
+Browse customer support prompt templates for ticket responses, FAQ generation, escalation handling, and satisfaction surveys. Optimized for Gemini, ChatGPT,…
+
+Customer Support Prompt Templates: Copy & Paste for AI Models
+
+Browse customer support prompt templates for ticket responses, FAQ generation, and escalation handling.
+
+Browse customer support prompt templates for ticket responses and FAQ generation.
+
+────────────────────────────────────────────────────────────
+[17]  Product Management Prompt Templates
+URL  : https://promptbuilder.cc/prompts/product-management
+
+── CODE ─────────────────────────────────────────────────────
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+text-primary mt-0.5 h-5 w-5 flex-shrink-0
+
+Feature prioritization, timeline estimation, and milestone definition
+
+Status reports, executive summaries, and progress presentations
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+text-base-content/60 text-center
+
+Prompt Builder. All rights reserved.
+
+text-base-content/60 flex items-center gap-4
+
+card-title  text-lg transition-colors
+
+width=device-width, initial-scale=1
+
+Product Management Prompt Templates: Copy & Paste for AI Models | Prompt Builder
+
+Browse product management prompt templates for PRDs, user stories, roadmap planning, and stakeholder communication. Optimized for Gemini, ChatGPT, Claude,…
+
+Product Management Prompt Templates: Copy & Paste for AI Models
+
+Browse product management prompt templates for PRDs, user stories, and roadmap planning.
+
+────────────────────────────────────────────────────────────
+[18]  Research Prompt Templates
+URL  : https://promptbuilder.cc/prompts/research
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+text-primary mt-0.5 h-5 w-5 flex-shrink-0
+
+Research design, sampling strategies, and data collection plans
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+text-base-content/60 text-center
+
+Prompt Builder. All rights reserved.
+
+text-base-content/60 flex items-center gap-4
+
+width=device-width, initial-scale=1
+
+Research Prompt Templates: Copy & Paste for AI Models | Prompt Builder
+
+Browse research prompt templates for literature review, hypothesis generation, methodology design, and findings synthesis. Optimized for Gemini, ChatGPT,…
+
+Research Prompt Templates: Copy & Paste for AI Models
+
+Browse research prompt templates for literature review, hypothesis generation, and methodology design.
+
+Browse research prompt templates for literature review and hypothesis generation.
+
+────────────────────────────────────────────────────────────
+[19]  Prompt Engineering: Best Practices, Frameworks & Templates
+URL  : https://promptbuilder.cc/prompt-engineering
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+{"@context":"https://schema.org","@type":"Article","headline":"Prompt Engineering Best Practices + Templates (2026)","description":"Learn prompt engineering patterns that improve accuracy and consistency across Gemini, Claude, and ChatGPT.","url":"https://promptbuilder.cc/prompt-engineering","datePublished":"2025-01-01","dateModified":"2026-01-17","author":{"@type":"Organization","name":"Prompt Builder"},"publisher":{"@type":"Organization","name":"Prompt Builder","logo":{"@type":"ImageObject","url":"https://promptbuilder.cc/images/logo/logo-light.svg"}}}
+
+text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl
+
+Prompt Engineering: Best Practices, Frameworks & Templates
+
+text-base-content/70 mt-6 text-lg sm:text-xl
+
+Master prompt engineering patterns that improve accuracy and consistency across Gemini, Claude, and ChatGPT. Get fewer retries and clearer outputs with model-optimized prompts.
+
+lg:grid lg:grid-cols-[280px_1fr] lg:gap-10
+
+Stop manually adapting prompts for each AI model. Prompt Builder generates, refines, and saves your best prompts so you can reuse what works.
+
+25 assistant requests/month. No credit card required.
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+text-base-content/60 text-center
+
+Prompt Builder. All rights reserved.
+
+text-base-content/60 flex items-center gap-4
+
+mt-0 mb-6 text-2xl font-bold sm:text-3xl
+
+text-base-content/80 text-lg leading-relaxed
+
+Prompt engineering is the practice of designing and refining inputs to get better, more consistent outputs from large language models (LLMs) like ChatGPT, Claude, and Gemini. It's part art, part science combining clear communication with an understanding of how each model processes instructions. For a quick definition with practical examples, see our
+
+text-base-content/80 mt-4 text-lg leading-relaxed
+
+, with fewer retries and less manual editing. Good prompt engineering reduces token waste, saves time, and improves the quality of AI-assisted work.
+
+mb-6 text-2xl font-bold sm:text-3xl
+
+Prompt Builder streamlines prompt engineering into a repeatable workflow that works across all major AI models. Here's how it works:
+
+steps steps-vertical lg:steps-horizontal w-full
+
+card bg-base-200 border-base-300 hover:border-primary/30 border transition-colors
+
+Prompt Optimizer (Existing Prompt → Better Prompt)
+
+Already have a prompt? Paste it into the Optimizer and instantly upgrade it into a clearer, higher-performing version. The Optimizer adds structure, constraints, output format specifications, and examples—then saves each version to history.
+
+Prompt Library (Save, Pin, Reuse)
+
+Save your best prompts to your Library. Pin favorites for quick access, organize by category, and run any saved prompt directly in Assistant. You can also explore Community Prompts shared by other users.
+
+Here are practical prompt templates you can use or adapt. Each template follows prompt engineering best practices and works across major AI models.
+
+text-base-content/70 mb-3 text-sm
+
+text-base-content/30  ml-auto h-4 w-4 transition-all group-hover:translate-x-1
+
+card bg-base-200 border-base-300 hover:border-primary/30 hover:bg-base-200/80 group border transition-all no-underline
+
+Prompt Engineering (2026): Best Practices + Free Templates | Prompt Builder
+
+Learn prompt engineering patterns that improve accuracy across ChatGPT, Claude, and Gemini—plus ready-to-use templates, checklists, and examples.
+
+Prompt Engineering (2026): Best Practices + Free Templates
+
+Learn prompt engineering patterns that improve accuracy across ChatGPT, Claude, and Gemini—plus templates and examples.
+
+────────────────────────────────────────────────────────────
+[20]  SKIPPED — https://promptbuilder.cc/docs
+────────────────────────────────────────────────────────────
+
+[21]  AI Prompts by Role
+URL  : https://promptbuilder.cc/prompts-for
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl
+
+text-base-content/70 mt-6 text-lg sm:text-xl
+
+Find AI prompts tailored for your profession. Each pack includes curated prompts across common tasks, recommended models, and customization tips.
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+text-base-content/60 text-center
+
+Prompt Builder. All rights reserved.
+
+text-base-content/60 flex items-center gap-4
+
+card bg-base-200 border-base-300 hover:border-primary/30 group border transition-all
+
+More persona packs coming soon:
+
+What are persona-based prompt packs?
+
+Persona prompt packs are curated collections of AI prompts designed for specific roles or professions. Each pack includes prompts across common tasks you handle daily, saving you time crafting prompts from scratch.
+
+How do I use these prompt packs?
+
+Click on your role to see all available prompts. Each prompt includes copy-paste templates, recommended AI models, and tips for customization. Replace bracketed placeholders with your specific details.
+
+Which AI models work with these prompts?
+
+All prompts work with major AI models including ChatGPT, Claude, Gemini, and Grok. Each persona page includes model recommendations for specific tasks.
+
+Yes. All prompts on this page are free to copy and use. For more advanced features like prompt optimization and library management, check out Prompt Builder.
+
+Absolutely. Contact us with your role or profession, and we will consider adding a dedicated prompt pack for your use cases.
+
+How often are prompt packs updated?
+
+We update prompt packs regularly based on user feedback and changes in AI model capabilities. Each page shows the last update date.
+
+width=device-width, initial-scale=1
+
+AI Prompts by Role: Curated Prompt Packs for Every Profession | Prompt Builder
+
+Find AI prompts tailored for your role. Curated prompt packs for Shopify owners, fitness trainers, marketers, developers, and more. Copy, paste, and customize.
+
+AI Prompts by Role: Curated Prompt Packs for Every Profession
+
+Find AI prompts tailored for your role. Curated prompt packs for Shopify owners, fitness trainers, marketers, and more.
+
+Find AI prompts tailored for your role. Curated packs for every profession.
+
+────────────────────────────────────────────────────────────
+[22]  Prompt Engineering Glossary
+URL  : https://promptbuilder.cc/glossary
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+text-base-content/70 mt-6 text-lg sm:text-xl
+
+Clear definitions and practical examples for key prompt engineering terms and AI concepts. Learn the vocabulary you need to write better prompts for ChatGPT, Claude, Gemini, and other AI models.
+
+grid gap-4 sm:grid-cols-2 lg:grid-cols-3
+
+Generate optimized prompts for any AI model using the techniques you've learned. Save your best prompts to a reusable library.
+
+25 assistant requests/month. No credit card required.
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+text-base-content/60 text-center
+
+Prompt Builder. All rights reserved.
+
+text-base-content/60 flex items-center gap-4
+
+flex h-8 w-8 items-center justify-center rounded font-medium transition-colors bg-base-100 hover:bg-primary hover:text-primary-content cursor-pointer
+
+This glossary explains key terms and concepts in prompt engineering and AI. Each entry includes a clear definition, practical examples, and tips for using the concept effectively with ChatGPT, Claude, Gemini, and other AI models.
+
+This glossary is designed for anyone working with AI language models—from beginners learning the basics to experienced practitioners looking for quick references. Whether you're a developer, marketer, writer, or researcher, you'll find practical explanations you can apply immediately.
+
+Browse popular terms on this page, use the A–Z list to find specific concepts, or click into any term for a detailed explanation with examples. Each term page includes practical examples you can copy and use, plus links to related concepts.
+
+Are the examples in this glossary ready to use?
+
+Yes! Every term includes practical examples with real prompts you can copy. Each example shows the prompt, expected output, and explains why it works. You can also click 'Run in Prompt Builder' to try examples directly.
+
+How often is this glossary updated?
+
+We update this glossary regularly as prompt engineering best practices evolve and new techniques emerge. Each term page shows when it was last modified so you can trust the information is current.
+
+Absolutely! We're always expanding this glossary. Contact us with term suggestions, and we'll prioritize additions based on community interest and relevance to prompt engineering.
+
+Prompt Engineering Glossary: AI & LLM Terms Explained | Prompt Builder
+
+Learn key prompt engineering terms and concepts. Clear definitions, practical examples, and expert tips for ChatGPT, Claude, Gemini, and other AI models.
+
+Prompt Engineering Glossary: AI & LLM Terms Explained
+
+Learn key prompt engineering terms and concepts. Clear definitions, practical examples, and expert tips.
+
+────────────────────────────────────────────────────────────
+[23]  AI Model Comparisons (2026)
+URL  : https://promptbuilder.cc/compare
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+text-base-content/50 text-sm font-normal
+
+text-base-content/70 mt-2 text-center text-sm
+
+Compare pricing, context window, and performance for coding, writing, and more.
+
+text-primary font-medium group-hover:underline
+
+card bg-base-100 border-base-200 border shadow-xl transition-all hover:shadow-2xl
+
+Stop Guessing. Start Prompting.
+
+We've built free prompt generators for every major model. Get better results instantly.
+
+25 assistant requests/month. No credit card required.
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+card bg-base-100 border-base-200 border p-6 shadow-xl transition-all hover:shadow-2xl
+
+width=device-width, initial-scale=1
+
+Compare AI Models (2026): Pick the Right Tool by Task | Prompt Builder
+
+Use this 2026 AI comparison table to choose the best model for your workflow, from content writing and coding to deep research.
+
+Compare AI Models (2026): Pick the Right Tool by Task
+
+────────────────────────────────────────────────────────────
+[24]  AI Insights & Tips
+URL  : https://promptbuilder.cc/blog
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+text-base-content/60 text-center
+
+Prompt Builder. All rights reserved.
+
+text-base-content/60 flex items-center gap-4
+
+mb-4 text-4xl font-bold md:text-5xl
+
+text-base-content/70 mx-auto max-w-2xl text-lg
+
+Expert insights, tutorials, and best practices for AI prompt engineering. Learn how to craft better prompts for ChatGPT, Claude, Gemini, and more.
+
+grid gap-8 md:grid-cols-2 lg:grid-cols-3
+
+card bg-base-100 border-base-300 overflow-hidden border shadow-sm transition-shadow hover:shadow-md
+
+badge badge-outline badge-sm hover:badge-primary transition-colors
+
+text-base-content/60 mt-3 text-xs
+
+Grok Prompt Guide (2026): 30 Copy-Paste Prompts for Marketing, Coding, and Content
+
+(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw
+
+text-base-content/60 mb-2 flex items-center gap-2 text-sm
+
+hover:text-primary transition-colors
+
+text-base-content/70 line-clamp-2 text-sm
+
+A practical Grok prompt guide with 30 copy-paste prompts across marketing, coding, and content. Includes a simple Grok prompt formula, output templates, and troubleshooting tips.
+
+Best Prompt Builder Tools (2026): 11 Tools Compared
+
+A practical 2026 guide to choosing a prompt builder for ChatGPT, Claude, Gemini, Grok, Midjourney, and Stable Diffusion.
+
+OpenAI Prompt Engineering Best Practices (2026): Guide + Templates
+
+Learn OpenAI prompt engineering with proven best practices, step-by-step instructions, and copy-paste examples. From zero-shot to chain-of-thought, this guide covers everything you need to write prompts that actually work.
+
+Prompt Engineering Best Practices (2026): Updated Checklist + Templates
+
+The updated 2026 prompt engineering checklist: success criteria, structured inputs, copy-paste templates, and lightweight evals to get reliable outputs from ChatGPT, Claude, and Gemini.
+
+Using AI for Design Automation: A Layerre Guest Guide
+
+A practical way to connect Prompt Builder and Layerre so teams can ship more consistent design work with less manual effort.
+
+Gemini Prompt Generator (2026): Copy-Paste Templates for Better Text + JSON
+
+Use this Gemini prompt generator playbook to get better outputs fast: the 3-part prompt formula, text + JSON templates, and troubleshooting tips for Gemini 3+.
+
+Prompt Chaining in 2026: The Reliable Way to Build Agents (Without 200-Line Prompts)
+
+Prompt chaining breaks complex tasks into steps for reliability and debuggability. Includes chain types, template, and FAQ.
+
+How to Sell Prompts on Shopify (2026): Prompt Packs, Licensing, Delivery, and Upsells
+
+Sell prompt packs on Shopify with clear licensing and instant delivery. Includes a product page template, licensing checklist, and upsell ideas.
+
+6 Quick Prompts for Shopify Store Owners to Launch Products, SEO, and Sales in Minutes
+
+Copy-paste these 6 AI prompts to write product pages, improve Shopify SEO, launch emails, brief UGC, answer support, and test ads.
+
+6 Quick Prompts for Real Estate Agents (Copy, Paste, Close)
+
+Use these plug-and-play AI prompts to write listings, follow up with buyers, stay top-of-mind with sellers, and post daily on social — in minutes, not hours.
+
+Discover six essential AI prompts tailored for fitness trainers to streamline workout planning, client communication, and content creation.
+
+Prompt Builder now supports Claude Opus, Claude Sonnet, DeepSeek, Perplexity, and Cohere. Discover which AI model is best for your use case and how to get started.
+
+Discover six essential AI prompts tailored for SaaS founders to streamline content creation, boost productivity, and save time on marketing tasks.
+
+Discover six essential AI prompts tailored for food influencers to streamline content creation, boost engagement, and save time.
+
+The CEO Schedule: Reclaim 10 Hours a Week
+
+Transform your CEO schedule with proven time management strategies. Learn to identify time leaks, prioritize high-impact tasks, and leverage AI tools to reclaim 10+ hours weekly.
+
+Privacy Policy & Terms and Conditions Generator (Free Template)
+
+Create a compliant Privacy Policy and Terms & Conditions for your website using Prompt Builder. Copy a proven prompt, customize for your business, and publish fast.
+
+What Is a Prompt Generator? (And Why You'll Love Using One)
+
+Learn what a prompt generator is and how it helps you turn a rough idea into a prompt that works well in ChatGPT, Claude, or Gemini.
+
+Why teams use Prompt Builder (with free prompts you can copy and paste)
+
+Prompt Builder turns a plain English task into a clear prompt for ChatGPT, Claude, or Gemini. Type your goal, pick a model, and copy the prompt.
+
+Claude vs ChatGPT vs Gemini Prompting: Best Practices (2025)
+
+Model specific prompt engineering tips for Claude, ChatGPT, and Gemini, with a quick verdict, comparison table, and copy and paste templates.
+
+Advanced Prompting Techniques for 2025: ReAct, Toolformer, Self‑Consistency
+
+A hands‑on guide to advanced prompting in 2025 with copy‑paste templates, evaluation tips, and when to use each technique.
+
+Prompt Engineering Best Practices (2025): Practical Checklist
+
+A practical 2025 checklist of prompt engineering best practices with examples, anti‑patterns to avoid, and copy‑paste templates for ChatGPT, Claude, and Gemini.
+
+Best Prompt Frameworks in 2025: CRISPE, APE, ROLE, SxS and More
+
+A practical 2025 guide to prompt frameworks with copy and paste templates, pros and cons, and when to use each.
+
+Prompt Engineering Methodologies – July 2025 Update
+
+Monthly roundup of new and improved prompt engineering methodologies in July 2025 with examples and adoption advice.
+
+How to Write Effective AI Prompts: Frameworks, Templates, and Tools (2025 Guide)
+
+A practical guide to writing AI prompts with frameworks, templates, and tools. Works for ChatGPT, Claude, Gemini, and more.
+
+50 Marketing Prompts for Viral LinkedIn Posts (2025)
+
+Boost your LinkedIn engagement with 50 AI-powered marketing prompts for viral posts. Generate authority, awareness, and conversions effortlessly.
+
+Prompt Engineering in 2025: Complete Guide for ChatGPT, Claude & Gemini
+
+A practical prompt engineering guide for 2025 with examples and templates. Covers Chain-of-Thought, RAG, evals, and more.
+
+How to Make AI Prompts Better: 15 Expert Tips for Superior Results (2025)
+
+Learn how to make AI prompts better with proven strategies that boost ChatGPT, Claude, and Gemini results. Expert tips for writing better AI prompts that deliver.
+
+Best Prompt Builders for GPT, Midjourney & Stable Diffusion (2025 Guide)
+
+A practical 2025 guide to choosing the right prompt builder for GPT, Claude, Midjourney, and Stable Diffusion, with quick picks and workflows.
+
+────────────────────────────────────────────────────────────
+[25]  Grok vs ChatGPT: The Complete 2026 Comparison
+URL  : https://promptbuilder.cc/grok-vs-chatgpt-comparison-2026
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl
+
+Grok vs ChatGPT: The Complete 2026 Comparison
+
+text-base-content/70 mt-6 text-lg sm:text-xl
+
+We tested Grok 4 and GPT-5.2 head-to-head on coding, writing, research, reasoning, and more. Find out which AI actually wins for your use case, backed by real benchmarks.
+
+lg:grid lg:grid-cols-[280px_1fr] lg:gap-10
+
+mb-6 text-2xl font-bold sm:text-3xl
+
+card bg-base-200 border-base-300 hover:border-primary/30 hover:bg-base-200/80 group border transition-all no-underline
+
+AI Prompts-/ai-prompt-generator
+
+ChatGPT Prompts-/chatgpt-prompt-generator
+
+Claude Prompts-/claude-prompt-generator
+
+Gemini Prompts-/gemini-prompt-generator
+
+Llama Prompts-/llama-prompt-generator
+
+Mistral Prompts-/mistral-prompt-generator
+
+DeepSeek Prompts-/deepseek-prompt-generator
+
+Perplexity Prompts-/perplexity-prompt-generator
+
+Cohere Prompts-/cohere-prompt-generator
+
+Grok Prompts-/grok-prompt-generator
+
+text-base-content/60 text-center
+
+Prompt Builder. All rights reserved.
+
+text-base-content/60 flex items-center gap-4
+
+text-base-content/70 hover:text-primary hover:bg-primary/5 rounded-sm px-3 py-2 text-sm transition-colors
+
+mx-auto w-full max-w-4xl lg:mx-0
+
+Side-by-side comparison of Grok 4 and ChatGPT GPT-5.2 interfaces showing the same prompt with different responses, highlighting key differences in output style and speed
+
+Coding, writing, reasoning, versatility
+
+Grok is xAI's flagship AI assistant, created by Elon Musk's artificial intelligence company. First launched in late 2023, Grok is now on its fourth major version (Grok 4, announced July 2025). It's designed to provide real-time, unfiltered responses with direct access to X (formerly Twitter) data and live web search.
+
+. While most AI models rely on training data with a cutoff date, Grok can pull live data from the web and X's massive social media feed, making it uniquely suited for current events, trending topics, and time-sensitive research.
+
+Grok 4 interface on grok.com showing a real-time research query with live web sources and X post citations
+
+with parallel tool calling and structured outputs (API supports up to 256K)
+
+for built-in AI image and audio generation (updated February 2026)
+
+benchmark scores, processing at 58 tokens/second
+
+ChatGPT is OpenAI's AI assistant and the product that kicked off the generative AI revolution in late 2022. Now powered by the GPT-5.2 model family, it remains the most widely used AI chatbot globally with over 300 million weekly active users.
+
+. Whether you need to write code, draft a blog post, analyze data, generate images and video, or build custom workflows with GPTs, ChatGPT offers the broadest feature set of any AI assistant.
+
+ChatGPT interface powered by GPT-5.2 Thinking generating a TypeScript weather script with syntax highlighting and code explanation
+
+: Instant (fast), Thinking (deep reasoning), and Pro (maximum compute)
+
+compared to GPT-5.1, with improved factual accuracy
+
+including text, images, voice, and vision
+
+for creating video content (Plus and Pro tiers)
+
+with SOC 2 compliance, SSO, and data privacy controls
+
+For developers, coding ability is often the deciding factor. Here's how Grok and ChatGPT compare on programming tasks in 2026.
+
+Better at debugging complex, multi-file projects
+
+GPT-5.2 Thinking mode for deep code analysis and planning
+
+86% HumanEval score, a 10% improvement over Grok 3
+
+Faster response times for quick code questions (58 tokens/sec)
+
+Less conservative, willing to attempt unconventional approaches
+
+Side-by-side comparison of Grok 4 and ChatGPT GPT-5.2 generating a TypeScript weather API script, showing differences in code structure, comments, and approach
+
+ChatGPT wins for coding. GPT-5.2's code generation is more reliable and handles complex projects better, though Grok's faster response times help for quick iterations.
+
+Whether you're writing blog posts, marketing copy, or creative fiction, the quality of AI output matters. Here's how each model handles writing tasks.
+
+ChatGPT produces more polished, publication-ready text. It's better at maintaining tone consistency across long pieces, following complex style guides, and generating varied sentence structures. The custom instructions feature lets you set a persistent brand voice. GPT-5.2 also excels at creating spreadsheets and building presentations.
+
+Grok's writing is more conversational and direct. It excels at informal content, social media posts, and opinion pieces. Its personality is less filtered, which some users prefer for authentic-sounding content. However, it can be inconsistent with longer, more structured writing.
+
+text-base-content/60 mb-4 text-sm font-semibold tracking-wider uppercase
+
+text-base-content/70 mb-6 text-sm italic
+
+Prompt: "Write a 3-sentence product description for a minimalist wooden desk lamp that costs $89. Target audience: remote workers. Tone: warm but professional."
+
+grid grid-cols-1 gap-4 md:grid-cols-2
+
+text-base-content/50 mt-4 text-xs
+
+Grok's output is conversational and punchy. ChatGPT's is more structured and detail-oriented. Both are usable, but ChatGPT follows the brief more precisely.
+
+ChatGPT wins for writing. Better tone control, longer form quality, and more consistent output make it the preferred choice for professional content creation.
+
+Grok vs ChatGPT: Frequently Asked Questions
+
+Common questions about choosing between Grok and ChatGPT in 2026.
+
+Grok vs ChatGPT: The Complete 2026 Comparison Guide | Prompt Builder
+
+In-depth Grok vs ChatGPT comparison for 2026. We tested coding, writing, research, reasoning, pricing & more. See which AI wins for your use case.
+
+grok vs chatgpt,grok vs chatgpt comparison 2026,chatgpt vs grok,grok vs chatgpt which is better,grok vs chatgpt differences 2026,grok 4 vs chatgpt,grok vs gpt-5,xai vs openai
+
+Grok vs ChatGPT: The Complete 2026 Comparison Guide
+
+────────────────────────────────────────────────────────────
+[26]  ChatGPT Prompt Generator
+URL  : https://promptbuilder.cc/chatgpt-prompt-generator
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+────────────────────────────────────────────────────────────
+[27]  Llama Prompt Generator
+URL  : https://promptbuilder.cc/llama-prompt-generator
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+width=device-width, initial-scale=1
+
+────────────────────────────────────────────────────────────
+[28]  Mistral Prompt Generator
+URL  : https://promptbuilder.cc/mistral-prompt-generator
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+width=device-width, initial-scale=1
+
+────────────────────────────────────────────────────────────
+[29]  DeepSeek Prompt Generator
+URL  : https://promptbuilder.cc/deepseek-prompt-generator
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+width=device-width, initial-scale=1
+
+────────────────────────────────────────────────────────────
+[30]  Perplexity Prompt Generator
+URL  : https://promptbuilder.cc/perplexity-prompt-generator
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+width=device-width, initial-scale=1
+
+────────────────────────────────────────────────────────────
+[31]  Cohere Prompt Generator
+URL  : https://promptbuilder.cc/cohere-prompt-generator
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+width=device-width, initial-scale=1
+
+────────────────────────────────────────────────────────────
+[32]  Privacy Policy
+URL  : https://promptbuilder.cc/privacy-policy
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://promptbuilder.cc/"},{"@type":"ListItem","position":2,"name":"Privacy Policy","item":"https://promptbuilder.cc/privacy-policy"}]}
+
+prose prose-lg dark:prose-invert max-w-none
+
+width=device-width, initial-scale=1
+
+────────────────────────────────────────────────────────────
+[33]  Terms of Service
+URL  : https://promptbuilder.cc/terms-of-service
+
+── CODE ─────────────────────────────────────────────────────
+text-base-content font-semibold
+
+text-base-content/60 mt-1 text-sm
+
+bg-base-200 hover:bg-base-300 rounded-xl p-4 transition-colors
+
+text-base-content/60 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-6
+
+grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12
+
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://promptbuilder.cc/"},{"@type":"ListItem","position":2,"name":"Terms of Service","item":"https://promptbuilder.cc/terms-of-service"}]}
+
+prose prose-lg dark:prose-invert max-w-none
+
+width=device-width, initial-scale=1
+
+────────────────────────────────────────────────────────────

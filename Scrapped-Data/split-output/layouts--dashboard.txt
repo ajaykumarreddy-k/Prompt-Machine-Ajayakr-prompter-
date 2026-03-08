@@ -1,0 +1,158 @@
+<div class="container">
+    <div class="terminal_toolbar">
+        <div class="butt">
+            <button class="btn btn-color"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+        </div>
+        <p class="user">johndoe@admin: ~</p>
+        <div class="add_tab">
+            +
+        </div>
+    </div>
+    <div class="terminal_body">
+        <div class="terminal_promt">
+            <span class="terminal_user">johndoe@admin:</span>
+            <span class="terminal_location">~</span>
+            <span class="terminal_bling">$</span>
+            <span class="terminal_cursor"></span>
+        </div>
+    </div>
+</div>
+
+── CSS
+
+<div class="container">
+    <div class="container_terminal"></div>
+    <div class="terminal_toolbar">
+        <div class="butt">
+            <button class="btn btn-color"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+        </div>
+        <p class="user">johndoe@admin: ~</p>
+    </div>
+    <div class="terminal_body">
+        <div class="terminal_promt">
+            <span class="terminal_user">johndoe@admin:</span>
+            <span class="terminal_location">~</span>
+            <span class="terminal_bling">$</span>
+            <span class="terminal_cursor"></span>
+        </div>
+    </div>
+</div>
+
+── CSS
+
+cd apps/web
+# or
+cd packages/ui
+# or wherever you want to initialize
+
+cd apps/web
+# or
+cd packages/ui
+# or wherever you want to initialize
+
+cd apps/web
+# or
+cd packages/ui
+# or wherever you want to initialize
+
+npx untitledui@latest init
+
+npx untitledui@latest init
+
+npx untitledui@latest init
+
+{
+  "aliases": {
+    "components": "@workspace/ui/components",
+    "utils": "@workspace/ui/utils",
+    "styles": "@workspace/ui/styles",
+    "hooks": "@workspace/ui/hooks"
+  },
+  "examples": "../../apps/web"
+}
+
+{
+  "aliases": {
+    "components": "@workspace/ui/components",
+    "utils": "@workspace/ui/utils",
+    "styles": "@workspace/ui/styles",
+    "hooks": "@workspace/ui/hooks"
+  },
+  "examples": "../../apps/web"
+}
+
+{
+  "aliases": {
+    "components": "@workspace/ui/components",
+    "utils": "@workspace/ui/utils",
+    "styles": "@workspace/ui/styles",
+    "hooks": "@workspace/ui/hooks"
+  },
+  "examples": "../../apps/web"
+}
+
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@workspace/ui/*": ["./packages/ui/src/*"]
+        }
+    }
+}
+
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@workspace/ui/*": ["./packages/ui/src/*"]
+        }
+    }
+}
+
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@workspace/ui/*": ["./packages/ui/src/*"]
+        }
+    }
+}
+
+@import "tailwindcss";
+...
+/* Adjust paths based on your monorepo structure */
+@source "../**/*.{ts,tsx}";
+
+@import "tailwindcss";
+...
+/* Adjust paths based on your monorepo structure */
+@source "../**/*.{ts,tsx}";
+
+@import "tailwindcss";
+...
+/* Adjust paths based on your monorepo structure */
+@source "../**/*.{ts,tsx}";
+
+npx untitledui@latest add button
+
+npx untitledui@latest add button
+
+npx untitledui@latest add button
+
+[60]  Interactive 3D Workspace Diorama
+URL  : https://freefrontend.com/code/interactive-3d-workspace-diorama-2026-02-16/
+By   : anon
+Tags : HTML36, CSS282, JavaScript218, Bootstrap65, Tailwind CSS78, html canvas api
+
+── HTML
+
+[127]  Staggered Panel Curtain Menu
+URL  : https://freefrontend.com/code/staggered-panel-curtain-menu-2026-02-03/
+By   : anon
+Tags : HTML36, CSS282, JavaScript218, Bootstrap65, Tailwind CSS78, css clip path, css custom property variables, js fullscreen menu, js menus, js staggered animation, css font variable effects
+
+── HTML

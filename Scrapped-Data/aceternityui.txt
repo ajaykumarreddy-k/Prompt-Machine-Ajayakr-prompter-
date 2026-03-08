@@ -1,0 +1,2813 @@
+============================================================
+  Ajay-Akr-Scrapper  —  Scraped Components
+  Sources : https://ui.aceternity.com/templates
+============================================================
+
+[1]  SKIPPED — https://ui.aceternity.com/pricing
+────────────────────────────────────────────────────────────
+
+[2]  SKIPPED — https://ui.aceternity.com
+────────────────────────────────────────────────────────────
+
+[3]  SKIPPED — https://ui.aceternity.com/components
+────────────────────────────────────────────────────────────
+
+[4]  SKIPPED — https://ui.aceternity.com/blocks
+────────────────────────────────────────────────────────────
+
+[5]  SKIPPED — https://ui.aceternity.com/showcase
+────────────────────────────────────────────────────────────
+
+[6]  Changelog
+URL  : https://ui.aceternity.com/changelog
+
+── CODE ─────────────────────────────────────────────────────
+"fade" | "typewriter" | "matrix"
+
+"cover" | "contain" | "fill"
+
+var(--color-blue-500)
+
+npx shadcn@latest add @aceternity-pro [component]
+Copy
+
+npx shadcn@latest add @aceternity-pro [component]
+
+npx shadcn@latest add @aceternity-pro/bento-grid-example-three
+Copy
+
+npx shadcn@latest add @aceternity-pro/bento-grid-example-three
+
+────────────────────────────────────────────────────────────
+[7]  Install Next.js
+URL  : https://ui.aceternity.com/docs/install-nextjs
+
+── CODE ─────────────────────────────────────────────────────
+npx create-next-app@latest
+
+npx create-next-app@latest
+
+What is your project named? my-app
+Would you like to use TypeScript? No / Yes
+Would you like to use ESLint? No / Yes
+Would you like to use Tailwind CSS? No / Yes
+Would you like to use `src/` directory? No / Yes
+Would you like to use App Router? (recommended) No / Yes
+Would you like to customize the default import alias (@/*)? No / Yes
+What import alias would you like configured? @/*
+ Copy
+
+What is your project named? my-app
+Would you like to use TypeScript? No / Yes
+Would you like to use ESLint? No / Yes
+Would you like to use Tailwind CSS? No / Yes
+Would you like to use `src/` directory? No / Yes
+Would you like to use App Router? (recommended) No / Yes
+Would you like to customize the default import alias (@/*)? No / Yes
+What import alias would you like configured? @/*
+
+cd my-app
+npm run devCopy
+
+cd my-app
+npm run dev
+
+────────────────────────────────────────────────────────────
+[8]  Install Tailwind CSS
+URL  : https://ui.aceternity.com/docs/install-tailwindcss
+
+── CODE ─────────────────────────────────────────────────────
+npx create-next-app@latest my-project --typescript --eslint
+cd my-project
+
+npx create-next-app@latest my-project --typescript --eslint
+cd my-project
+
+npm install tailwindcss @tailwindcss/postcss @tailwindcss/cli
+
+npm install tailwindcss @tailwindcss/postcss @tailwindcss/cli
+
+@import "tailwindcss";
+ 
+@theme inline {
+  /* Configure your theme variables here */
+  --font-display: "Inter", "sans-serif";
+  --color-primary-500: oklch(0.84 0.18 117.33);
+  --spacing: 0.25rem;
+}Copy
+
+@import "tailwindcss";
+ 
+@theme inline {
+  /* Configure your theme variables here */
+  --font-display: "Inter", "sans-serif";
+  --color-primary-500: oklch(0.84 0.18 117.33);
+  --spacing: 0.25rem;
+}
+
+module.exports = {
+  plugins: {
+    "@tailwindcss/postcss": {},
+  },
+};CopySelect Language
+
+module.exports = {
+  plugins: {
+    "@tailwindcss/postcss": {},
+  },
+};
+
+export default function Home() {
+  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+}CopySelect Language
+
+export default function Home() {
+  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+}
+
+npx create-next-app@latest my-project --typescript --eslint
+cd my-project
+
+npx create-next-app@latest my-project --typescript --eslint
+cd my-project
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+ 
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};CopySelect Language
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+ 
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;Copy
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+export default function Home() {
+  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+}CopySelect Language
+
+export default function Home() {
+  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+}
+
+@import "tailwindcss"
+
+/* Custom utilities */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+ 
+/* Custom variants */
+@variant dark (&:where(.dark, .dark *));
+ 
+/* Add plugins */
+@plugin "@tailwindcss/typography";Copy
+
+/* Custom utilities */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+ 
+/* Custom variants */
+@variant dark (&:where(.dark, .dark *));
+ 
+/* Add plugins */
+@plugin "@tailwindcss/typography";
+
+────────────────────────────────────────────────────────────
+[9]  Add Utilities
+URL  : https://ui.aceternity.com/docs/add-utilities
+
+── CODE ─────────────────────────────────────────────────────
+npm i motion clsx tailwind-mergeCopy
+
+npm i motion clsx tailwind-merge
+
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+ 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}CopySelect Language
+
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+ 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
+"dependencies": {
+    "framer-motion": "^12.0.0-alpha.1",
+    "next": "15.0.3",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "tailwind-merge": "^2.5.5"
+  },
+  "overrides": {
+    "framer-motion": {
+      "react": "19.0.0-rc-66855b96-20241106",
+      "react-dom": "19.0.0-rc-66855b96-20241106"
+    }
+  },
+ Copy
+
+"dependencies": {
+    "framer-motion": "^12.0.0-alpha.1",
+    "next": "15.0.3",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "tailwind-merge": "^2.5.5"
+  },
+  "overrides": {
+    "framer-motion": {
+      "react": "19.0.0-rc-66855b96-20241106",
+      "react-dom": "19.0.0-rc-66855b96-20241106"
+    }
+  },
+
+"dependencies": {
+    "motion": "^12.0.0-alpha.1",
+    "next": "15.0.3",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "tailwind-merge": "^2.5.5"
+  },
+  "overrides": {
+    "motion": {
+      "react": "19.0.0-rc-66855b96-20241106",
+      "react-dom": "19.0.0-rc-66855b96-20241106"
+    }
+  },
+ Copy
+
+"dependencies": {
+    "motion": "^12.0.0-alpha.1",
+    "next": "15.0.3",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "tailwind-merge": "^2.5.5"
+  },
+  "overrides": {
+    "motion": {
+      "react": "19.0.0-rc-66855b96-20241106",
+      "react-dom": "19.0.0-rc-66855b96-20241106"
+    }
+  },
+
+────────────────────────────────────────────────────────────
+[10]  CLI
+URL  : https://ui.aceternity.com/docs/cli
+
+── CODE ─────────────────────────────────────────────────────
+bash npx shadcn@latest init
+
+Which style would you like to use? › New York
+Which color would you like to use as base color? › Zinc
+Do you want to use CSS variables for colors? › no / yesCopy
+
+Which style would you like to use? › New York
+Which color would you like to use as base color? › Zinc
+Do you want to use CSS variables for colors? › no / yes
+
+Usage: shadcn init [options] [components...]
+ 
+initialize your project and install dependencies
+ 
+Arguments:
+  components         the components to add or a url to the component.
+ 
+Options:
+  -d, --defaults    use default values i.e new-york, zinc and css variables. (default: false)
+  -f, --force       force overwrite of existing components.json. (default: false)
+  -y, --yes         skip confirmation prompt. (default: false)
+  -c, --cwd <cwd>   the working directory. defaults to the current directory.
+  -h, --help       display help for commandCopy
+
+Usage: shadcn init [options] [components...]
+ 
+initialize your project and install dependencies
+ 
+Arguments:
+  components         the components to add or a url to the component.
+ 
+Options:
+  -d, --defaults    use default values i.e new-york, zinc and css variables. (default: false)
+  -f, --force       force overwrite of existing components.json. (default: false)
+  -y, --yes         skip confirmation prompt. (default: false)
+  -c, --cwd <cwd>   the working directory. defaults to the current directory.
+  -h, --help       display help for command
+
+bash npx shadcn@latest add [component]
+
+Usage: shadcn add [options] [components...]
+ 
+add a component to your project
+ 
+Arguments:
+  components         the components to add or a url to the component.
+ 
+Options:
+  -y, --yes          skip confirmation prompt. (default: false)
+  -o, --overwrite    overwrite existing files. (default: false)
+  -c, --cwd <cwd>    the working directory. defaults to the current directory.
+  -p, --path <path>  the path to add the component to.
+  -h, --help         display help for commandCopy
+
+Usage: shadcn add [options] [components...]
+ 
+add a component to your project
+ 
+Arguments:
+  components         the components to add or a url to the component.
+ 
+Options:
+  -y, --yes          skip confirmation prompt. (default: false)
+  -o, --overwrite    overwrite existing files. (default: false)
+  -c, --cwd <cwd>    the working directory. defaults to the current directory.
+  -p, --path <path>  the path to add the component to.
+  -h, --help         display help for command
+
+bash npx shadcn@latest init -c ./apps/www
+
+bash npx shadcn@latest add alert-dialog -c ./apps/www
+
+bash npx shadcn@latest add https://ui.aceternity.com/registry/[component].json
+
+bash npx shadcn@latest add https://ui.aceternity.com/registry/bento-grid.json
+
+{
+  "registries": {
+    "@aceternity": "https://ui.aceternity.com/registry/{name}.json"
+  }
+}Copy
+
+{
+  "registries": {
+    "@aceternity": "https://ui.aceternity.com/registry/{name}.json"
+  }
+}
+
+bash npx shadcn@latest add @aceternity/[component]
+
+bash npx shadcn@latest add @aceternity/3d-marquee
+
+bash npx shadcn@latest view @aceternity
+
+bash npx shadcn@latest search @aceternity -q "card"
+
+bash npx shadcn@latest list @aceternity
+
+{
+  "registries": {
+    "@aceternity": "https://ui.aceternity.com/registry/{name}.json"
+  }
+}Copy
+
+{
+  "registries": {
+    "@aceternity": "https://ui.aceternity.com/registry/{name}.json"
+  }
+}
+
+bash npx shadcn@latest mcp init
+
+bash npx shadcn@latest mcp init --client cursor
+
+────────────────────────────────────────────────────────────
+[11]  SKIPPED — https://ui.aceternity.com/templates/nodus-agent-template
+────────────────────────────────────────────────────────────
+
+[12]  SKIPPED — https://ui.aceternity.com/templates/agenforce-marketing-template
+────────────────────────────────────────────────────────────
+
+[13]  SKIPPED — https://ui.aceternity.com/templates/ai-saas-template
+────────────────────────────────────────────────────────────
+
+[14]  SKIPPED — https://ui.aceternity.com/templates/startup-landing-page-template
+────────────────────────────────────────────────────────────
+
+[15]  SKIPPED — https://ui.aceternity.com/templates/proactiv-marketing-template
+────────────────────────────────────────────────────────────
+
+[16]  SKIPPED — https://ui.aceternity.com/templates/minimal-portfolio-template
+────────────────────────────────────────────────────────────
+
+[17]  SKIPPED — https://ui.aceternity.com/templates/cryptgen-marketing-aceternity
+────────────────────────────────────────────────────────────
+
+[18]  SKIPPED — https://ui.aceternity.com/templates/playful-marketing-aceternity
+────────────────────────────────────────────────────────────
+
+[19]  SKIPPED — https://ui.aceternity.com/templates/agenlabs-agency-template
+────────────────────────────────────────────────────────────
+
+[20]  SKIPPED — https://ui.aceternity.com/templates/devpro-portfolio-template
+────────────────────────────────────────────────────────────
+
+[21]  SKIPPED — https://ui.aceternity.com/templates/foxtrot-marketing-template
+────────────────────────────────────────────────────────────
+
+[22]  SKIPPED — https://ui.aceternity.com/templates/sidefolio-portfolio-template
+────────────────────────────────────────────────────────────
+
+[23]  SKIPPED — https://ui.aceternity.com/templates/schedule-marketing-template
+────────────────────────────────────────────────────────────
+
+[24]  Hero Sections
+URL  : https://ui.aceternity.com/blocks/hero-sections
+
+── CODE ─────────────────────────────────────────────────────
+npm i @tabler/icons-react react-fast-marqueeCopy
+
+npm i @tabler/icons-react react-fast-marquee
+
+npm i react-rough-notationCopy
+
+npm i react-rough-notation
+
+────────────────────────────────────────────────────────────
+[25]  SKIPPED — https://ui.aceternity.com/blocks/shaders
+────────────────────────────────────────────────────────────
+
+[26]  SKIPPED — https://ui.aceternity.com/blocks/illustrations
+────────────────────────────────────────────────────────────
+
+[27]  Logo Clouds
+URL  : https://ui.aceternity.com/blocks/logo-clouds
+
+── CODE ─────────────────────────────────────────────────────
+npm i react-fast-marqueeCopy
+
+npm i react-fast-marquee
+
+────────────────────────────────────────────────────────────
+[28]  SKIPPED — https://ui.aceternity.com/blocks/bento-grids
+────────────────────────────────────────────────────────────
+
+[29]  SKIPPED — https://ui.aceternity.com/blocks/cta-sections
+────────────────────────────────────────────────────────────
+
+[30]  Testimonials
+URL  : https://ui.aceternity.com/blocks/testimonials
+
+── CODE ─────────────────────────────────────────────────────
+npm i @headlessui/reactCopy
+
+npm i @headlessui/react
+
+npm i react-fast-marqueeCopy
+
+npm i react-fast-marquee
+
+npm i react-iconsCopy
+
+────────────────────────────────────────────────────────────
+[31]  Feature Sections
+URL  : https://ui.aceternity.com/blocks/feature-sections
+
+── CODE ─────────────────────────────────────────────────────
+npm i shadcn@latest add @aceternity/dotted-glow-background
+
+────────────────────────────────────────────────────────────
+[32]  SKIPPED — https://ui.aceternity.com/blocks/pricing-sections
+────────────────────────────────────────────────────────────
+
+[33]  SKIPPED — https://ui.aceternity.com/blocks/cards
+────────────────────────────────────────────────────────────
+
+[34]  SKIPPED — https://ui.aceternity.com/blocks/navbars
+────────────────────────────────────────────────────────────
+
+[35]  SKIPPED — https://ui.aceternity.com/blocks/footers
+────────────────────────────────────────────────────────────
+
+[36]  Login and Signup Sections
+URL  : https://ui.aceternity.com/blocks/login-and-signup-sections
+
+── CODE ─────────────────────────────────────────────────────
+bash npm i motion @radix-ui/react-label
+
+────────────────────────────────────────────────────────────
+[37]  SKIPPED — https://ui.aceternity.com/blocks/contact-sections
+────────────────────────────────────────────────────────────
+
+[38]  SKIPPED — https://ui.aceternity.com/blocks/blog-sections
+────────────────────────────────────────────────────────────
+
+[39]  Blog Content Sections
+URL  : https://ui.aceternity.com/blocks/blog-content-sections
+
+── CODE ─────────────────────────────────────────────────────
+npm i react-markdown date-fnsCopy
+
+npm i react-markdown date-fns
+
+────────────────────────────────────────────────────────────
+[40]  SKIPPED — https://ui.aceternity.com/blocks/faqs
+────────────────────────────────────────────────────────────
+
+[41]  SKIPPED — https://ui.aceternity.com/blocks/sidebars
+────────────────────────────────────────────────────────────
+
+[42]  SKIPPED — https://ui.aceternity.com/blocks/stats-sections
+────────────────────────────────────────────────────────────
+
+[43]  SKIPPED — https://ui.aceternity.com/blocks/backgrounds
+────────────────────────────────────────────────────────────
+
+[44]  SKIPPED — https://ui.aceternity.com/blocks/text-animations
+────────────────────────────────────────────────────────────
+
+[45]  Webcam Pixel Grid
+URL  : https://ui.aceternity.com/components/webcam-pixel-grid
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/webcam-pixel-grid-demo
+
+npx shadcn@latest add @aceternity/webcam-pixel-gridCopy
+
+npx shadcn@latest add @aceternity/webcam-pixel-grid
+
+────────────────────────────────────────────────────────────
+[46]  Images Badge
+URL  : https://ui.aceternity.com/components/images-badge
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/images-badge-demo
+
+npx shadcn@latest add @aceternity/images-badgeCopy
+
+npx shadcn@latest add @aceternity/images-badge
+
+npx shadcn@latest add @aceternity/images-badge-demo
+
+npx shadcn@latest add @aceternity/images-badge-demo-2
+
+npx shadcn@latest add @aceternity/images-badge-demo-3
+
+npx shadcn@latest add @aceternity/images-badge-demo-4
+
+────────────────────────────────────────────────────────────
+[47]  Parallax Hero Images
+URL  : https://ui.aceternity.com/components/parallax-hero-images
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/parallax-hero-images-demo
+
+npx shadcn@latest add @aceternity/parallax-hero-imagesCopy
+
+npx shadcn@latest add @aceternity/parallax-hero-images
+
+npx shadcn@latest add @aceternity/parallax-hero-images-edge-focus-demo
+
+────────────────────────────────────────────────────────────
+[48]  Scales
+URL  : https://ui.aceternity.com/components/scales
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/scales-with-image-demo
+
+npx shadcn@latest add @aceternity/scalesCopy
+
+npx shadcn@latest add @aceternity/scales
+
+npx shadcn@latest add @aceternity/scales-horizontal-demo
+
+npx shadcn@latest add @aceternity/scales-vertical-demo
+
+npx shadcn@latest add @aceternity/scales-container-demo
+
+npx shadcn@latest add @aceternity/scales-with-image-demo
+
+"horizontal" | "vertical" | "diagonal"
+
+"horizontal" | "vertical" | "diagonal"
+
+────────────────────────────────────────────────────────────
+[49]  Dotted Glow Background
+URL  : https://ui.aceternity.com/components/dotted-glow-background
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/dotted-glow-background-demo
+
+npx shadcn@latest add @aceternity/dotted-glow-backgroundCopy
+
+npx shadcn@latest add @aceternity/dotted-glow-background
+
+npx shadcn@latest add @aceternity/dotted-glow-background-demo-2
+
+"rgba(0, 170, 255, 0.85)"
+
+────────────────────────────────────────────────────────────
+[50]  Background Ripple Effect
+URL  : https://ui.aceternity.com/components/background-ripple-effect
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/background-ripple-effect-demo
+
+npx shadcn@latest add @aceternity/background-ripple-effectCopy
+
+npx shadcn@latest add @aceternity/background-ripple-effect
+
+@theme inline {
+  --animate-cell-ripple: cell-ripple var(--duration, 200ms) ease-out none 1
+  var(--delay, 0ms);
+ 
+  @keyframes cell-ripple {
+    0% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 0.4;
+    }
+  }
+}Copy
+
+@theme inline {
+  --animate-cell-ripple: cell-ripple var(--duration, 200ms) ease-out none 1
+  var(--delay, 0ms);
+ 
+  @keyframes cell-ripple {
+    0% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 0.4;
+    }
+  }
+}
+
+{ row: number; col: number } | null
+
+(row: number, col: number) => void
+
+────────────────────────────────────────────────────────────
+[51]  Sparkles
+URL  : https://ui.aceternity.com/components/sparkles
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/sparkles-demo
+
+npx shadcn@latest add @aceternity/sparklesCopy
+
+npx shadcn@latest add @aceternity/sparkles
+
+npx shadcn@latest add @aceternity/sparkles-fullpage-demo
+
+────────────────────────────────────────────────────────────
+[52]  Background Gradient
+URL  : https://ui.aceternity.com/components/background-gradient
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/background-gradient-demo
+
+npx shadcn@latest add @aceternity/background-gradientCopy
+
+npx shadcn@latest add @aceternity/background-gradient
+
+────────────────────────────────────────────────────────────
+[53]  Background Gradient Animation
+URL  : https://ui.aceternity.com/components/background-gradient-animation
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/background-gradient-animation-demo
+
+npx shadcn@latest add @aceternity/background-gradient-animationCopy
+
+npx shadcn@latest add @aceternity/background-gradient-animation
+
+@import "tailwindcss";
+ 
+@theme inline {
+  --animate-first: moveVertical 30s ease infinite;
+  --animate-second: moveInCircle 20s reverse infinite;
+  --animate-third: moveInCircle 40s linear infinite;
+  --animate-fourth: moveHorizontal 40s ease infinite;
+  --animate-fifth: moveInCircle 20s ease infinite;
+}
+ 
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+}
+ 
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+ 
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}Copy
+
+@import "tailwindcss";
+ 
+@theme inline {
+  --animate-first: moveVertical 30s ease infinite;
+  --animate-second: moveInCircle 20s reverse infinite;
+  --animate-third: moveInCircle 40s linear infinite;
+  --animate-fourth: moveHorizontal 40s ease infinite;
+  --animate-fifth: moveInCircle 20s ease infinite;
+}
+ 
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+}
+ 
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+ 
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+────────────────────────────────────────────────────────────
+[54]  Wavy Background
+URL  : https://ui.aceternity.com/components/wavy-background
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/wavy-background-demo
+
+npx shadcn@latest add @aceternity/wavy-backgroundCopy
+
+npx shadcn@latest add @aceternity/wavy-background
+
+────────────────────────────────────────────────────────────
+[55]  Background Boxes
+URL  : https://ui.aceternity.com/components/background-boxes
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/background-boxes-demo
+
+npx shadcn@latest add @aceternity/background-boxesCopy
+
+npx shadcn@latest add @aceternity/background-boxes
+
+────────────────────────────────────────────────────────────
+[56]  Background Beams
+URL  : https://ui.aceternity.com/components/background-beams
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/background-beams-demo
+
+npx shadcn@latest add @aceternity/background-beamsCopy
+
+npx shadcn@latest add @aceternity/background-beams
+
+────────────────────────────────────────────────────────────
+[57]  Background Beams With Collision
+URL  : https://ui.aceternity.com/components/background-beams-with-collision
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/background-beams-with-collision-demo
+
+npx shadcn@latest add @aceternity/background-beams-with-collisionCopy
+
+npx shadcn@latest add @aceternity/background-beams-with-collision
+
+React.RefObject<HTMLDivElement>
+
+React.RefObject<HTMLDivElement>
+
+────────────────────────────────────────────────────────────
+[58]  Background Lines
+URL  : https://ui.aceternity.com/components/background-lines
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/background-lines-demo
+
+npx shadcn@latest add @aceternity/background-linesCopy
+
+npx shadcn@latest add @aceternity/background-lines
+
+────────────────────────────────────────────────────────────
+[59]  Aurora Background
+URL  : https://ui.aceternity.com/components/aurora-background
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/aurora-background-demo
+
+npx shadcn@latest add @aceternity/aurora-backgroundCopy
+
+npx shadcn@latest add @aceternity/aurora-background
+
+@import "tailwindcss";
+ 
+@theme inline {
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
+    }
+  }
+}Copy
+
+@import "tailwindcss";
+ 
+@theme inline {
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
+    }
+  }
+}
+
+────────────────────────────────────────────────────────────
+[60]  Meteor Effect
+URL  : https://ui.aceternity.com/components/meteors
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/meteors-demo
+
+npx shadcn@latest add @aceternity/meteorsCopy
+
+npx shadcn@latest add @aceternity/meteors
+
+@theme inline {
+  --animate-meteor-effect: meteor 5s linear infinite;
+ 
+  @keyframes meteor {
+    0% {
+      transform: rotate(215deg) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(215deg) translateX(-500px);
+      opacity: 0;
+    }
+  }
+}Copy
+
+@theme inline {
+  --animate-meteor-effect: meteor 5s linear infinite;
+ 
+  @keyframes meteor {
+    0% {
+      transform: rotate(215deg) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(215deg) translateX(-500px);
+      opacity: 0;
+    }
+  }
+}
+
+────────────────────────────────────────────────────────────
+[61]  Glowing Background Stars Card
+URL  : https://ui.aceternity.com/components/glowing-stars-effect
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/glowing-stars-demo
+
+npx shadcn@latest add @aceternity/glowing-starsCopy
+
+npx shadcn@latest add @aceternity/glowing-stars
+
+────────────────────────────────────────────────────────────
+[62]  Shooting Stars and Stars Background
+URL  : https://ui.aceternity.com/components/shooting-stars-and-stars-background
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/shooting-stars-and-stars-background-demo
+
+npx shadcn@latest add @aceternity/shooting-stars stars-backgroundCopy
+
+npx shadcn@latest add @aceternity/shooting-stars stars-background
+
+────────────────────────────────────────────────────────────
+[63]  Vortex Background
+URL  : https://ui.aceternity.com/components/vortex
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/vortex-demo
+
+npx shadcn@latest add @aceternity/vortexCopy
+
+npx shadcn@latest add @aceternity/vortex
+
+npx shadcn@latest add @aceternity/vortex-demo-2
+
+────────────────────────────────────────────────────────────
+[64]  Spotlight
+URL  : https://ui.aceternity.com/components/spotlight
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/spotlight-demo
+
+npx shadcn@latest add @aceternity/spotlightCopy
+
+npx shadcn@latest add @aceternity/spotlight
+
+@import "tailwindcss";
+ 
+@theme inline {
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+}
+ 
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}Copy
+
+@import "tailwindcss";
+ 
+@theme inline {
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+}
+ 
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
+────────────────────────────────────────────────────────────
+[65]  Spotlight New
+URL  : https://ui.aceternity.com/components/spotlight-new
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/spotlight-new-demo
+
+npx shadcn@latest add @aceternity/spotlight-newCopy
+
+npx shadcn@latest add @aceternity/spotlight-new
+
+"radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(210, 100%, 85%, .08) 0, hsla(210, 100%, 55%, .02) 50%, hsla(210, 100%, 45%, 0) 80%)"
+
+"radial-gradient(50% 50% at 50% 50%, hsla(210, 100%, 85%, .06) 0, hsla(210, 100%, 55%, .02) 80%, transparent 100%)"
+
+"radial-gradient(50% 50% at 50% 50%, hsla(210, 100%, 85%, .04) 0, hsla(210, 100%, 45%, .02) 80%, transparent 100%)"
+
+────────────────────────────────────────────────────────────
+[66]  Canvas Reveal Effect
+URL  : https://ui.aceternity.com/components/canvas-reveal-effect
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/canvas-reveal-effect-demo
+
+npx shadcn@latest add @aceternity/canvas-reveal-effectCopy
+
+npx shadcn@latest add @aceternity/canvas-reveal-effect
+
+npx shadcn@latest add @aceternity/canvas-reveal-effect-demo-3
+
+npx shadcn@latest add @aceternity/canvas-reveal-effect-demo-2
+
+────────────────────────────────────────────────────────────
+[67]  SVG Mask Effect
+URL  : https://ui.aceternity.com/components/svg-mask-effect
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/svg-mask-effect-demo
+
+npx shadcn@latest add @aceternity/svg-mask-effectCopy
+
+npx shadcn@latest add @aceternity/svg-mask-effect
+
+<svg
+  width="1298"
+  height="1298"
+  viewBox="0 0 1298 1298"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle cx="649" cy="649" r="649" fill="black" />
+</svg>CopySelect Language
+
+<svg
+  width="1298"
+  height="1298"
+  viewBox="0 0 1298 1298"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle cx="649" cy="649" r="649" fill="black" />
+</svg>
+
+────────────────────────────────────────────────────────────
+[68]  Tracing Beam
+URL  : https://ui.aceternity.com/components/tracing-beam
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/tracing-beam-demo
+
+npx shadcn@latest add @aceternity/tracing-beamCopy
+
+npx shadcn@latest add @aceternity/tracing-beam
+
+────────────────────────────────────────────────────────────
+[69]  Lamp Section Header
+URL  : https://ui.aceternity.com/components/lamp-effect
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/lamp-demo
+
+npx shadcn@latest add @aceternity/lampCopy
+
+npx shadcn@latest add @aceternity/lamp
+
+────────────────────────────────────────────────────────────
+[70]  Grid and Dot Backgrounds
+URL  : https://ui.aceternity.com/components/grid-and-dot-backgrounds
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/grid-background-demo
+
+npm i motion clsx tailwind-mergeCopy
+
+npm i motion clsx tailwind-merge
+
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+ 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}CopySelect Language
+
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+ 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
+npx shadcn@latest add @aceternity/grid-background-demo
+
+npx shadcn@latest add @aceternity/grid-small-background-demo
+
+npx shadcn@latest add @aceternity/dot-background-demo
+
+────────────────────────────────────────────────────────────
+[71]  Glowing Effect
+URL  : https://ui.aceternity.com/components/glowing-effect
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/glowing-effect-demo
+
+npx shadcn@latest add @aceternity/glowing-effectCopy
+
+npx shadcn@latest add @aceternity/glowing-effect
+
+npx shadcn@latest add @aceternity/glowing-effect-demo-2
+
+────────────────────────────────────────────────────────────
+[72]  Google Gemini Effect
+URL  : https://ui.aceternity.com/components/google-gemini-effect
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/google-gemini-effect-demo
+
+npx shadcn@latest add @aceternity/google-gemini-effectCopy
+
+npx shadcn@latest add @aceternity/google-gemini-effect
+
+────────────────────────────────────────────────────────────
+[73]  Keyboard
+URL  : https://ui.aceternity.com/components/keyboard
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/keyboard-demo
+
+npx shadcn@latest add @aceternity/keyboardCopy
+
+npx shadcn@latest add @aceternity/keyboard
+
+npx shadcn@latest add @aceternity/keyboard-demo
+
+npx shadcn@latest add @aceternity/keyboard-no-sound-demo
+
+npx shadcn@latest add @aceternity/keyboard-with-preview-demo
+
+────────────────────────────────────────────────────────────
+[74]  Tooltip Card
+URL  : https://ui.aceternity.com/components/tooltip-card
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/tooltip-card-demo
+
+npx shadcn@latest add @aceternity/tooltip-cardCopy
+
+npx shadcn@latest add @aceternity/tooltip-card
+
+string | React.ReactNode
+
+────────────────────────────────────────────────────────────
+[75]  ASCII Art
+URL  : https://ui.aceternity.com/components/ascii-art
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/ascii-art-demo
+
+npx shadcn@latest add @aceternity/ascii-artCopy
+
+npx shadcn@latest add @aceternity/ascii-art
+
+npx shadcn@latest add @aceternity/ascii-art-demo-matrix
+
+npx shadcn@latest add @aceternity/ascii-art-demo-typewriter
+
+npx shadcn@latest add @aceternity/ascii-art-demo-blocks
+
+npx shadcn@latest add @aceternity/ascii-art-demo-binary
+
+npx shadcn@latest add @aceternity/ascii-art-demo-dots
+
+npx shadcn@latest add @aceternity/ascii-art-demo-braille
+
+npx shadcn@latest add @aceternity/ascii-art-demo-dense
+
+npx shadcn@latest add @aceternity/ascii-art-demo-circles
+
+npx shadcn@latest add @aceternity/ascii-art-demo-stars
+
+npx shadcn@latest add @aceternity/ascii-art-demo-css-vars
+
+"fade" | "typewriter" | "matrix" | "none"
+
+"cover" | "contain" | "fill"
+
+────────────────────────────────────────────────────────────
+[76]  Pixelated Canvas
+URL  : https://ui.aceternity.com/components/pixelated-canvas
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/pixelated-canvas-demo
+
+npx shadcn@latest add @aceternity/pixelated-canvasCopy
+
+npx shadcn@latest add @aceternity/pixelated-canvas
+
+npx shadcn@latest add @aceternity/pixelated-canvas-demo-2
+
+"repel" | "attract" | "swirl"
+
+"cover" | "contain" | "fill" | "none"
+
+────────────────────────────────────────────────────────────
+[77]  3D Card Effect
+URL  : https://ui.aceternity.com/components/3d-card-effect
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/3d-card-demo
+
+npx shadcn@latest add @aceternity/3d-cardCopy
+
+npx shadcn@latest add @aceternity/3d-card
+
+npx shadcn@latest add @aceternity/3d-card-demo-2
+
+────────────────────────────────────────────────────────────
+[78]  Evervault Card
+URL  : https://ui.aceternity.com/components/evervault-card
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/evervault-card-demo
+
+npx shadcn@latest add @aceternity/evervault-cardCopy
+
+npx shadcn@latest add @aceternity/evervault-card
+
+────────────────────────────────────────────────────────────
+[79]  Card Stack
+URL  : https://ui.aceternity.com/components/card-stack
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/card-stack-demo
+
+npx shadcn@latest add @aceternity/card-stackCopy
+
+npx shadcn@latest add @aceternity/card-stack
+
+Array<{id: number; name: string; designation: string; content: React.ReactNode;}>
+
+────────────────────────────────────────────────────────────
+[80]  Hover Effect
+URL  : https://ui.aceternity.com/components/card-hover-effect
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/card-hover-effect-demo
+
+npx shadcn@latest add @aceternity/card-hover-effectCopy
+
+npx shadcn@latest add @aceternity/card-hover-effect
+
+{title: string, description: string, link: ReactNode}
+
+────────────────────────────────────────────────────────────
+[81]  Wobble Card
+URL  : https://ui.aceternity.com/components/wobble-card
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/wobble-card-demo
+
+npx shadcn@latest add @aceternity/wobble-cardCopy
+
+npx shadcn@latest add @aceternity/wobble-card
+
+────────────────────────────────────────────────────────────
+[82]  Expandable Cards
+URL  : https://ui.aceternity.com/components/expandable-card
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/expandable-card-demo-standard
+
+npx shadcn@latest add @aceternity/expandable-card-demo-standard @aceternity/expandable-card-demo-gridCopy
+
+npx shadcn@latest add @aceternity/expandable-card-demo-standard @aceternity/expandable-card-demo-grid
+
+import React, { useEffect } from "react";
+ 
+export const useOutsideClick = (
+  ref: React.RefObject<HTMLDivElement>,
+  callback: Function
+) => {
+  useEffect(() => {
+    const listener = (event: any) => {
+      if (!ref.current || ref.current.contains(event.target)) {
+        return;
+      }
+      callback(event);
+    };
+ 
+    document.addEventListener("mousedown", listener);
+    document.addEventListener("touchstart", listener);
+ 
+    return () => {
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
+    };
+  }, [ref, callback]);
+};CopySelect Language
+
+import React, { useEffect } from "react";
+ 
+export const useOutsideClick = (
+  ref: React.RefObject<HTMLDivElement>,
+  callback: Function
+) => {
+  useEffect(() => {
+    const listener = (event: any) => {
+      if (!ref.current || ref.current.contains(event.target)) {
+        return;
+      }
+      callback(event);
+    };
+ 
+    document.addEventListener("mousedown", listener);
+    document.addEventListener("touchstart", listener);
+ 
+    return () => {
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
+    };
+  }, [ref, callback]);
+};
+
+npx shadcn@latest add @aceternity/expandable-card-demo-standard
+
+npx shadcn@latest add @aceternity/expandable-card-demo-grid
+
+────────────────────────────────────────────────────────────
+[83]  Card Spotlight
+URL  : https://ui.aceternity.com/components/card-spotlight
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/card-spotlight-demo
+
+npx shadcn@latest add @aceternity/card-spotlightCopy
+
+npx shadcn@latest add @aceternity/card-spotlight
+
+────────────────────────────────────────────────────────────
+[84]  Focus Cards
+URL  : https://ui.aceternity.com/components/focus-cards
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/focus-cards-demo
+
+npx shadcn@latest add @aceternity/focus-cardsCopy
+
+npx shadcn@latest add @aceternity/focus-cards
+
+React.Dispatch<React.SetStateAction<number | null>>
+
+────────────────────────────────────────────────────────────
+[85]  Infinite Moving Cards
+URL  : https://ui.aceternity.com/components/infinite-moving-cards
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/infinite-moving-cards-demo
+
+npx shadcn@latest add @aceternity/infinite-moving-cardsCopy
+
+npx shadcn@latest add @aceternity/infinite-moving-cards
+
+@import "tailwindcss";
+ 
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+ 
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}Copy
+
+@import "tailwindcss";
+ 
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+ 
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}
+
+{ quote: string; name: string; title: string; }[]
+
+"fast" | "normal" | "slow"
+
+────────────────────────────────────────────────────────────
+[86]  Draggable Card
+URL  : https://ui.aceternity.com/components/draggable-card
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/draggable-card-demo-2
+
+npx shadcn@latest add @aceternity/draggable-cardCopy
+
+npx shadcn@latest add @aceternity/draggable-card
+
+npx shadcn@latest add @aceternity/draggable-card-demo-2
+
+npx shadcn@latest add @aceternity/draggable-card-demo-3
+
+npx shadcn@latest add @aceternity/draggable-card-demo
+
+────────────────────────────────────────────────────────────
+[87]  Comet Card
+URL  : https://ui.aceternity.com/components/comet-card
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/comet-card-demo
+
+npx shadcn@latest add @aceternity/comet-cardCopy
+
+npx shadcn@latest add @aceternity/comet-card
+
+────────────────────────────────────────────────────────────
+[88]  Glare Card
+URL  : https://ui.aceternity.com/components/glare-card
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/glare-card-demo
+
+npx shadcn@latest add @aceternity/glare-cardCopy
+
+npx shadcn@latest add @aceternity/glare-card
+
+npx shadcn@latest add @aceternity/glare-card-demo-2
+
+────────────────────────────────────────────────────────────
+[89]  Direction Aware Hover
+URL  : https://ui.aceternity.com/components/direction-aware-hover
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/direction-aware-hover-demo
+
+npx shadcn@latest add @aceternity/direction-aware-hoverCopy
+
+npx shadcn@latest add @aceternity/direction-aware-hover
+
+────────────────────────────────────────────────────────────
+[90]  Parallax Grid Scroll
+URL  : https://ui.aceternity.com/components/parallax-scroll
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/parallax-scroll-demo
+
+npx shadcn@latest add @aceternity/parallax-scroll parallax-scroll-2Copy
+
+npx shadcn@latest add @aceternity/parallax-scroll parallax-scroll-2
+
+────────────────────────────────────────────────────────────
+[91]  Sticky Scroll Reveal
+URL  : https://ui.aceternity.com/components/sticky-scroll-reveal
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/sticky-scroll-reveal-demo
+
+npx shadcn@latest add @aceternity/sticky-scroll-revealCopy
+
+npx shadcn@latest add @aceternity/sticky-scroll-reveal
+
+Array<{title: string, description: string, content: React.ReactNode}>
+
+────────────────────────────────────────────────────────────
+[92]  Fey.com Macbook Scroll
+URL  : https://ui.aceternity.com/components/macbook-scroll
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/macbook-scroll-demo
+
+npx shadcn@latest add @aceternity/macbook-scrollCopy
+
+npx shadcn@latest add @aceternity/macbook-scroll
+
+────────────────────────────────────────────────────────────
+[93]  Container Scroll Animation
+URL  : https://ui.aceternity.com/components/container-scroll-animation
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/container-scroll-animation-demo
+
+npx shadcn@latest add @aceternity/container-scroll-animationCopy
+
+npx shadcn@latest add @aceternity/container-scroll-animation
+
+string | React.ReactNode
+
+string | React.ReactNode
+
+────────────────────────────────────────────────────────────
+[94]  Hero Parallax
+URL  : https://ui.aceternity.com/components/hero-parallax
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/hero-parallax-demo
+
+npx shadcn@latest add @aceternity/hero-parallaxCopy
+
+npx shadcn@latest add @aceternity/hero-parallax
+
+────────────────────────────────────────────────────────────
+[95]  Canvas Text
+URL  : https://ui.aceternity.com/components/canvas-text
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/canvas-text-demo
+
+npx shadcn@latest add @aceternity/canvas-textCopy
+
+npx shadcn@latest add @aceternity/canvas-text
+
+npx shadcn@latest add @aceternity/canvas-text-demo-2
+
+npx shadcn@latest add @aceternity/canvas-text-demo
+
+"bg-white dark:bg-neutral-950"
+
+["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4", "#ffeaa7", ...]
+
+<CanvasText
+  text="Colorful Text"
+  colors={[
+    "var(--color-blue-500)",
+    "var(--color-sky-500)",
+    "var(--color-violet-500)",
+    "var(--color-teal-500)",
+  ]}
+/>CopySelect Language
+
+<CanvasText
+  text="Colorful Text"
+  colors={[
+    "var(--color-blue-500)",
+    "var(--color-sky-500)",
+    "var(--color-violet-500)",
+    "var(--color-teal-500)",
+  ]}
+/>
+
+<CanvasText
+  text="Dark Mode Ready"
+  backgroundClassName="bg-white dark:bg-neutral-950"
+/>CopySelect Language
+
+<CanvasText
+  text="Dark Mode Ready"
+  backgroundClassName="bg-white dark:bg-neutral-950"
+/>
+
+────────────────────────────────────────────────────────────
+[96]  Encrypted Text
+URL  : https://ui.aceternity.com/components/encrypted-text
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/encrypted-text-demo-2
+
+npx shadcn@latest add @aceternity/encrypted-textCopy
+
+npx shadcn@latest add @aceternity/encrypted-text
+
+npx shadcn@latest add @aceternity/encrypted-text-demo
+
+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-={}[];:,.<>/?"
+
+────────────────────────────────────────────────────────────
+[97]  Layout Text Flip
+URL  : https://ui.aceternity.com/components/layout-text-flip
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/layout-text-flip-demo
+
+npx shadcn@latest add @aceternity/layout-text-flipCopy
+
+npx shadcn@latest add @aceternity/layout-text-flip
+
+["Landing Pages", "Component Blocks", "Page Sections", "3D Shaders"]
+
+────────────────────────────────────────────────────────────
+[98]  Colourful Text
+URL  : https://ui.aceternity.com/components/colourful-text
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/colourful-text-demo
+
+npx shadcn@latest add @aceternity/colourful-textCopy
+
+npx shadcn@latest add @aceternity/colourful-text
+
+────────────────────────────────────────────────────────────
+[99]  Text Generate Effect
+URL  : https://ui.aceternity.com/components/text-generate-effect
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/text-generate-effect-demo
+
+npx shadcn@latest add @aceternity/text-generate-effectCopy
+
+npx shadcn@latest add @aceternity/text-generate-effect
+
+────────────────────────────────────────────────────────────
+[100]  Typewriter Effect
+URL  : https://ui.aceternity.com/components/typewriter-effect
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/typewriter-effect-demo-1
+
+npx shadcn@latest add @aceternity/typewriter-effectCopy
+
+npx shadcn@latest add @aceternity/typewriter-effect
+
+npx shadcn@latest add @aceternity/typewriter-effect-demo-2
+
+Array<{text: string; className: string;}>
+
+────────────────────────────────────────────────────────────
+[101]  Flip Words
+URL  : https://ui.aceternity.com/components/flip-words
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/flip-words-demo
+
+npx shadcn@latest add @aceternity/flip-wordsCopy
+
+npx shadcn@latest add @aceternity/flip-words
+
+────────────────────────────────────────────────────────────
+[102]  Text Hover Effect
+URL  : https://ui.aceternity.com/components/text-hover-effect
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/text-hover-effect-demo
+
+npx shadcn@latest add @aceternity/text-hover-effectCopy
+
+npx shadcn@latest add @aceternity/text-hover-effect
+
+────────────────────────────────────────────────────────────
+[103]  Container Text Flip
+URL  : https://ui.aceternity.com/components/container-text-flip
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/container-text-flip-demo
+
+npx shadcn@latest add @aceternity/container-text-flipCopy
+
+npx shadcn@latest add @aceternity/container-text-flip
+
+npx shadcn@latest add @aceternity/container-text-flip-demo
+
+npx shadcn@latest add @aceternity/container-text-flip-demo-2
+
+["better", "modern", "beautiful", "awesome"]
+
+────────────────────────────────────────────────────────────
+[104]  Hero Highlight
+URL  : https://ui.aceternity.com/components/hero-highlight
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/hero-highlight-demo
+
+npx shadcn@latest add @aceternity/hero-highlightCopy
+
+npx shadcn@latest add @aceternity/hero-highlight
+
+────────────────────────────────────────────────────────────
+[105]  Text Reveal Card
+URL  : https://ui.aceternity.com/components/text-reveal-card
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/text-reveal-card-demo
+
+npx shadcn@latest add @aceternity/text-reveal-cardCopy
+
+npx shadcn@latest add @aceternity/text-reveal-card
+
+────────────────────────────────────────────────────────────
+[106]  Noise Background
+URL  : https://ui.aceternity.com/components/noise-background
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/noise-background-demo
+
+npx shadcn@latest add @aceternity/noise-backgroundCopy
+
+npx shadcn@latest add @aceternity/noise-background
+
+npx shadcn@latest add @aceternity/noise-background-demo-2
+
+["rgb(255, 100, 150)", "rgb(100, 150, 255)", "rgb(255, 200, 100)"]
+
+────────────────────────────────────────────────────────────
+[107]  Tailwind CSS buttons
+URL  : https://ui.aceternity.com/components/tailwindcss-buttons
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/tailwindcss-buttons-demo
+
+npm i motion clsx tailwind-merge react-element-to-jsx-stringCopy
+
+npm i motion clsx tailwind-merge react-element-to-jsx-string
+
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+ 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}CopySelect Language
+
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+ 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      animation: {
+        shimmer: "shimmer 2s linear infinite",
+      },
+      keyframes: {
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
+          },
+        },
+      },
+    },
+  },
+  plugins: [],
+};CopySelect Language
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      animation: {
+        shimmer: "shimmer 2s linear infinite",
+      },
+      keyframes: {
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
+          },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
+
+components/ui/tailwindcss-buttons.tsx
+
+"use client";
+import React from "react";
+import { IconClipboard } from "@tabler/icons-react";
+import { cn } from "@/lib/utils";
+ 
+export const ButtonsCard = ({
+  children,
+  className,
+  onClick,
+}: {
+  children?: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
+}) => {
+  return (
+    <div
+      onClick={onClick}
+      className={cn(
+        "h-60 w-full bg-white rounded-xl border border-neutral-100 dark:bg-black dark:border-white/[0.2] hover:border-neutral-200 group/btn overflow-hidden relative flex items-center justify-center",
+        className
+      )}
+    >
+      <div className="absolute inset-0 dark:bg-dot-white/[0.1] bg-dot-black/[0.1]" />
+      <IconClipboard className="absolute top-2 right-2 text-neutral-300 group-hover/btn:block hidden h-4 w-4 transition duration-200" />
+      <div className="relative z-40">{children}</div>
+    </div>
+  );
+};CopySelect Language
+
+"use client";
+import React from "react";
+import { IconClipboard } from "@tabler/icons-react";
+import { cn } from "@/lib/utils";
+ 
+export const ButtonsCard = ({
+  children,
+  className,
+  onClick,
+}: {
+  children?: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
+}) => {
+  return (
+    <div
+      onClick={onClick}
+      className={cn(
+        "h-60 w-full bg-white rounded-xl border border-neutral-100 dark:bg-black dark:border-white/[0.2] hover:border-neutral-200 group/btn overflow-hidden relative flex items-center justify-center",
+        className
+      )}
+    >
+      <div className="absolute inset-0 dark:bg-dot-white/[0.1] bg-dot-black/[0.1]" />
+      <IconClipboard className="absolute top-2 right-2 text-neutral-300 group-hover/btn:block hidden h-4 w-4 transition duration-200" />
+      <div className="relative z-40">{children}</div>
+    </div>
+  );
+};
+
+────────────────────────────────────────────────────────────
+[108]  Hover Border Gradient
+URL  : https://ui.aceternity.com/components/hover-border-gradient
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/hover-border-gradient-demo
+
+npx shadcn@latest add @aceternity/hover-border-gradientCopy
+
+npx shadcn@latest add @aceternity/hover-border-gradient
+
+React.HTMLAttributes<HTMLElement>
+
+────────────────────────────────────────────────────────────
+[109]  Moving Border
+URL  : https://ui.aceternity.com/components/moving-border
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/moving-border-demo
+
+npx shadcn@latest add @aceternity/moving-borderCopy
+
+npx shadcn@latest add @aceternity/moving-border
+
+────────────────────────────────────────────────────────────
+[110]  Stateful Button
+URL  : https://ui.aceternity.com/components/stateful-button
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/stateful-button-demo
+
+npx shadcn@latest add @aceternity/stateful-buttonCopy
+
+npx shadcn@latest add @aceternity/stateful-button
+
+(event: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>
+
+"button" | "submit" | "reset"
+
+React.ButtonHTMLAttributes<HTMLButtonElement>
+
+────────────────────────────────────────────────────────────
+[111]  Multi Step Loader
+URL  : https://ui.aceternity.com/components/multi-step-loader
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/multi-step-loader-demo
+
+npx shadcn@latest add @aceternity/multi-step-loaderCopy
+
+npx shadcn@latest add @aceternity/multi-step-loader
+
+────────────────────────────────────────────────────────────
+[112]  Loaders
+URL  : https://ui.aceternity.com/components/loader
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/loader-one-demo
+
+npx shadcn@latest add @aceternity/loaderCopy
+
+npx shadcn@latest add @aceternity/loader
+
+npx shadcn@latest add @aceternity/loader-one-demo
+
+npx shadcn@latest add @aceternity/loader-five-demo
+
+npx shadcn@latest add @aceternity/loader-two-demo
+
+npx shadcn@latest add @aceternity/loader-three-demo
+
+npx shadcn@latest add @aceternity/loader-four-demo
+
+────────────────────────────────────────────────────────────
+[113]  Floating Navbar
+URL  : https://ui.aceternity.com/components/floating-navbar
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/floating-navbar-demo
+
+npx shadcn@latest add @aceternity/floating-navbarCopy
+
+npx shadcn@latest add @aceternity/floating-navbar
+
+{name: string, link: string, icon: ReactNode}
+
+────────────────────────────────────────────────────────────
+[114]  Navbar Menu
+URL  : https://ui.aceternity.com/components/navbar-menu
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/navbar-menu-demo
+
+npx shadcn@latest add @aceternity/navbar-menuCopy
+
+npx shadcn@latest add @aceternity/navbar-menu
+
+────────────────────────────────────────────────────────────
+[115]  Sidebar
+URL  : https://ui.aceternity.com/components/sidebar
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/sidebar-demo
+
+npx shadcn@latest add @aceternity/sidebarCopy
+
+npx shadcn@latest add @aceternity/sidebar
+
+npx shadcn@latest add @aceternity/sidebar-demo-2
+
+React.Dispatch<React.SetStateAction<boolean>>
+
+React.Dispatch<React.SetStateAction<boolean>>
+
+React.ComponentProps<typeof motion.div>
+
+React.ComponentProps<typeof motion.div>
+
+React.ComponentProps<"div">
+
+React.JSX.Element | React.ReactNode
+
+React.Dispatch<React.SetStateAction<boolean>>
+
+────────────────────────────────────────────────────────────
+[116]  Floating Dock
+URL  : https://ui.aceternity.com/components/floating-dock
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/floating-dock-demo
+
+npx shadcn@latest add @aceternity/floating-dockCopy
+
+npx shadcn@latest add @aceternity/floating-dock
+
+{ title: string; icon: React.ReactNode; href: string }[]
+
+{ title: string; icon: React.ReactNode; href: string }[]
+
+{ title: string; icon: React.ReactNode; href: string }[]
+
+────────────────────────────────────────────────────────────
+[117]  Animated Tabs
+URL  : https://ui.aceternity.com/components/tabs
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/tabs-demo
+
+npx shadcn@latest add @aceternity/tabsCopy
+
+npx shadcn@latest add @aceternity/tabs
+
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+ 
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}Copy
+
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+ 
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+────────────────────────────────────────────────────────────
+[118]  Resizable Navbar
+URL  : https://ui.aceternity.com/components/resizable-navbar
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/resizable-navbar-demo
+
+npx shadcn@latest add @aceternity/resizable-navbarCopy
+
+npx shadcn@latest add @aceternity/resizable-navbar
+
+Array<{ name: string, link: string }>
+
+"primary" | "secondary" | "dark" | "gradient"
+
+────────────────────────────────────────────────────────────
+[119]  Sticky Banner
+URL  : https://ui.aceternity.com/components/sticky-banner
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/sticky-banner-demo
+
+npx shadcn@latest add @aceternity/sticky-bannerCopy
+
+npx shadcn@latest add @aceternity/sticky-banner
+
+npx shadcn@latest add @aceternity/sticky-banner-demo
+
+────────────────────────────────────────────────────────────
+[120]  Signup Form
+URL  : https://ui.aceternity.com/components/signup-form
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/signup-form-demo
+
+npx shadcn@latest add @aceternity/signup-form-demoCopy
+
+npx shadcn@latest add @aceternity/signup-form-demo
+
+@import "tailwindcss";
+ 
+@theme inline {
+  --shadow-input:
+    0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+}Copy
+
+@import "tailwindcss";
+ 
+@theme inline {
+  --shadow-input:
+    0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+}
+
+React.InputHTMLAttributes<HTMLInputElement>
+
+React.Ref<HTMLInputElement>
+
+React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>
+
+────────────────────────────────────────────────────────────
+[121]  Placeholders And Vanish Input
+URL  : https://ui.aceternity.com/components/placeholders-and-vanish-input
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/placeholders-and-vanish-input-demo
+
+npx shadcn@latest add @aceternity/placeholders-and-vanish-inputCopy
+
+npx shadcn@latest add @aceternity/placeholders-and-vanish-input
+
+(e: React.ChangeEvent<HTMLInputElement>) => void
+
+(e: React.FormEvent<HTMLFormElement>) => void
+
+────────────────────────────────────────────────────────────
+[122]  File Upload
+URL  : https://ui.aceternity.com/components/file-upload
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/file-upload-demo
+
+npx shadcn@latest add @aceternity/file-uploadCopy
+
+npx shadcn@latest add @aceternity/file-upload
+
+(files: File[]) => void
+
+────────────────────────────────────────────────────────────
+[123]  Dither Shader
+URL  : https://ui.aceternity.com/components/dither-shader
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/dither-shader-demo
+
+npx shadcn@latest add @aceternity/dither-shaderCopy
+
+npx shadcn@latest add @aceternity/dither-shader
+
+npx shadcn@latest add @aceternity/dither-shader-demo-simple
+
+npx shadcn@latest add @aceternity/dither-shader-demo-duotone
+
+npx shadcn@latest add @aceternity/dither-shader-interactive
+
+"bayer" | "halftone" | "noise" | "crosshatch"
+
+"original" | "grayscale" | "duotone" | "custom"
+
+["#000000", "#ffffff"]
+
+"cover" | "contain" | "fill" | "none"
+
+────────────────────────────────────────────────────────────
+[124]  Animated Modal
+URL  : https://ui.aceternity.com/components/animated-modal
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/animated-modal-demo
+
+npx shadcn@latest add @aceternity/animated-modalCopy
+
+npx shadcn@latest add @aceternity/animated-modal
+
+React.RefObject<HTMLDivElement>
+
+────────────────────────────────────────────────────────────
+[125]  Animated Tooltip
+URL  : https://ui.aceternity.com/components/animated-tooltip
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/animated-tooltip-demo
+
+npx shadcn@latest add @aceternity/animated-tooltipCopy
+
+npx shadcn@latest add @aceternity/animated-tooltip
+
+Array<{id: number, name: string, designation: string, image: string}>
+
+────────────────────────────────────────────────────────────
+[126]  Link Preview
+URL  : https://ui.aceternity.com/components/link-preview
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/link-preview-demo
+
+npx shadcn@latest add @aceternity/link-previewCopy
+
+npx shadcn@latest add @aceternity/link-preview
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: [
+      "api.microlink.io", // Microlink Image Preview
+    ],
+  },
+};
+ 
+module.exports = nextConfig;CopySelect Language
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: [
+      "api.microlink.io", // Microlink Image Preview
+    ],
+  },
+};
+ 
+module.exports = nextConfig;
+
+npx shadcn@latest add @aceternity/link-preview-demo-2
+
+────────────────────────────────────────────────────────────
+[127]  Images Slider
+URL  : https://ui.aceternity.com/components/images-slider
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/images-slider-demo
+
+npx shadcn@latest add @aceternity/images-sliderCopy
+
+npx shadcn@latest add @aceternity/images-slider
+
+────────────────────────────────────────────────────────────
+[128]  Carousel
+URL  : https://ui.aceternity.com/components/carousel
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/carousel-demo
+
+npx shadcn@latest add @aceternity/carouselCopy
+
+npx shadcn@latest add @aceternity/carousel
+
+(index: number) => void
+
+────────────────────────────────────────────────────────────
+[129]  Apple Cards Carousel
+URL  : https://ui.aceternity.com/components/apple-cards-carousel
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/apple-cards-carousel-demo
+
+npx shadcn@latest add @aceternity/apple-cards-carouselCopy
+
+npx shadcn@latest add @aceternity/apple-cards-carousel
+
+import React, { useEffect } from "react";
+ 
+export const useOutsideClick = (
+  ref: React.RefObject<HTMLDivElement>,
+  callback: Function
+) => {
+  useEffect(() => {
+    const listener = (event: any) => {
+      if (!ref.current || ref.current.contains(event.target)) {
+        return;
+      }
+      callback(event);
+    };
+ 
+    document.addEventListener("mousedown", listener);
+    document.addEventListener("touchstart", listener);
+ 
+    return () => {
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
+    };
+  }, [ref, callback]);
+};CopySelect Language
+
+import React, { useEffect } from "react";
+ 
+export const useOutsideClick = (
+  ref: React.RefObject<HTMLDivElement>,
+  callback: Function
+) => {
+  useEffect(() => {
+    const listener = (event: any) => {
+      if (!ref.current || ref.current.contains(event.target)) {
+        return;
+      }
+      callback(event);
+    };
+ 
+    document.addEventListener("mousedown", listener);
+    document.addEventListener("touchstart", listener);
+ 
+    return () => {
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
+    };
+  }, [ref, callback]);
+};
+
+npx shadcn@latest add @aceternity/apple-cards-carousel-demo
+
+npx shadcn@latest add @aceternity/apple-cards-carousel-demo-2
+
+type Card = {
+  src: string;
+  title: string;
+  category: string;
+  content: React.ReactNode;
+};CopySelect Language
+
+type Card = {
+  src: string;
+  title: string;
+  category: string;
+  content: React.ReactNode;
+};
+
+────────────────────────────────────────────────────────────
+[130]  Animated Testimonials
+URL  : https://ui.aceternity.com/components/animated-testimonials
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/animated-testimonials-demo
+
+npx shadcn@latest add @aceternity/animated-testimonialsCopy
+
+npx shadcn@latest add @aceternity/animated-testimonials
+
+Array<{ quote: string; name: string; designation: string; src: string }>
+
+────────────────────────────────────────────────────────────
+[131]  Layout Grid
+URL  : https://ui.aceternity.com/components/layout-grid
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/layout-grid-demo
+
+npx shadcn@latest add @aceternity/layout-gridCopy
+
+npx shadcn@latest add @aceternity/layout-grid
+
+JSX.Element | React.ReactNode | string
+
+────────────────────────────────────────────────────────────
+[132]  Bento Grid
+URL  : https://ui.aceternity.com/components/bento-grid
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/bento-grid-demo
+
+npx shadcn@latest add @aceternity/bento-gridCopy
+
+npx shadcn@latest add @aceternity/bento-grid
+
+npx shadcn@latest add @aceternity/bento-grid-demo-3
+
+npx shadcn@latest add @aceternity/bento-grid-demo-2
+
+{title: string, description: string, header: ReactNode, icon: ReactNode}
+
+────────────────────────────────────────────────────────────
+[133]  Cover
+URL  : https://ui.aceternity.com/components/container-cover
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/cover-demo
+
+npx shadcn@latest add @aceternity/coverCopy
+
+npx shadcn@latest add @aceternity/cover
+
+────────────────────────────────────────────────────────────
+[134]  GitHub Globe
+URL  : https://ui.aceternity.com/components/github-globe
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/globe-demo
+
+npx shadcn@latest add @aceternity/globeCopy
+
+npx shadcn@latest add @aceternity/globe
+
+────────────────────────────────────────────────────────────
+[135]  World Map
+URL  : https://ui.aceternity.com/components/world-map
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/world-map-demo
+
+npx shadcn@latest add @aceternity/world-mapCopy
+
+npx shadcn@latest add @aceternity/world-map
+
+Array<{start: Point, end: Point}>
+
+────────────────────────────────────────────────────────────
+[136]  Timeline
+URL  : https://ui.aceternity.com/components/timeline
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/timeline-demo
+
+npx shadcn@latest add @aceternity/timelineCopy
+
+npx shadcn@latest add @aceternity/timeline
+
+type TimelineEntry = {
+  title: string;
+  content: React.ReactNode;
+};CopySelect Language
+
+type TimelineEntry = {
+  title: string;
+  content: React.ReactNode;
+};
+
+────────────────────────────────────────────────────────────
+[137]  Compare
+URL  : https://ui.aceternity.com/components/compare
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/compare-demo
+
+npx shadcn@latest add @aceternity/compare @aceternity/sparklesCopy
+
+npx shadcn@latest add @aceternity/compare @aceternity/sparkles
+
+npx shadcn@latest add @aceternity/compare-demo
+
+npx shadcn@latest add @aceternity/compare-autoplay-demo
+
+npx shadcn@latest add @aceternity/compare-drag-demo
+
+────────────────────────────────────────────────────────────
+[138]  Code Block
+URL  : https://ui.aceternity.com/components/code-block
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/code-block-demo
+
+1const DummyComponent = () => {
+2 const [count, setCount] = React.useState(0);
+3
+4 const handleClick = () => {
+5 setCount(prev => prev + 1);
+6 };
+7
+8 return (
+9 <div className="p-4 border rounded-lg">
+10 <h2 className="text-xl font-bold mb-4">Fights Counter</h2>
+11 <p className="mb-2">Fight Club Fights Count: {count}</p>
+12 <button
+13 onClick={handleClick}
+14 className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+15 >
+16        Increment
+17 </button>
+18 </div>
+19 );
+20};
+21
+
+npx shadcn@latest add @aceternity/code-blockCopy
+
+npx shadcn@latest add @aceternity/code-block
+
+npx shadcn@latest add @aceternity/code-block-demo-2
+
+1<div className="p-4 border rounded-lg">
+2 <h2 className="text-xl font-bold mb-4">Fights Counter</h2>
+3 <p className="mb-2">Fight Club Fights Count: {count}</p>
+4 <button
+5 onClick={handleClick}
+6 className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+7 >
+8    Increment
+9 </button>
+10</div>
+11
+
+────────────────────────────────────────────────────────────
+[139]  Following Pointer
+URL  : https://ui.aceternity.com/components/following-pointer
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/following-pointer-demo
+
+npx shadcn@latest add @aceternity/following-pointerCopy
+
+npx shadcn@latest add @aceternity/following-pointer
+
+────────────────────────────────────────────────────────────
+[140]  Pointer Highlight
+URL  : https://ui.aceternity.com/components/pointer-highlight
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/pointer-highlight-demo
+
+npx shadcn@latest add @aceternity/pointer-highlightCopy
+
+npx shadcn@latest add @aceternity/pointer-highlight
+
+npx shadcn@latest add @aceternity/pointer-highlight-demo-3
+
+npx shadcn@latest add @aceternity/pointer-highlight-demo-2
+
+────────────────────────────────────────────────────────────
+[141]  Lens
+URL  : https://ui.aceternity.com/components/lens
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/lens-demo
+
+npx shadcn@latest add @aceternity/lensCopy
+
+npx shadcn@latest add @aceternity/lens
+
+npx shadcn@latest add @aceternity/lens-demo
+
+npx shadcn@latest add @aceternity/lens-demo-2
+
+npx shadcn@latest add @aceternity/lens-demo-3
+
+{ x: number, y: number }
+
+(hovering: boolean) => void
+
+────────────────────────────────────────────────────────────
+[142]  3D Globe
+URL  : https://ui.aceternity.com/components/3d-globe
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/3d-globe-demo
+
+npx shadcn@latest add @aceternity/3d-globeCopy
+
+npx shadcn@latest add @aceternity/3d-globe
+
+npx shadcn@latest add @aceternity/3d-globe-demo-3
+
+npx shadcn@latest add @aceternity/3d-globe-demo-2
+
+npx shadcn@latest add @aceternity/3d-globe-demo
+
+(marker: GlobeMarker) => void
+
+(marker: GlobeMarker | null) => void
+
+{ x: number; y: number }
+
+────────────────────────────────────────────────────────────
+[143]  3D Animated Pin
+URL  : https://ui.aceternity.com/components/3d-pin
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/3d-pin-demo
+
+npx shadcn@latest add @aceternity/3d-pinCopy
+
+npx shadcn@latest add @aceternity/3d-pin
+
+────────────────────────────────────────────────────────────
+[144]  3D Marquee
+URL  : https://ui.aceternity.com/components/3d-marquee
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/3d-marquee-demo
+
+npx shadcn@latest add @aceternity/3d-marqueeCopy
+
+npx shadcn@latest add @aceternity/3d-marquee
+
+npx shadcn@latest add @aceternity/3d-marquee-demo
+
+npx shadcn@latest add @aceternity/3d-marquee-demo-2
+
+────────────────────────────────────────────────────────────
+[145]  Feature Sections
+URL  : https://ui.aceternity.com/components/feature-sections-free
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/features-section-demo-1 @aceternity/features-section-demo-2 @aceternity/features-section-demo-3Copy
+
+npx shadcn@latest add @aceternity/features-section-demo-1 @aceternity/features-section-demo-2 @aceternity/features-section-demo-3
+
+npx shadcn@latest add @aceternity/features-section-demo-3
+
+npx shadcn@latest add @aceternity/features-section-demo-1
+
+npx shadcn@latest add @aceternity/features-section-demo-2
+
+────────────────────────────────────────────────────────────
+[146]  Cards
+URL  : https://ui.aceternity.com/components/cards-free
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/cards-demo-1 @aceternity/cards-demo-2 @aceternity/cards-demo-3Copy
+
+npx shadcn@latest add @aceternity/cards-demo-1 @aceternity/cards-demo-2 @aceternity/cards-demo-3
+
+import type { Config } from "tailwindcss";
+ 
+const config: Config = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      animation: {
+        move: "move 5s linear infinite",
+      },
+      keyframes: {
+        move: {
+          "0%": { transform: "translateX(-200px)" },
+          "100%": { transform: "translateX(200px)" },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
+ 
+export default config;CopySelect Language
+
+import type { Config } from "tailwindcss";
+ 
+const config: Config = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      animation: {
+        move: "move 5s linear infinite",
+      },
+      keyframes: {
+        move: {
+          "0%": { transform: "translateX(-200px)" },
+          "100%": { transform: "translateX(200px)" },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
+ 
+export default config;
+
+npx shadcn@latest add @aceternity/cards-demo-3
+
+npx shadcn@latest add @aceternity/cards-demo-1
+
+npx shadcn@latest add @aceternity/cards-demo-2
+
+────────────────────────────────────────────────────────────
+[147]  Hero Sections
+URL  : https://ui.aceternity.com/components/hero-sections-free
+
+── CODE ─────────────────────────────────────────────────────
+npx shadcn@latest add @aceternity/hero-section-demo-1Copy
+
+npx shadcn@latest add @aceternity/hero-section-demo-1
+
+npx shadcn@latest add @aceternity/hero-section-demo-1
+
+────────────────────────────────────────────────────────────
+[148]  SKIPPED — https://ui.aceternity.com/template-preview/nodus-agent-template
+────────────────────────────────────────────────────────────
+
+[149]  SKIPPED — https://ui.aceternity.com/template-preview/agenforce-marketing-template
+────────────────────────────────────────────────────────────
+
+[150]  SKIPPED — https://ui.aceternity.com/template-preview/startup-landing-page-template
+────────────────────────────────────────────────────────────
+
+[151]  SKIPPED — https://ui.aceternity.com/template-preview/minimal-portfolio-template
+────────────────────────────────────────────────────────────
+
+[152]  SKIPPED — https://ui.aceternity.com/template-preview/ai-saas-template
+────────────────────────────────────────────────────────────
+
+[153]  SKIPPED — https://ui.aceternity.com/template-preview/cryptgen-marketing-aceternity
+────────────────────────────────────────────────────────────
+
+[154]  SKIPPED — https://ui.aceternity.com/template-preview/playful-marketing-aceternity
+────────────────────────────────────────────────────────────
+
+[155]  SKIPPED — https://ui.aceternity.com/template-preview/proactiv-marketing-template
+────────────────────────────────────────────────────────────
+
+[156]  SKIPPED — https://ui.aceternity.com/template-preview/schedule-marketing-template
+────────────────────────────────────────────────────────────
+
+[157]  SKIPPED — https://ui.aceternity.com/template-preview/agenlabs-agency-template
+────────────────────────────────────────────────────────────
+
+[158]  SKIPPED — https://ui.aceternity.com/template-preview/devpro-portfolio-template
+────────────────────────────────────────────────────────────
+
+[159]  SKIPPED — https://ui.aceternity.com/template-preview/foxtrot-marketing-template
+────────────────────────────────────────────────────────────
+
+[160]  SKIPPED — https://ui.aceternity.com/template-preview/sidefolio-portfolio-template
+────────────────────────────────────────────────────────────
+
+[161]  SKIPPED — https://ui.aceternity.com/explore
+────────────────────────────────────────────────────────────
+
+[162]  Installation Guide
+URL  : https://ui.aceternity.com/installation
+
+── CODE ─────────────────────────────────────────────────────
+npx create-next-app@latest my-project
+
+npm install -D tailwindcss postcss autoprefixer
+
+npx tailwindcss init -p
+
+npm install --legacy-peer-deps
+
+────────────────────────────────────────────────────────────
+[163]  SKIPPED — https://ui.aceternity.com/affiliate-program
+────────────────────────────────────────────────────────────
+
+[164]  SKIPPED — https://ui.aceternity.com/categories
+────────────────────────────────────────────────────────────
+
+[165]  SKIPPED — https://ui.aceternity.com/tools/box-shadows
+────────────────────────────────────────────────────────────
+
+[166]  SKIPPED — https://ui.aceternity.com/pro
+────────────────────────────────────────────────────────────
+
+[167]  SKIPPED — https://ui.aceternity.com/licence
+────────────────────────────────────────────────────────────
+
+[168]  SKIPPED — https://ui.aceternity.com/refunds
+────────────────────────────────────────────────────────────
+
+[169]  SKIPPED — https://ui.aceternity.com/privacy
+────────────────────────────────────────────────────────────
+
+[170]  SKIPPED — https://ui.aceternity.com/terms
+────────────────────────────────────────────────────────────
+
+[171]  Aceternity UI
+URL  : https://ui.aceternity.com/brand-facts
+
+── CODE ─────────────────────────────────────────────────────
+/.well-known/brand-facts.json
+
+────────────────────────────────────────────────────────────
+[172]  SKIPPED — https://ui.aceternity.com/guides
+────────────────────────────────────────────────────────────
+
+[173]  SKIPPED — https://ui.aceternity.com/best-modern-design-templates
+────────────────────────────────────────────────────────────
+
+[174]  SKIPPED — https://ui.aceternity.com/best-ai-saas-templates
+────────────────────────────────────────────────────────────
+
+[175]  SKIPPED — https://ui.aceternity.com/best-marketing-templates
+────────────────────────────────────────────────────────────
+
+[176]  SKIPPED — https://ui.aceternity.com/best-minimal-templates-in-react-and-nextjs
+────────────────────────────────────────────────────────────
+
+[177]  SKIPPED — https://ui.aceternity.com/best-components-and-templates-with-framer-motion
+────────────────────────────────────────────────────────────
+
+[178]  SKIPPED — https://ui.aceternity.com/amazing-tailwindcss-and-framer-motion-components
+────────────────────────────────────────────────────────────
+
+[179]  SKIPPED — https://ui.aceternity.com/shadcn-blocks
+────────────────────────────────────────────────────────────
+

@@ -1,0 +1,99 @@
+# Prompt Templates
+
+## What Makes a Strong UI Prompt
+1. **Explicit Identification**: Strict taxonomy of the exact target demographic (B2B, consumer) and product shell parameters up-front.
+2. **Structural Mapping**: Calling out unequivocally what distinct layout components appear and in what specific cascading vertical rhythm.
+3. **Palette Determination**: Clearly declaring the isolated Primary, Secondary, and Accent vectors utilizing strict Tailwind identifier terminology.
+4. **Keyword Binding**: Deploying heavy categorical adjectives ("Corporate", "Brutalist", "Glassmorphic") commanding total system aesthetics.
+5. **Data Expectations**: Declaring strictly what dummy matrix rows, avatar counts, or table routing variables must manifest.
+6. **Responsiveness Flags**: Routinely demanding absolute mobile grid collapsing protocols avoiding overflow bleeds.
+7. **Animation Protocols**: Calling out exact singular visual interactive keyframe hits rather than submitting vague "make it move" triggers.
+8. **Component Referencing**: Calling out explicit files (`[cards]`, `[navbar]`) from the knowledge base directory schemas to enforce strict compliance mapping.
+9. **Spacing Authority**: Specifically enforcing vertical `py-32` blocks to avoid claustrophobic code generation mappings.
+10. **Stack Lockdown**: Reinforcing React hooks and Tailwind CSS utility restraints universally.
+
+## Template: Landing Page
+
+[PRODUCT_DESCRIPTION]
+Target audience: [TARGET_AUDIENCE]
+
+Layout Structure:
+1. Navbar: Brand + standard links + Auth buttons
+2. Hero: Centered text heavy, huge H1, ghost glow background
+3. Cards Array: 3-column feature grid
+4. Footer: Simple standard terminal bounds
+
+Design Directives:
+- Color palette: Primary [PRIMARY] Secondary [SECONDARY] Accent [ACCENT]
+- Base Layout Style: [KEYWORD_1], [KEYWORD_2]
+- Visual accent mapping: [EFFECT_NAME]
+- Typography animation: [ANIMATION_KEYFRAME]
+- Responsiveness: Required (Mobile hidden grids, nav-collapse)
+
+Tech Stack: React Functional Components, Tailwind CSS (Utility classes only).
+
+## Template: Dashboard
+
+[PRODUCT_DESCRIPTION]
+Target audience: [TARGET_AUDIENCE]
+
+Layout Structure (h-screen, overflow segmented):
+1. Sidebar: Fixed left, primary routing states
+2. Main Frame: Overflowing content right side
+3. Metrics Row: 4 stat cards horizontally aligned
+4. Main Table: User configuration array taking primary screen real estate
+
+Data Expected:
+[LIST_OF_TABLE_ATTRIBUTES_AND_ROWS]
+
+Design Directives:
+- Color palette: Primary [PRIMARY] Secondary [SECONDARY] Accent [ACCENT]
+- Base Layout Style: Dense, crisp lines, heavily segmented backgrounds
+- Responsiveness: Required (Sidebar into hamburger, tables into scroll-x)
+
+Tech Stack: React Functional Components, Tailwind CSS.
+
+## Template: Auth Page
+
+[PRODUCT_DESCRIPTION]
+Page type: [Login / Registration Flow]
+
+Layout Structure:
+1. Centered Floating Card Array
+2. Explicit Label + Input bindings: [EMAIL], [PASSWORD], [LOGIN_BUTTON]
+3. Standard micro-footer links beneath card bounding box.
+
+Design Directives:
+- Color palette: Primary [PRIMARY] Secondary [SECONDARY] Accent [ACCENT]
+- Base Layout Style: Minimal, pure white bounded, extreme padding.
+- Visual accent mapping: Subtle background glow behind card bounds.
+- Responsiveness: Required (Card matches full width on mobile breakpoints).
+
+Tech Stack: React Functional Components, Tailwind CSS.
+
+## Template: Feature Section
+
+[PRODUCT_DESCRIPTION]
+Section Scope: Highlighting [SPECIFIC_FEATURE] value mapping.
+
+Layout Structure:
+1. Left split column: H2 heading array + 3 bulleted textual value props.
+2. Right split column: Dashboard visual mockup rendering or feature illustration array.
+
+Design Directives:
+- Color palette: Primary [PRIMARY] Secondary [SECONDARY] Accent [ACCENT]
+- Layout rhythm: `py-24` minimum vertical spacing constraints.
+- Visual accent mapping: Absolute right glow matching Primary color.
+- Responsiveness: Required (Stack grid-cols-1 strictly on breakpoints).
+
+Tech Stack: React Functional Components, Tailwind CSS.
+
+## High-Signal Keyword Reference
+
+| Category | High Priority Generative Keywords |
+|---|---|
+| Architecture | modern, robust, clean, SaaS, dashboard, enterprise scale, isolated |
+| Emotion | highly professional, deeply trustworthy, playful, approachable, secure |
+| Layout Pattern | split-screen, centered typography, multi-column directory, dense grid |
+| Decorators | glassmorphism, neo-brutalist, sheer lines, high contrast, stripped down |
+| Scaling | mobile-first responsive cascade, horizontal overflow tracking, infinite scroll |
