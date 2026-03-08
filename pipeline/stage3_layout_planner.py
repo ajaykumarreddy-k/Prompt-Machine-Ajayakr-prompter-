@@ -2,6 +2,8 @@
 # Allowed Layout Primitives - strictly semantic only, no wrappers
 PRIMITIVES = {"Page", "Component"}
 
+from pipeline.stage5_blueprint_validator import FORBIDDEN_PRIMITIVES
+
 # Deterministic Page Rules per Domain
 PAGE_RULES = {
     "quiz": [
@@ -106,7 +108,7 @@ def generate_page_layout(domain: str, page_name: str, available_components: list
     if page_name in ["Home", "Landing", "Overview"]:
         placed_types = {c["type"] for c in stack_children}
         for comp in available_components:
-            if comp not in placed_types and comp not in ["Navbar", "Footer", "Sidebar"]:
+            if comp not in placed_types and comp not in ["Navbar", "Footer", "Sidebar"] and comp not in FORBIDDEN_PRIMITIVES:
                 # Try to map and add
                 add_if_available(comp)
 

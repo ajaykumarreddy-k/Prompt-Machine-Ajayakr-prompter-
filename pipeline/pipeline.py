@@ -69,18 +69,19 @@ def run_pipeline(prd, no_code=False, verbose=False, palette_override=None, save=
     _progress(10, TOTAL, "Blueprint Output")
     print("\n")
 
-    _progress(11, TOTAL, "Strict Token Validation")
-    name = intent["product_name"].lower().replace(" ", "-")
-    target_dir = os.path.join(output_dir, name) if save else "tmp"
-    validate_generated_code(target_dir)
-
     full_blueprint = {
         "intent": intent, "ontology": ontology, "layout": layout, "ast": blueprint_ast,
         "design": design, "prompt": final_prompt, "code": code,
     }
 
-    print(render_blueprint(full_blueprint, verbose=verbose))
     if save:
         save_blueprint(full_blueprint, output_dir=output_dir)
+
+    _progress(11, TOTAL, "Strict Token Validation")
+    name = intent["product_name"].lower().replace(" ", "-")
+    target_path = os.path.join(output_dir, name) if save else "tmp"
+    validate_generated_code(target_path)
+
+    print(render_blueprint(full_blueprint, verbose=verbose))
 
     return full_blueprint

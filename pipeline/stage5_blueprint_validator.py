@@ -2,7 +2,8 @@ import sys
 
 FORBIDDEN_PRIMITIVES = {
     "Container", "Section", "Wrapper", "Layout", 
-    "PageContainer", "SectionWrapper", "Stack", "Grid", "FlexRow"
+    "PageContainer", "SectionWrapper", "Stack", "Grid", "FlexRow",
+    "ModalWrapper", "AppLayout"
 }
 
 def validate_blueprint(blueprint: dict, required_components: list) -> dict:

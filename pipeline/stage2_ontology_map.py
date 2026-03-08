@@ -4,6 +4,8 @@ from vector_kb import get_model
 import numpy as np
 import re
 
+from pipeline.stage5_blueprint_validator import FORBIDDEN_PRIMITIVES
+
 # ── 4. COMPONENT ONTOLOGY OUTPUT ──────────────────────────────────────────────
 # Core component mappings per domain. These lists strictly forbid incorrect injections.
 DOMAIN_MAPS = {
@@ -38,7 +40,8 @@ DOMAIN_ANCHORS = {
     },
     "dashboard": {
         "dashboard": 3, "admin": 3, "metrics": 2, "analytics": 2,
-        "chart": 1, "graph": 1, "statistics": 2, "portal": 2
+        "chart": 1, "graph": 1, "statistics": 2, "portal": 2,
+        "board": 2, "task": 2, "kanban": 3
     },
     "marketing": {
         "landing page": 3, "waitlist": 3, "newsletter": 2,
@@ -157,7 +160,10 @@ def map_ontology_by_embedding(intent: dict) -> dict:
     
     # Explicitly add requested custom components
     for comp in intent.get("custom_components", []):
-        required_comps.add(comp)
+        if comp not in FORBIDDEN_PRIMITIVES:
+            required_comps.add(comp)
+        else:
+            print(f"\033[90m    Skipping forbidden primitive: {comp}\033[0m")
         
     extracted = list(required_comps)
     print(f"\033[90m  Ontology Components: {', '.join(extracted)}\033[0m")
