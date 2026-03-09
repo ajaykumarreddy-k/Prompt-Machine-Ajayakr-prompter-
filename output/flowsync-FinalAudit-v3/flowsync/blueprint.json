@@ -1,0 +1,396 @@
+{
+  "intent": {
+    "product_name": "FlowSync",
+    "product_type": "saas",
+    "target_audience": "high-performance teams",
+    "key_features": [
+      "Dynamic task boards with real-time syncing",
+      "Team collaboration tools (chat, comments, shared docs)",
+      "Workflow automation engine with visual builder",
+      "Detailed analytics and reporting"
+    ],
+    "tone": "professional",
+    "style_keywords": [
+      "zinc-based minimal editorial style",
+      "red accents"
+    ],
+    "pages": [
+      "home",
+      "features",
+      "product-showcase",
+      "benefits",
+      "testimonials",
+      "pricing-preview",
+      "cta",
+      "footer"
+    ],
+    "palette_hint": "clean, high-performance with zinc and red",
+    "complexity": "medium",
+    "industry": "task management, team collaboration, workflow automation",
+    "custom_components": [
+      "Navbar",
+      "HeroSection",
+      "FeaturesSection",
+      "ProductShowcase",
+      "BenefitsSection",
+      "TestimonialsSection",
+      "PricingPreview",
+      "CTASection",
+      "Footer"
+    ],
+    "ui_interactions": []
+  },
+  "ontology": {
+    "domain": "dashboard",
+    "required_components": [
+      "FeaturesSection",
+      "ProductShowcase",
+      "Footer",
+      "UserMenu",
+      "ChartWidget",
+      "BenefitsSection",
+      "TestimonialsSection",
+      "DataGrid",
+      "PricingPreview",
+      "CTASection",
+      "Sidebar",
+      "HeroSection",
+      "Navbar",
+      "ActivityFeed",
+      "StatCard"
+    ]
+  },
+  "layout": {
+    "pages": [
+      {
+        "name": "Overview",
+        "route": "/",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar"
+            },
+            {
+              "type": "StatCard",
+              "original_name": "StatCard"
+            },
+            {
+              "type": "ActivityFeed",
+              "original_name": "ActivityFeed"
+            },
+            {
+              "type": "FeaturesSection",
+              "original_name": "FeaturesSection"
+            },
+            {
+              "type": "ProductShowcase",
+              "original_name": "ProductShowcase"
+            },
+            {
+              "type": "UserMenu",
+              "original_name": "UserMenu"
+            },
+            {
+              "type": "ChartWidget",
+              "original_name": "ChartWidget"
+            },
+            {
+              "type": "BenefitsSection",
+              "original_name": "BenefitsSection"
+            },
+            {
+              "type": "TestimonialsSection",
+              "original_name": "TestimonialsSection"
+            },
+            {
+              "type": "DataGrid",
+              "original_name": "DataGrid"
+            },
+            {
+              "type": "PricingPreview",
+              "original_name": "PricingPreview"
+            },
+            {
+              "type": "CTASection",
+              "original_name": "CTASection"
+            },
+            {
+              "type": "HeroSection",
+              "original_name": "HeroSection"
+            },
+            {
+              "type": "Footer",
+              "original_name": "Footer"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Analytics",
+        "route": "/analytics",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar"
+            },
+            {
+              "type": "ChartWidget",
+              "original_name": "ChartWidget"
+            },
+            {
+              "type": "DataGrid",
+              "original_name": "DataGrid"
+            },
+            {
+              "type": "Footer",
+              "original_name": "Footer"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Settings",
+        "route": "/settings",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar"
+            },
+            {
+              "type": "Footer",
+              "original_name": "Footer"
+            }
+          ]
+        }
+      }
+    ],
+    "discarded_components": [
+      {
+        "component": "Sidebar",
+        "discard_reason": "Not used in layout"
+      }
+    ]
+  },
+  "ast": {
+    "pages": [
+      {
+        "name": "Overview",
+        "route": "/",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "Provides navigation options for the user"
+              ]
+            },
+            {
+              "type": "StatCard",
+              "props": [
+                "stats"
+              ],
+              "responsibilities": [
+                "Displays key statistics about the product or service"
+              ]
+            },
+            {
+              "type": "ActivityFeed",
+              "props": [],
+              "responsibilities": [
+                "Shows recent activities related to the user's account or usage"
+              ]
+            },
+            {
+              "type": "FeaturesSection",
+              "props": [],
+              "responsibilities": [
+                "Lists and describes key features of the product or service"
+              ]
+            },
+            {
+              "type": "ProductShowcase",
+              "props": [],
+              "responsibilities": [
+                "Highlights the main products or services offered by the company"
+              ]
+            },
+            {
+              "type": "UserMenu",
+              "props": [],
+              "responsibilities": [
+                "Provides user-specific actions and settings"
+              ]
+            },
+            {
+              "type": "ChartWidget",
+              "props": [
+                "data"
+              ],
+              "responsibilities": [
+                "Displays charts or graphs to visualize data"
+              ]
+            },
+            {
+              "type": "BenefitsSection",
+              "props": [],
+              "responsibilities": [
+                "Lists and explains the benefits of using the product or service"
+              ]
+            },
+            {
+              "type": "TestimonialsSection",
+              "props": [],
+              "responsibilities": [
+                "Displays customer testimonials to build trust"
+              ]
+            },
+            {
+              "type": "DataGrid",
+              "props": [
+                "items"
+              ],
+              "responsibilities": [
+                "Provides a tabular view of data for easy analysis"
+              ]
+            },
+            {
+              "type": "PricingPreview",
+              "props": [],
+              "responsibilities": [
+                "Shows pricing plans and options to the user"
+              ]
+            },
+            {
+              "type": "CTASection",
+              "props": [],
+              "responsibilities": [
+                "Encourages users to take a specific action, e.g., sign up or purchase"
+              ]
+            },
+            {
+              "type": "HeroSection",
+              "props": [
+                "title",
+                "subtitle"
+              ],
+              "responsibilities": [
+                "Serves as the main hero section that introduces the product or service"
+              ]
+            },
+            {
+              "type": "Footer",
+              "props": [],
+              "responsibilities": [
+                "Provides additional links and information at the bottom of the page"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "Analytics",
+        "route": "/analytics",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "Provides navigation options for the user"
+              ]
+            },
+            {
+              "type": "ChartWidget",
+              "props": [
+                "data"
+              ],
+              "responsibilities": [
+                "Displays charts or graphs to visualize data"
+              ]
+            },
+            {
+              "type": "DataGrid",
+              "props": [
+                "items"
+              ],
+              "responsibilities": [
+                "Provides a tabular view of data for easy analysis"
+              ]
+            },
+            {
+              "type": "Footer",
+              "props": [],
+              "responsibilities": [
+                "Provides additional links and information at the bottom of the page"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "Settings",
+        "route": "/settings",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "Provides navigation options for the user"
+              ]
+            },
+            {
+              "type": "Footer",
+              "props": [],
+              "responsibilities": [
+                "Provides additional links and information at the bottom of the page"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "discarded_components": [
+      {
+        "component": "Sidebar",
+        "discard_reason": "Not used in layout"
+      }
+    ]
+  },
+  "design": {
+    "palette_id": "P-5",
+    "tailwind": {
+      "container": "max-w-7xl mx-auto px-6",
+      "section": "py-16 md:py-24",
+      "card": "bg-zinc-50 rounded-lg border border-zinc-200 shadow-md p-6",
+      "btn_primary": "bg-zinc-900 hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold transition-all",
+      "btn_secondary": "border border-zinc-300 text-zinc-700 px-6 py-3 rounded-lg hover:bg-zinc-50 transition-all",
+      "text_heading": "text-zinc-900",
+      "text_body": "text-zinc-900 opacity-70",
+      "bg_page": "bg-white",
+      "accent_text": "text-red-500",
+      "accent_bg": "bg-red-500/10",
+      "input": "w-full px-4 py-3 rounded-lg border border-zinc-200 bg-zinc-50 text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-500"
+    },
+    "visual_effect": "corner-blur",
+    "effect_placement": "top-right",
+    "text_animation": "typewriter",
+    "border_radius": "rounded-lg",
+    "shadow_style": "shadow-md",
+    "font_pair": "Inter",
+    "dark_mode": false
+  }
+}

@@ -11,6 +11,9 @@ dependencies = [
     "rich>=14.3.3",
     "sentence-transformers>=5.2.3",
     "tqdm>=4.67.3",
+    "textual>=1.0.0",
+    "psutil>=6.0.0",
+    "rich-pixels>=3.0.1",
 ]
 
 [project.scripts]

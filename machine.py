@@ -160,9 +160,13 @@ def run() -> None:
 def main() -> None:
     if len(sys.argv) >= 3 and sys.argv[1] == "run" and sys.argv[2] == "Ajayakr-prompter":
         run()
+    elif len(sys.argv) >= 3 and sys.argv[1] == "run" and sys.argv[2] == "promptmachine":
+        from ui.dashboard import PromptMachineApp
+        PromptMachineApp().run()
     else:
         print(f"\n{C.B}Prompt Machine v3.0{C.R}")
-        print(f"  {C.CY}uv run machine.py run Ajayakr-prompter{C.R}\n")
+        print(f"  {C.CY}uv run machine.py run Ajayakr-prompter{C.R}")
+        print(f"  {C.CY}uv run machine.py run promptmachine{C.R}\n")
         print(f"  Flags:")
         print(f"  {C.GY}  --model=qwen2.5      override Ollama model{C.R}")
         print(f"  {C.GY}  --palette=P-4         force palette (P-1..P-5){C.R}")

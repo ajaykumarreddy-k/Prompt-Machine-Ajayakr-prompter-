@@ -1,0 +1,427 @@
+{
+  "intent": {
+    "product_name": "TaskFlow",
+    "product_type": "tool",
+    "target_audience": "Students managing assignments, Developers tracking tasks, Individuals organizing personal tasks",
+    "key_features": [
+      "Kanban Board",
+      "Task Cards",
+      "Create Task",
+      "Drag and Drop",
+      "Task Details Modal"
+    ],
+    "tone": "professional",
+    "style_keywords": [
+      "clean productivity interface",
+      "minimal distractions",
+      "smooth drag animations"
+    ],
+    "pages": [
+      "Top navigation bar",
+      "Kanban board area",
+      "Task creation modal",
+      "Task details modal"
+    ],
+    "palette_hint": "Clean and minimalistic design with smooth transitions",
+    "complexity": "medium complexity",
+    "industry": "Project Management Tools",
+    "custom_components": [
+      "Layout",
+      "AppLayout",
+      "Navbar",
+      "BoardContainer",
+      "Kanban Board",
+      "KanbanColumn",
+      "TaskCard",
+      "Modals",
+      "CreateTaskModal",
+      "TaskDetailModal",
+      "Button",
+      "InputField"
+    ],
+    "ui_interactions": [
+      "drag-and-drop",
+      "modal interactions"
+    ]
+  },
+  "ontology": {
+    "domain": "dashboard",
+    "required_components": [
+      "CreateTaskModal",
+      "Modals",
+      "Button",
+      "StatCard",
+      "Sidebar",
+      "DataGrid",
+      "Navbar",
+      "ActivityFeed",
+      "KanbanColumn",
+      "Kanban Board",
+      "TaskDetailModal",
+      "BoardContainer",
+      "InputField",
+      "ChartWidget",
+      "UserMenu",
+      "TaskCard"
+    ]
+  },
+  "layout": {
+    "pages": [
+      {
+        "name": "Overview",
+        "route": "/",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar"
+            },
+            {
+              "type": "StatCard",
+              "original_name": "StatCard"
+            },
+            {
+              "type": "ActivityFeed",
+              "original_name": "ActivityFeed"
+            },
+            {
+              "type": "CreateTaskModal",
+              "original_name": "CreateTaskModal"
+            },
+            {
+              "type": "Modals",
+              "original_name": "Modals"
+            },
+            {
+              "type": "Button",
+              "original_name": "Button"
+            },
+            {
+              "type": "DataGrid",
+              "original_name": "DataGrid"
+            },
+            {
+              "type": "KanbanColumn",
+              "original_name": "KanbanColumn"
+            },
+            {
+              "type": "Kanban Board",
+              "original_name": "Kanban Board"
+            },
+            {
+              "type": "TaskDetailModal",
+              "original_name": "TaskDetailModal"
+            },
+            {
+              "type": "BoardContainer",
+              "original_name": "BoardContainer"
+            },
+            {
+              "type": "InputField",
+              "original_name": "InputField"
+            },
+            {
+              "type": "ChartWidget",
+              "original_name": "ChartWidget"
+            },
+            {
+              "type": "UserMenu",
+              "original_name": "UserMenu"
+            },
+            {
+              "type": "TaskCard",
+              "original_name": "TaskCard"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Analytics",
+        "route": "/analytics",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar"
+            },
+            {
+              "type": "ChartWidget",
+              "original_name": "ChartWidget"
+            },
+            {
+              "type": "DataGrid",
+              "original_name": "DataGrid"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Settings",
+        "route": "/settings",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar"
+            }
+          ]
+        }
+      }
+    ],
+    "discarded_components": [
+      {
+        "component": "Sidebar",
+        "discard_reason": "Not used in layout"
+      }
+    ]
+  },
+  "ast": {
+    "pages": [
+      {
+        "name": "Overview",
+        "route": "/",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "Display navigation options"
+              ]
+            },
+            {
+              "type": "StatCard",
+              "props": [
+                {
+                  "title": "Total Tasks"
+                },
+                {
+                  "stats": 100
+                }
+              ],
+              "responsibilities": [
+                "Display statistical information about tasks"
+              ]
+            },
+            {
+              "type": "ActivityFeed",
+              "props": [
+                {
+                  "items": []
+                }
+              ],
+              "responsibilities": [
+                "Show recent activities or events"
+              ]
+            },
+            {
+              "type": "CreateTaskModal",
+              "props": [],
+              "responsibilities": [
+                "Allow users to create new tasks"
+              ]
+            },
+            {
+              "type": "Modals",
+              "props": [],
+              "responsibilities": [
+                "Handle various modal dialogs"
+              ]
+            },
+            {
+              "type": "Button",
+              "props": [
+                {
+                  "title": "Action"
+                }
+              ],
+              "responsibilities": [
+                "Trigger actions or events"
+              ]
+            },
+            {
+              "type": "DataGrid",
+              "props": [
+                {
+                  "items": []
+                }
+              ],
+              "responsibilities": [
+                "Display tabular data"
+              ]
+            },
+            {
+              "type": "KanbanColumn",
+              "props": [
+                {
+                  "title": "In Progress"
+                },
+                {
+                  "items": []
+                }
+              ],
+              "responsibilities": [
+                "Show tasks in a column of the Kanban board"
+              ]
+            },
+            {
+              "type": "Kanban Board",
+              "props": [],
+              "responsibilities": [
+                "Display and manage tasks on a Kanban board"
+              ]
+            },
+            {
+              "type": "TaskDetailModal",
+              "props": [
+                {
+                  "task": {}
+                }
+              ],
+              "responsibilities": [
+                "Show detailed information about a task"
+              ]
+            },
+            {
+              "type": "BoardContainer",
+              "props": [],
+              "responsibilities": [
+                "Contain the Kanban board components"
+              ]
+            },
+            {
+              "type": "InputField",
+              "props": [
+                {
+                  "placeholder": "Search"
+                }
+              ],
+              "responsibilities": [
+                "Allow users to input text for search or filtering"
+              ]
+            },
+            {
+              "type": "ChartWidget",
+              "props": [
+                {
+                  "data": []
+                }
+              ],
+              "responsibilities": [
+                "Display charts or graphs related to data"
+              ]
+            },
+            {
+              "type": "UserMenu",
+              "props": [],
+              "responsibilities": [
+                "Provide user-specific actions and options"
+              ]
+            },
+            {
+              "type": "TaskCard",
+              "props": [
+                {
+                  "task": {}
+                }
+              ],
+              "responsibilities": [
+                "Show a card for a specific task"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "Analytics",
+        "route": "/analytics",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "Display navigation options"
+              ]
+            },
+            {
+              "type": "ChartWidget",
+              "props": [
+                {
+                  "data": []
+                }
+              ],
+              "responsibilities": [
+                "Display charts or graphs related to analytics data"
+              ]
+            },
+            {
+              "type": "DataGrid",
+              "props": [
+                {
+                  "items": []
+                }
+              ],
+              "responsibilities": [
+                "Show tabular data for analytics"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "Settings",
+        "route": "/settings",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "Display navigation options"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "discarded_components": [
+      {
+        "component": "Sidebar",
+        "discard_reason": "Not used in layout"
+      }
+    ]
+  },
+  "design": {
+    "palette_id": "P-5",
+    "tailwind": {
+      "container": "max-w-7xl mx-auto px-6",
+      "section": "py-16 md:py-24",
+      "card": "bg-zinc-50 rounded-lg border border-zinc-200 shadow-md p-6",
+      "btn_primary": "bg-zinc-900 hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold transition-all",
+      "btn_secondary": "border border-zinc-300 text-zinc-700 px-6 py-3 rounded-lg hover:bg-zinc-50 transition-all",
+      "text_heading": "text-zinc-900",
+      "text_body": "text-zinc-900 opacity-70",
+      "bg_page": "bg-white",
+      "accent_text": "text-red-500",
+      "accent_bg": "bg-red-500/10",
+      "input": "w-full px-4 py-3 rounded-lg border border-zinc-200 bg-zinc-50 text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-500"
+    },
+    "visual_effect": "none",
+    "effect_placement": "top-right",
+    "text_animation": "typewriter",
+    "border_radius": "rounded-lg",
+    "shadow_style": "shadow-md",
+    "font_pair": "Inter",
+    "dark_mode": false
+  }
+}
