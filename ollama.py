@@ -93,30 +93,37 @@ def ollama_stream(prompt: str, system: str = "") -> str:
         "stream": True,
         "options": {"temperature": 0.3, "top_p": 0.9, "num_ctx": 8192},
     }
-    req = _make_request(payload)
-    result: list[str] = []
-
-    try:
-        with urllib.request.urlopen(req, timeout=360) as resp:
-            for line in resp:
-                line = line.strip()
-                if not line:
-                    continue
-                try:
-                    chunk = json.loads(line)
-                    token = chunk.get("response", "")
-                    sys.stdout.write(token)
-                    sys.stdout.flush()
-                    result.append(token)
-                    if chunk.get("done"):
-                        break
-                except json.JSONDecodeError:
-                    continue
-    except urllib.error.URLError as e:
-        raise ConnectionError(f"Ollama connection failed: {e}") from e
-
-    print()  # newline after streaming
-    return "".join(result)
+    attempts = 3
+    for attempt in range(attempts):
+        try:
+            req = _make_request(payload)
+            result: list[str] = []
+            with urllib.request.urlopen(req, timeout=120) as resp:
+                for line in resp:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    try:
+                        chunk = json.loads(line)
+                        token = chunk.get("response", "")
+                        sys.stdout.write(token)
+                        sys.stdout.flush()
+                        result.append(token)
+                        if chunk.get("done"):
+                            break
+                    except json.JSONDecodeError:
+                        continue
+            print()  # newline after streaming
+            return "".join(result)
+        except (urllib.error.URLError, ConnectionError, TimeoutError) as e:
+            if attempt < attempts - 1:
+                wait = 10 * (attempt + 1)
+                print(f"\n\033[33m  ⚠ Attempt {attempt+1} failed: {e}. Retrying in {wait}s...\033[0m")
+                time.sleep(wait)
+            else:
+                print(f"\n\033[31m  ✖ Final attempt failed: {e}\033[0m")
+                raise ConnectionError(f"Ollama connection failed after {attempts} attempts: {e}") from e
+    return ""
 
 
 # ── NON-STREAMING (for JSON stages — cleaner) ─────────────────────────────────
@@ -129,20 +136,26 @@ def ollama(prompt: str, system: str = "", label: str = "Thinking") -> str:
         "stream": False,
         "options": {"temperature": 0.3, "top_p": 0.9, "num_ctx": 8192},
     }
-    req = _make_request(payload)
-
-    with Spinner(label):
+    attempts = 3
+    for attempt in range(attempts):
         try:
-            with urllib.request.urlopen(req, timeout=360) as resp:
-                raw = resp.read().decode()
-        except urllib.error.URLError as e:
-            raise ConnectionError(f"Ollama connection failed: {e}") from e
-
-    try:
-        data = json.loads(raw)
-        return (data.get("response") or "").strip()
-    except json.JSONDecodeError as e:
-        raise ValueError(f"Failed to parse Ollama response: {raw[:200]}") from e
+            req = _make_request(payload)
+            with Spinner(label):
+                with urllib.request.urlopen(req, timeout=120) as resp:
+                    raw = resp.read().decode()
+                    data = json.loads(raw)
+                    return (data.get("response") or "").strip()
+        except (urllib.error.URLError, ConnectionError, TimeoutError, json.JSONDecodeError) as e:
+            if attempt < attempts - 1:
+                wait = 10 * (attempt + 1)
+                print(f"\n\033[33m  ⚠ Attempt {attempt+1} failed: {e}. Retrying in {wait}s...\033[0m")
+                time.sleep(wait)
+            else:
+                print(f"\n\033[31m  ✖ Final attempt failed: {e}\033[0m")
+                if isinstance(e, json.JSONDecodeError):
+                    raise ValueError(f"Failed to parse Ollama response after {attempts} attempts") from e
+                raise ConnectionError(f"Ollama connection failed after {attempts} attempts: {e}") from e
+    return ""
 
 
 # ── JSON EXTRACTOR ────────────────────────────────────────────────────────────

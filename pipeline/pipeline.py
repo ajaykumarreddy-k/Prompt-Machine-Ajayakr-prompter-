@@ -3,6 +3,12 @@
 import sys
 import os
 
+# ── SAFETY NET FOR TUI REDIRECTION ──────────────────────────────────────────
+if not hasattr(sys.stdout, 'isatty'):
+    sys.stdout.isatty = lambda: False
+if not hasattr(sys.stderr, 'isatty'):
+    sys.stderr.isatty = lambda: False
+
 from pipeline.stage1_intent_parser       import parse_intent
 from pipeline.stage2_ontology_map        import map_ontology_by_embedding
 from pipeline.stage3_layout_planner      import plan_layout

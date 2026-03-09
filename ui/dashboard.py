@@ -561,6 +561,19 @@ class PromptMachineApp(App):
                 self.buf = ""
                 self.has_emitted_partial = False
 
+            def isatty(self):
+                return False
+
+            def fileno(self):
+                import io
+                raise io.UnsupportedOperation("fileno")
+
+            def readable(self):
+                return False
+
+            def writable(self):
+                return True
+
             def write(self, s):
                 if not s: return
                 s = ansi_escape.sub('', s)
