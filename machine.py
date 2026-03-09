@@ -17,33 +17,6 @@ import sys
 # ── FORCE CPU for embeddings — Ollama owns the GPU ────────────────────────────
 os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
-# ── COLOURS ───────────────────────────────────────────────────────────────────
-class C:
-    R  = "\033[0m" ; B  = "\033[1m" ; DIM = "\033[2m"
-    CY = "\033[36m"; GR = "\033[32m"; YL  = "\033[33m"
-    RD = "\033[31m"; BL = "\033[34m"; MG  = "\033[35m"
-    GY = "\033[90m"
-
-
-BANNER = f"""{C.MG}
-██████╗ ██████╗  ██████╗ ███╗   ███╗██████╗ ████████╗
-██╔══██╗██╔══██╗██╔═══██╗████╗ ████║██╔══██╗╚══██╔══╝
-██████╔╝██████╔╝██║   ██║██╔████╔██║██████╔╝   ██║
-██╔═══╝ ██╔══██╗██║   ██║██║╚██╔╝██║██╔═══╝    ██║
-██║     ██║  ██║╚██████╔╝██║ ╚═╝ ██║██║        ██║
-╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚═╝        ╚═╝{C.R}
-
-{C.CY}███╗   ███╗ █████╗  ██████╗██╗  ██╗██╗███╗   ██╗███████╗
-████╗ ████║██╔══██╗██╔════╝██║  ██║██║████╗  ██║██╔════╝
-██╔████╔██║███████║██║     ███████║██║██╔██╗ ██║█████╗
-██║╚██╔╝██║██╔══██║██║     ██╔══██║██║██║╚██╗██║██╔══╝
-██║ ╚═╝ ██║██║  ██║╚██████╗██║  ██║██║██║ ╚████║███████╗
-╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚══════╝{C.R}
-
-{C.GY}                  designed and built by Ajay
-    ─────────────────────────────────────────────────────{C.R}
-"""
-
 
 # ── ARG PARSING ───────────────────────────────────────────────────────────────
 def _parse_flags() -> dict:
@@ -76,6 +49,8 @@ def _parse_flags() -> dict:
 
 # ── PRD INPUT ─────────────────────────────────────────────────────────────────
 def _get_prd() -> str:
+    from core.pipeline import C
+
     print(f"\n{C.CY}{'─' * 58}{C.R}")
     print(f"{C.B}  Paste your PRD.  Type END on a new line when done.{C.R}")
     print(f"{C.CY}{'─' * 58}{C.R}\n")
@@ -92,46 +67,24 @@ def _get_prd() -> str:
 
     prd = "\n".join(lines).strip()
     if not prd:
+        from core.pipeline import C
         print(f"{C.RD}{C.B}[ERROR]{C.R} No PRD provided.")
         sys.exit(1)
     if len(prd.split()) < 5:
+        from core.pipeline import C
         print(f"{C.YL}⚠  Input is very short — proceeding anyway.{C.R}")
     return prd
-
-
-# ── WARM KB ───────────────────────────────────────────────────────────────────
-def _warm_kb() -> None:
-    try:
-        from vector_kb import get_model, get_index
-        print(f"{C.GY}  Warming up vector KB (CPU)...{C.R}", end="", flush=True)
-        get_model()
-        get_index()
-        print(f"\r  {C.GR}✓  Vector KB ready.{C.R}               ")
-    except SystemExit:
-        print(f"\r  {C.YL}⚠  KB index not built — retrieval will be skipped.{C.R}")
-        print(f"  {C.GY}    Run:  uv run vector_kb.py build{C.R}")
-    except Exception as e:
-        print(f"\r  {C.YL}⚠  KB warm-up failed: {e}{C.R}")
 
 
 # ── RUN ───────────────────────────────────────────────────────────────────────
 def run() -> None:
     flags = _parse_flags()
+    from core.pipeline import C, run_prompt_machine
 
     # Apply model override before any imports use it
     if flags["model"]:
         os.environ["OLLAMA_MODEL"] = flags["model"]
 
-    from ollama import check_ollama, MODEL
-    from pipeline.pipeline import run_pipeline
-
-    print(BANNER)
-    check_ollama()
-    print(f"  {C.GY}Model: {MODEL}{C.R}")
-    print(f"  {C.GY}{'─' * 56}{C.R}")
-
-    _warm_kb()
- 
     if flags["input"]:
         if not os.path.exists(flags["input"]):
             print(f"{C.RD}{C.B}[ERROR]{C.R} Input file not found: {flags['input']}")
@@ -142,11 +95,7 @@ def run() -> None:
     else:
         prd = _get_prd()
  
-    print(f"\n{C.CY}{'─' * 58}{C.R}")
-    print(f"  {C.GR}{C.B}Running pipeline…{C.R}")
-    print(f"{C.CY}{'─' * 58}{C.R}")
- 
-    run_pipeline(
+    run_prompt_machine(
         prd,
         no_code=flags["no_code"],
         verbose=flags["verbose"],
@@ -163,7 +112,7 @@ def main() -> None:
     elif len(sys.argv) >= 3 and sys.argv[1] == "run" and sys.argv[2] == "promptmachine":
         from ui.dashboard import PromptMachineApp
         PromptMachineApp().run()
-    else:
+        from core.pipeline import C
         print(f"\n{C.B}Prompt Machine v3.0{C.R}")
         print(f"  {C.CY}uv run machine.py run Ajayakr-prompter{C.R}")
         print(f"  {C.CY}uv run machine.py run promptmachine{C.R}\n")

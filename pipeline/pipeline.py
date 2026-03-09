@@ -29,7 +29,7 @@ def _progress(n, total, label):
 
 
 def run_pipeline(prd, no_code=False, verbose=False, palette_override=None, save=True, output_dir="output"):
-    TOTAL = 11
+    TOTAL = 12
     print("\n\033[36m  Starting Compiler Pipeline Engine...\033[0m\n")
 
     _progress(1, TOTAL, "Intent Parsing")
@@ -54,19 +54,22 @@ def run_pipeline(prd, no_code=False, verbose=False, palette_override=None, save=
     design = inject_design_system(intent, palette_override)
 
     _progress(8, TOTAL, "Prompt Synthesis")
-    final_prompt = generate_prompt(intent, blueprint_ast, kb_context, design)
+    raw_prompt = generate_prompt(intent, blueprint_ast, kb_context, design)
     
+    _progress(9, TOTAL, "Prompt Refinement")
+    final_prompt = refine_prompt(raw_prompt, intent)
+
     # Store complete metadata into a single dict 
     components_dict = {"kb_context": kb_context, "required_components": ontology["required_components"]}
 
     code = ""
     if not no_code:
-        _progress(9, TOTAL, "Multi-File Code Generation")
+        _progress(10, TOTAL, "Multi-File Code Generation")
         code = generate_code(intent, blueprint_ast, components_dict, design, kb_context, final_prompt)
     else:
-        _progress(9, TOTAL, "Code Generation (skipped)")
+        _progress(10, TOTAL, "Code Generation (skipped)")
 
-    _progress(10, TOTAL, "Blueprint Output")
+    _progress(11, TOTAL, "Blueprint Output")
     print("\n")
 
     full_blueprint = {
@@ -77,7 +80,7 @@ def run_pipeline(prd, no_code=False, verbose=False, palette_override=None, save=
     if save:
         save_blueprint(full_blueprint, output_dir=output_dir)
 
-    _progress(11, TOTAL, "Strict Token Validation")
+    _progress(12, TOTAL, "Strict Token Validation")
     name = intent["product_name"].lower().replace(" ", "-")
     target_path = os.path.join(output_dir, name) if save else "tmp"
     validate_generated_code(target_path)

@@ -234,12 +234,16 @@ class SideStats(Static):
 # ══════════════════════════════════════════════════════════════════
 #  PROMPT AREA — full conversation log + input
 # ══════════════════════════════════════════════════════════════════
-class PromptArea(Static):
+class PromptArea(ScrollableContainer):
     _tick: reactive[int] = reactive(0)
 
     def __init__(self, **kw):
         super().__init__(**kw)
         self._history: list = []  # list of (role, ts, text)
+        self.can_focus = True
+
+    def compose(self) -> ComposeResult:
+        yield Static(id="message-log")
 
     def add_entry(self, text: str) -> None:
         ts = time.strftime("%H:%M:%S")
@@ -248,6 +252,7 @@ class PromptArea(Static):
         if len(self._history) > 200:
             self._history = self._history[-200:]
         self._tick += 1
+        self.call_after_refresh(self.scroll_end, animate=False)
 
     def update_engine(self, ansi_text: str, replace: bool = False) -> None:
         try:
@@ -264,8 +269,13 @@ class PromptArea(Static):
         if len(self._history) > 200:
             self._history = self._history[-200:]
         self._tick += 1
+        self.call_after_refresh(self.scroll_end, animate=False)
 
-    def render(self) -> RenderableType:
+    def watch__tick(self) -> None:
+        log = self.query_one("#message-log", Static)
+        log.update(self.render_history())
+
+    def render_history(self) -> RenderableType:
         if not self._history:
             msg = Text()
             msg.append("\n\n  Ready.\n\n", style="dim white")
@@ -274,14 +284,10 @@ class PromptArea(Static):
             msg.append("  Type ", style="dim white")
             msg.append("/help", style="bold white")
             msg.append(" or click the /help button for tips.\n", style="dim white")
-            return Panel(msg,
-                         title=Text("PROMPT ENGINE", style="bold white"),
-                         border_style="color(238)",
-                         box=box.SIMPLE_HEAD,
-                         padding=(0, 2))
+            return msg
 
         out = Text()
-        for role, ts, line in self._history[-30:]:
+        for role, ts, line in self._history:
             if role == "user":
                 out.append(f"\n  [{ts}] ", style="dim white")
                 out.append("you  ", style="bold white")
@@ -294,12 +300,11 @@ class PromptArea(Static):
                     out.append("\n")
                 else:
                     out.append(str(line) + "\n", style="dim white")
+        return out
 
-        return Panel(out,
-                     title=Text("PROMPT ENGINE", style="bold white"),
-                     border_style="color(238)",
-                     box=box.SIMPLE_HEAD,
-                     padding=(0, 2))
+    def render(self) -> RenderableType:
+        return "" # We use compose now
+
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -372,6 +377,20 @@ class PromptMachineApp(App):
 
     PromptArea {
         height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        border: tall #222222;
+        padding: 0 1;
+        margin: 0 1;
+    }
+
+    PromptArea:hover {
+        border: tall cyan;
+    }
+
+    #message-log {
+        width: 1fr;
+        height: auto;
     }
 
     /* ── input bar ── */
@@ -436,6 +455,14 @@ class PromptMachineApp(App):
         ("ctrl+s", "submit", "Submit"),
     ]
 
+    def on_mount(self) -> None:
+        import time
+        area = self.query_one("#prompt-area", PromptArea)
+        area._history.append(("engine", time.strftime("%H:%M:%S"), "──────────────────────────────────────────────────────────"))
+        area._history.append(("engine", time.strftime("%H:%M:%S"), "  Paste your PRD.  Type END or -> END on a new line when done."))
+        area._history.append(("engine", time.strftime("%H:%M:%S"), "──────────────────────────────────────────────────────────"))
+        area._tick += 1
+
     def compose(self) -> ComposeResult:
         yield TitleBar()
         yield Footer()
@@ -473,10 +500,21 @@ class PromptMachineApp(App):
         elif event.button.id == "help-btn":
             self._handle_command("/help")
 
+    def on_text_area_changed(self, event: TextArea.Changed) -> None:
+        if event.text_area.id == "prompt-input" and event.text_area.text.strip().endswith("END"):
+            self._do_submit()
+
     def _do_submit(self) -> None:
         ta = self.query_one("#prompt-input", TextArea)
         text = ta.text.strip()
         ta.clear()
+
+        # Clean END keyword
+        if text.endswith("END"):
+            text = text[:-3].strip()
+            if text.endswith("->"):
+                text = text[:-2].strip()
+
         if not text:
             return
         # Intercept built-in commands before hitting the pipeline
@@ -508,47 +546,63 @@ class PromptMachineApp(App):
     @work(thread=True)
     def run_pipeline_bg(self, text: str) -> None:
         from pipeline.pipeline import run_pipeline
+        import re
+        import os
+
+        # Tell `ollama.py` to disable its high-speed spinner writes
+        os.environ["PROMPT_MACHINE_TUI"] = "1"
+
+        ansi_escape = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
 
         class UIStdout:
             def __init__(self, app, area):
                 self.app = app
                 self.area = area
                 self.buf = ""
+                self.has_emitted_partial = False
 
             def write(self, s):
-                if not s:
-                    return
-                if "\r" in s:
-                    style = s.strip()
-                    if style:
-                        self.app.call_from_thread(self.area.update_engine, style, True)
-                    return
-                self.buf += s
-                if "\n" in s:
-                    lines = self.buf.split("\n")
-                    self.buf = lines[-1]
-                    for line in lines[:-1]:
-                        if line.strip():
-                            self.app.call_from_thread(self.area.update_engine, line.strip(), False)
+                if not s: return
+                s = ansi_escape.sub('', s)
+
+                for char in s:
+                    if char == '\n':
+                        if self.buf:
+                            self.app.call_from_thread(self.area.update_engine, self.buf, self.has_emitted_partial)
+                        else:
+                            self.app.call_from_thread(self.area.update_engine, "", self.has_emitted_partial)
+                        self.buf = ""
+                        self.has_emitted_partial = False
+                    elif char == '\r':
+                        self.buf = ""
+                    else:
+                        self.buf += char
 
             def flush(self):
-                if self.buf.strip():
-                    self.app.call_from_thread(self.area.update_engine, self.buf.strip(), False)
-                self.buf = ""
+                if self.buf:
+                    self.app.call_from_thread(self.area.update_engine, self.buf, self.has_emitted_partial)
+                    self.has_emitted_partial = True
 
         area = self.query_one("#prompt-area", PromptArea)
         ui_out = UIStdout(self, area)
 
         original_stdout = sys.stdout
+        original_stderr = sys.stderr
         sys.stdout = ui_out
+        sys.stderr = ui_out
         try:
-            run_pipeline(text, no_code=False, verbose=False)
+            from core.pipeline import run_prompt_machine
+            
+            run_prompt_machine(text, no_code=False, verbose=False)
+
             sys.stdout.flush()
             self.app.call_from_thread(area.update_engine, "✅ Done! Project files generated.", False)
-        except Exception as e:
+        except BaseException as e:
+            # BaseException catches SystemExit, KeyboardInterrupt, etc.
             self.app.call_from_thread(area.update_engine, f"❌ Error: {e}", False)
         finally:
             sys.stdout = original_stdout
+            sys.stderr = original_stderr
 
 
 if __name__ == "__main__":

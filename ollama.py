@@ -24,27 +24,41 @@ class Spinner:
     def __init__(self, msg: str):
         self.msg    = msg
         self._stop  = threading.Event()
+        self.is_tui = os.environ.get("PROMPT_MACHINE_TUI") == "1"
         self._thread = threading.Thread(target=self._run, daemon=True)
 
     def _run(self):
         i = 0
         while not self._stop.is_set():
-            sys.stdout.write(f"\r\033[36m{self._FRAMES[i % 10]} {self.msg}...\033[0m")
-            sys.stdout.flush()
+            if not self.is_tui:
+                sys.stdout.write(f"\r\033[36m{self._FRAMES[i % 10]} {self.msg}...\033[0m")
+                sys.stdout.flush()
+                time.sleep(0.08)
+            else:
+                # In TUI, print dots occasionally to keep standard out "alive" 
+                # so the Textual app knows the worker is not completely frozen.
+                if i == 0:
+                    sys.stdout.write(f"\r{self.msg}...")
+                elif i % 10 == 0:
+                    sys.stdout.write(".")
+                sys.stdout.flush()
+                time.sleep(0.5)
             i += 1
-            time.sleep(0.08)
 
     def __enter__(self):
-        if sys.stdout.isatty():
-            self._thread.start()
+        self._thread.start()
         return self
  
     def __exit__(self, *_):
+        self._stop.set()
         if self._thread.is_alive():
-            self._stop.set()
             self._thread.join()
+        
+        if self.is_tui:
+            sys.stdout.write(f"\r{self.msg}... Done.\n")
+        else:
             sys.stdout.write("\r" + " " * (len(self.msg) + 6) + "\r")
-            sys.stdout.flush()
+        sys.stdout.flush()
 
 
 # ── HELPERS ───────────────────────────────────────────────────────────────────
