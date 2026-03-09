@@ -254,13 +254,13 @@ class PromptArea(Static):
             line = Text.from_ansi(ansi_text)
         except Exception:
             line = Text(ansi_text)
-            
+
         if replace and self._history and self._history[-1][0] == "engine":
             ts = self._history[-1][1]
             self._history[-1] = ("engine", ts, line)
         else:
             self._history.append(("engine", time.strftime("%H:%M:%S"), line))
-            
+
         if len(self._history) > 200:
             self._history = self._history[-200:]
         self._tick += 1
@@ -273,7 +273,7 @@ class PromptArea(Static):
             msg.append("  The pipeline will process the requirements and generate everything.\n", style="dim white")
             msg.append("  Type ", style="dim white")
             msg.append("/help", style="bold white")
-            msg.append(" or hover over Submit for tips.\n", style="dim white")
+            msg.append(" or click the /help button for tips.\n", style="dim white")
             return Panel(msg,
                          title=Text("PROMPT ENGINE", style="bold white"),
                          border_style="color(238)",
@@ -300,6 +300,30 @@ class PromptArea(Static):
                      border_style="color(238)",
                      box=box.SIMPLE_HEAD,
                      padding=(0, 2))
+
+
+# ══════════════════════════════════════════════════════════════════
+#  HELP TEXT
+# ══════════════════════════════════════════════════════════════════
+HELP_TEXT = """\
+AKR Prompt Engine — Help
+━━━━━━━━━━━━━━━━━━━━━━━━
+Usage:
+  • Type your PRD or prompt in the input box and click Submit (or Ctrl+S).
+  • The engine will process your request and stream output here.
+
+Commands:
+  /help      Show this help message
+  /clear     Clear the conversation history
+  q          Quit the application (keyboard shortcut)
+
+Tips:
+  1. Be specific — detailed prompts produce better results.
+  2. Paste full PRDs for end-to-end project generation.
+  3. The SYS panel on the left shows live CPU / MEM stats.
+"""
+
+_HELP_COMMANDS = {"/help", "/clear"}
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -374,9 +398,10 @@ class PromptMachineApp(App):
     }
 
     TextArea:focus { border: none; }
-    
+
     #button-col {
-        width: 18;
+        width: 20;
+        min-width: 20;
         height: 100%;
         align: center middle;
     }
@@ -388,7 +413,7 @@ class PromptMachineApp(App):
         background: #111118;
         color: cyan;
         border: none;
-        min-width: 14;
+        min-width: 16;
         height: 3;
     }
 
@@ -405,7 +430,11 @@ class PromptMachineApp(App):
     }
     """
 
-    BINDINGS = [("q", "quit", "Quit")]
+    # FIX: Ctrl+S as shortcut to submit, q to quit
+    BINDINGS = [
+        ("q", "quit", "Quit"),
+        ("ctrl+s", "submit", "Submit"),
+    ]
 
     def compose(self) -> ComposeResult:
         yield TitleBar()
@@ -422,56 +451,94 @@ class PromptMachineApp(App):
             yield Static("⟫ ", id="prompt-label")
             yield TextArea(id="prompt-input", show_line_numbers=False)
             with Vertical(id="button-col"):
-                btn = Button("[Submit]", id="submit-btn")
-                btn.tooltip = "Tips:\n1. Ask questions, edit files, or run commands.\n2. Be specific for the best results.\n3. Type /help for more info."
+                # FIX: removed Rich markup brackets from button labels
+                btn = Button("Submit", id="submit-btn")
+                btn.tooltip = (
+                    "Tips:\n"
+                    "1. Ask questions, edit files, or run commands.\n"
+                    "2. Be specific for the best results.\n"
+                    "3. Type /help for more info.\n"
+                    "Shortcut: Ctrl+S"
+                )
                 yield btn
-                yield Button("[/help]", id="help-btn")
+                yield Button("/help", id="help-btn")
+
+    # ── keyboard shortcut for submit ──
+    def action_submit(self) -> None:
+        self._do_submit()
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "submit-btn":
-            ta = self.query_one("#prompt-input", TextArea)
-            text = ta.text.strip()
-            ta.text = ""
-            if text:
-                self.query_one("#prompt-area", PromptArea).add_entry(text)
-                self.run_pipeline_bg(text)
+            self._do_submit()
         elif event.button.id == "help-btn":
-            self.query_one("#prompt-area", PromptArea).add_entry("/help")
-            self.run_pipeline_bg("/help")
+            self._handle_command("/help")
+
+    def _do_submit(self) -> None:
+        ta = self.query_one("#prompt-input", TextArea)
+        text = ta.text.strip()
+        ta.clear()
+        if not text:
+            return
+        # Intercept built-in commands before hitting the pipeline
+        if text.lower() in _HELP_COMMANDS:
+            self._handle_command(text.lower())
+        else:
+            self.query_one("#prompt-area", PromptArea).add_entry(text)
+            self.run_pipeline_bg(text)
+
+    def _handle_command(self, cmd: str) -> None:
+        """Handle built-in slash-commands without calling the pipeline."""
+        area = self.query_one("#prompt-area", PromptArea)
+        if cmd == "/help":
+            # Clear everything, show help inline, then auto-clear after 6s
+            area._history.clear()
+            for line in HELP_TEXT.splitlines():
+                area._history.append(("engine", time.strftime("%H:%M:%S"), line if line.strip() else " "))
+            area._tick += 1
+            self.set_timer(6, self._clear_history)
+        elif cmd == "/clear":
+            area._history.clear()
+            area._tick += 1
+
+    def _clear_history(self) -> None:
+        area = self.query_one("#prompt-area", PromptArea)
+        area._history.clear()
+        area._tick += 1
 
     @work(thread=True)
     def run_pipeline_bg(self, text: str) -> None:
         from pipeline.pipeline import run_pipeline
-        
+
         class UIStdout:
             def __init__(self, app, area):
                 self.app = app
                 self.area = area
                 self.buf = ""
-                self.replace = False
 
             def write(self, s):
+                if not s:
+                    return
                 if "\r" in s:
-                    self.replace = True
-                    s = s.replace("\r", "")
+                    style = s.strip()
+                    if style:
+                        self.app.call_from_thread(self.area.update_engine, style, True)
+                    return
                 self.buf += s
                 if "\n" in s:
                     lines = self.buf.split("\n")
                     self.buf = lines[-1]
                     for line in lines[:-1]:
-                        if line.strip() or self.replace:
-                            self.app.call_from_thread(self.area.update_engine, line.strip(), self.replace)
-                            self.replace = False
-            
+                        if line.strip():
+                            self.app.call_from_thread(self.area.update_engine, line.strip(), False)
+
             def flush(self):
-                if self.buf.strip() or self.replace:
-                    self.app.call_from_thread(self.area.update_engine, self.buf.strip(), self.replace)
+                if self.buf.strip():
+                    self.app.call_from_thread(self.area.update_engine, self.buf.strip(), False)
                 self.buf = ""
-                self.replace = False
 
         area = self.query_one("#prompt-area", PromptArea)
         ui_out = UIStdout(self, area)
-        
+
         original_stdout = sys.stdout
         sys.stdout = ui_out
         try:
