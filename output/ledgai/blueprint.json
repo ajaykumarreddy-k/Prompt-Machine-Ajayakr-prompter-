@@ -1,0 +1,266 @@
+{
+  "intent": {
+    "product_name": "LedgAI",
+    "product_type": "saas",
+    "target_audience": "Freelancers and small businesses",
+    "key_features": [
+      "Auto-invoicing",
+      "AI expense categorization",
+      "tax estimates"
+    ],
+    "tone": "professional|high-tech|slightly futuristic",
+    "style_keywords": [
+      "modern",
+      "clean",
+      "trustworthy",
+      "futuristic",
+      "dark mode",
+      "violet",
+      "slate accents"
+    ],
+    "pages": [
+      "home"
+    ],
+    "palette_hint": "Dark mode, violet and slate accents",
+    "complexity": "medium",
+    "industry": "accounting",
+    "custom_components": [],
+    "ui_interactions": []
+  },
+  "ontology": {
+    "domain": "dashboard",
+    "required_components": [
+      "StatCard",
+      "ActivityFeed",
+      "Sidebar",
+      "DataGrid",
+      "Navbar",
+      "UserMenu",
+      "ChartWidget"
+    ]
+  },
+  "layout": {
+    "pages": [
+      {
+        "name": "Overview",
+        "route": "/",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar"
+            },
+            {
+              "type": "StatCard",
+              "original_name": "StatCard"
+            },
+            {
+              "type": "ActivityFeed",
+              "original_name": "ActivityFeed"
+            },
+            {
+              "type": "DataGrid",
+              "original_name": "DataGrid"
+            },
+            {
+              "type": "UserMenu",
+              "original_name": "UserMenu"
+            },
+            {
+              "type": "ChartWidget",
+              "original_name": "ChartWidget"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Analytics",
+        "route": "/analytics",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar"
+            },
+            {
+              "type": "ChartWidget",
+              "original_name": "ChartWidget"
+            },
+            {
+              "type": "DataGrid",
+              "original_name": "DataGrid"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Settings",
+        "route": "/settings",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar"
+            }
+          ]
+        }
+      }
+    ],
+    "discarded_components": [
+      {
+        "component": "Sidebar",
+        "discard_reason": "Not used in layout"
+      }
+    ]
+  },
+  "ast": {
+    "pages": [
+      {
+        "name": "Overview",
+        "route": "/",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "Provides navigation options for the application"
+              ]
+            },
+            {
+              "type": "StatCard",
+              "props": [
+                "stats"
+              ],
+              "responsibilities": [
+                "Displays key statistical information about the data"
+              ]
+            },
+            {
+              "type": "ActivityFeed",
+              "props": [
+                "items"
+              ],
+              "responsibilities": [
+                "Shows recent activities or events related to user actions"
+              ]
+            },
+            {
+              "type": "DataGrid",
+              "props": [
+                "items",
+                "filters"
+              ],
+              "responsibilities": [
+                "Displays tabular data with filtering and sorting capabilities"
+              ]
+            },
+            {
+              "type": "UserMenu",
+              "props": [],
+              "responsibilities": [
+                "Provides user-specific actions like profile, settings, logout"
+              ]
+            },
+            {
+              "type": "ChartWidget",
+              "props": [
+                "data"
+              ],
+              "responsibilities": [
+                "Displays interactive charts or graphs for data visualization"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "Analytics",
+        "route": "/analytics",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "Provides navigation options for the application"
+              ]
+            },
+            {
+              "type": "ChartWidget",
+              "props": [
+                "data"
+              ],
+              "responsibilities": [
+                "Displays interactive charts or graphs for data visualization"
+              ]
+            },
+            {
+              "type": "DataGrid",
+              "props": [
+                "items",
+                "filters"
+              ],
+              "responsibilities": [
+                "Displays tabular data with filtering and sorting capabilities"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "Settings",
+        "route": "/settings",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "Provides navigation options for the application"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "discarded_components": [
+      {
+        "component": "Sidebar",
+        "discard_reason": "Not used in layout"
+      }
+    ]
+  },
+  "design": {
+    "palette_id": "P-4",
+    "tailwind": {
+      "container": "max-w-7xl mx-auto px-6",
+      "section": "py-16 md:py-24",
+      "card": "bg-slate-900 rounded-2xl border border-slate-800 shadow-lg p-6",
+      "btn_primary": "bg-violet-500 hover:opacity-90 text-white px-6 py-3 rounded-2xl font-semibold transition-all",
+      "btn_secondary": "border border-violet-300 text-violet-700 px-6 py-3 rounded-2xl hover:bg-violet-50 transition-all",
+      "text_heading": "text-slate-200",
+      "text_body": "text-slate-200 opacity-70",
+      "bg_page": "bg-slate-950",
+      "accent_text": "text-cyan-400",
+      "accent_bg": "bg-cyan-500/10",
+      "input": "w-full px-4 py-3 rounded-2xl border border-slate-800 bg-slate-900 text-slate-200 focus:outline-none focus:ring-2 focus:ring-violet-500"
+    },
+    "visual_effect": "corner-blur",
+    "effect_placement": "top-right",
+    "text_animation": "gradient-text",
+    "border_radius": "rounded-2xl",
+    "shadow_style": "shadow-lg",
+    "font_pair": "Plus Jakarta Sans",
+    "dark_mode": true
+  }
+}
