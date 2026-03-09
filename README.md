@@ -2,7 +2,7 @@
 
 Prompt Machine is an intelligent, CLI-based UI Designer and Code Generator pipeline. It uses a local LLM through [Ollama](https://ollama.ai/) combined with a local FAISS-based Vector Knowledge Base to intelligently architect and generate production-quality React + Tailwind CSS components from a simple Product Requirements Document (PRD).
 
-![Prompt Machine Dashboard](tui-screenshot.png) *(Note: To capture a screenshot of the dashboard, run `uv run machine.py run promptmachine` and use your system capture tool)*
+![Prompt Machine Dashboard](tui-screenshot.png) *(Note:  run `uv run machine.py run promptmachine` and use your system capture tool)*
 
 ## ✨ Key Features
 
