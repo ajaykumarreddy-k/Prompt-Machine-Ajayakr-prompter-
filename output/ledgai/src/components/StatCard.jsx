@@ -1,12 +1,12 @@
-import { useState } from 'react';
-
-export const StatCard = ({ stats }) => (
-  <div className="bg-slate-900 rounded-2xl border border-slate-800 shadow-lg p-6 max-w-sm mx-auto my-4 text-center">
+const StatCard = ({ stats }) => (
+  <div className="bg-slate-900 rounded-2xl border border-slate-800 shadow-lg p-6 w-full transition-all hover:border-slate-700">
     {stats.map((stat, index) => (
-      <div key={index} className="mb-4">
-        <p className="text-xl font-semibold">{stat.title}</p>
-        <p className="text-slate-200 opacity-70">{stat.value}</p>
+      <div key={index}>
+        <p className="text-sm font-medium text-slate-400 uppercase tracking-wider mb-1">{stat.title}</p>
+        <p className="text-3xl font-bold text-white">{stat.value}</p>
       </div>
     ))}
   </div>
 );
+
+export default StatCard;

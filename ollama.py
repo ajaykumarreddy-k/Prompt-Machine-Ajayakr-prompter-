@@ -62,7 +62,7 @@ class Spinner:
 
 
 # ── HELPERS ───────────────────────────────────────────────────────────────────
-def _make_request(payload: dict, timeout: int = 360) -> urllib.request.Request:
+def _make_request(payload: dict) -> urllib.request.Request:
     data = json.dumps(payload).encode()
     return urllib.request.Request(
         OLLAMA_URL,
@@ -93,12 +93,12 @@ def ollama_stream(prompt: str, system: str = "") -> str:
         "stream": True,
         "options": {"temperature": 0.3, "top_p": 0.9, "num_ctx": 8192},
     }
-    attempts = 3
+    attempts = 5
     for attempt in range(attempts):
         try:
             req = _make_request(payload)
             result: list[str] = []
-            with urllib.request.urlopen(req, timeout=120) as resp:
+            with urllib.request.urlopen(req, timeout=300) as resp:
                 for line in resp:
                     line = line.strip()
                     if not line:
@@ -136,12 +136,12 @@ def ollama(prompt: str, system: str = "", label: str = "Thinking") -> str:
         "stream": False,
         "options": {"temperature": 0.3, "top_p": 0.9, "num_ctx": 8192},
     }
-    attempts = 3
+    attempts = 5
     for attempt in range(attempts):
         try:
             req = _make_request(payload)
             with Spinner(label):
-                with urllib.request.urlopen(req, timeout=120) as resp:
+                with urllib.request.urlopen(req, timeout=300) as resp:
                     raw = resp.read().decode()
                     data = json.loads(raw)
                     return (data.get("response") or "").strip()

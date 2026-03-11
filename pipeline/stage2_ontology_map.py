@@ -164,6 +164,12 @@ def map_ontology_by_embedding(intent: dict) -> dict:
             required_comps.add(comp)
         else:
             print(f"\033[90m    Skipping forbidden primitive: {comp}\033[0m")
+    
+    # FIX 1 — Strip .tsx/.jsx/etc. extensions from component names
+    required_comps = {
+        re.sub(r'\.(tsx|jsx|ts|js)$', '', comp, flags=re.IGNORECASE)
+        for comp in required_comps
+    }
         
     extracted = list(required_comps)
     print(f"\033[90m  Ontology Components: {', '.join(extracted)}\033[0m")

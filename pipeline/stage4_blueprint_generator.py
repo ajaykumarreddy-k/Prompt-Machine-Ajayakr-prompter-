@@ -46,7 +46,8 @@ Output format expected:
   ]
 }}
  
-Return the FULL ENHANCED JSON. Do not omit the layout structure. Do NOT use quiz examples if the domain is not quiz. Preserve all existing fields like 'type' and 'original_name'.
+Return the FULL ENHANCED JSON. Do not omit the layout structure. Do NOT use quiz examples if the domain is not quiz. 
+CRITICAL: You MUST preserve all existing fields like 'type' and 'original_name' for every component. Failure to include 'original_name' will break the pipeline validation.
 """
 
     raw = ollama(prompt, system=SYSTEM, label="Generating Component Contracts")

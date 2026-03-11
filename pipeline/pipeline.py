@@ -1,4 +1,4 @@
-"""pipeline.py — Orchestrates all 10 pipeline stages."""
+"""pipeline.py — Orchestrates all 10 pipeline stages with Design Style Detection."""
 
 import sys
 import os
@@ -16,12 +16,14 @@ from pipeline.stage4_blueprint_generator import generate_blueprint_ast
 from pipeline.stage5_blueprint_validator import validate_blueprint
 from pipeline.stage6_targeted_retriever  import retrieve_targeted_context
 from pipeline.stage5_design_system       import inject_design_system
-from pipeline.stage7_prompt_generator    import generate_prompt
+from pipeline.stage7_prompt_generator    import generate_prompt, override_design_from_styles
 from pipeline.stage8_code_generator      import generate_code
 from pipeline.stage9_prompt_refiner      import refine_prompt
 from pipeline.stage10_blueprint_output   import render_blueprint, save_blueprint
 from pipeline.stage11_code_validator    import validate_generated_code
 
+# Design Style Detection
+from design_style_detector import detect_styles, build_style_context_prompt
 
 def _progress(n, total, label):
     filled  = "▰" * n
@@ -33,10 +35,14 @@ def _progress(n, total, label):
     if n == total:
         print()
 
-
 def run_pipeline(prd, no_code=False, verbose=False, palette_override=None, save=True, output_dir="output"):
     TOTAL = 12
     print("\n\033[36m  Starting Compiler Pipeline Engine...\033[0m\n")
+
+    # FIX 3: Detect Design Styles early and store result
+    styles = detect_styles(prd)
+    style_prompt = build_style_context_prompt(styles)
+    print(f"  \033[90mDetected Design Styles: {', '.join(styles)}\033[0m")
 
     _progress(1, TOTAL, "Intent Parsing")
     intent = parse_intent(prd)
@@ -54,13 +60,16 @@ def run_pipeline(prd, no_code=False, verbose=False, palette_override=None, save=
     blueprint_ast = validate_blueprint(raw_blueprint, ontology["required_components"])
 
     _progress(6, TOTAL, "Targeted Retrieval")
-    kb_context = retrieve_targeted_context(blueprint_ast, ontology["required_components"])
+    kb_context = retrieve_targeted_context(prd, blueprint_ast, ontology["required_components"])
 
     _progress(7, TOTAL, "Design System Integration")
     design = inject_design_system(intent, palette_override)
+    # Apply Style Overrides globally so Stage 8 and Stage 10 see the correct tokens
+    design = override_design_from_styles(design, styles)
 
     _progress(8, TOTAL, "Prompt Synthesis")
-    raw_prompt = generate_prompt(intent, blueprint_ast, kb_context, design)
+    # FIX 3: Pass detected_styles
+    raw_prompt = generate_prompt(intent, blueprint_ast, kb_context, design, style_prompt=style_prompt, detected_styles=styles)
     
     _progress(9, TOTAL, "Prompt Refinement")
     final_prompt = refine_prompt(raw_prompt, intent)
@@ -71,7 +80,8 @@ def run_pipeline(prd, no_code=False, verbose=False, palette_override=None, save=
     code = ""
     if not no_code:
         _progress(10, TOTAL, "Multi-File Code Generation")
-        code = generate_code(intent, blueprint_ast, components_dict, design, kb_context, final_prompt)
+        # FIX 3: Pass detected_styles and style_context
+        code = generate_code(intent, blueprint_ast, components_dict, design, kb_context, final_prompt, detected_styles=styles, style_context=style_prompt)
     else:
         _progress(10, TOTAL, "Code Generation (skipped)")
 
@@ -81,6 +91,7 @@ def run_pipeline(prd, no_code=False, verbose=False, palette_override=None, save=
     full_blueprint = {
         "intent": intent, "ontology": ontology, "layout": layout, "ast": blueprint_ast,
         "design": design, "prompt": final_prompt, "code": code,
+        "detected_styles": styles
     }
 
     if save:
@@ -89,7 +100,8 @@ def run_pipeline(prd, no_code=False, verbose=False, palette_override=None, save=
     _progress(12, TOTAL, "Strict Token Validation")
     name = intent["product_name"].lower().replace(" ", "-")
     target_path = os.path.join(output_dir, name) if save else "tmp"
-    validate_generated_code(target_path)
+    # FIX 3 & 5: Pass detected_styles
+    validate_generated_code(target_path, detected_styles=styles)
 
     print(render_blueprint(full_blueprint, verbose=verbose))
 

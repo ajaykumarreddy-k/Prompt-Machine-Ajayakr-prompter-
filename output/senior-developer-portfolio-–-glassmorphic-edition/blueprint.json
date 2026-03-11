@@ -1,0 +1,558 @@
+{
+  "intent": {
+    "product_name": "Senior Developer Portfolio \u2013 Glassmorphic Edition",
+    "product_type": "portfolio",
+    "target_audience": "Tech recruiters, Startup founders, Engineering managers, Other developers, Potential collaborators",
+    "key_features": [
+      "High technical credibility",
+      "Strong design sense",
+      "Professional authority",
+      "Modern frontend capability",
+      "Glassmorphic design",
+      "Smooth animations",
+      "Frosted glass cards",
+      "Subtle blur backgrounds",
+      "Gradient lighting",
+      "Soft shadows",
+      "Thin borders",
+      "Animated skill bars",
+      "Glass grid cards",
+      "Animated skill bars",
+      "Timeline style layout",
+      "Glass nodes",
+      "Glowing line",
+      "Reusable components",
+      "Smooth transitions",
+      "Hover interactions",
+      "Scale: 1.03",
+      "Glow increase",
+      "Fade in",
+      "Slide up",
+      "Blur reveal",
+      "Button ripple",
+      "Card tilt",
+      "Gradient shift"
+    ],
+    "tone": "technical",
+    "style_keywords": [
+      "glassmorphism",
+      "futuristic",
+      "premium",
+      "modern"
+    ],
+    "pages": [
+      "Hero",
+      "About",
+      "Skills",
+      "Projects",
+      "Experience",
+      "Contact"
+    ],
+    "palette_hint": "#0f172a, #020617, #111827, #7c3aed, #06b6d4, #8b5cf6",
+    "complexity": "complex",
+    "industry": "software development",
+    "custom_components": [
+      "Hero.tsx",
+      "About.tsx",
+      "Skills.tsx",
+      "Projects.tsx",
+      "Experience.tsx",
+      "Contact.tsx"
+    ],
+    "ui_interactions": [
+      "hover interactions",
+      "scale: 1.03",
+      "glow increase",
+      "fade in",
+      "slide up",
+      "blur reveal",
+      "button ripple",
+      "card tilt",
+      "gradient shift"
+    ]
+  },
+  "ontology": {
+    "domain": "marketing",
+    "required_components": [
+      "TestimonialSlider",
+      "Hero",
+      "PricingTable",
+      "Experience",
+      "Contact",
+      "NewsletterSignup",
+      "Projects",
+      "About",
+      "Skills",
+      "Footer",
+      "Navbar",
+      "FeatureGrid"
+    ]
+  },
+  "layout": {
+    "pages": [
+      {
+        "name": "Landing",
+        "route": "/",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar",
+              "responsibilities": [
+                "Renders top navigation bar",
+                "Handles mobile menu toggle",
+                "Displays logo and links"
+              ]
+            },
+            {
+              "type": "NewsletterSignup",
+              "original_name": "NewsletterSignup",
+              "responsibilities": [
+                "Renders email subscription form",
+                "Handles submission validation",
+                "Displays success/error feedback"
+              ]
+            },
+            {
+              "type": "Footer",
+              "original_name": "Footer",
+              "responsibilities": [
+                "Renders site footer",
+                "Displays copyright and social links",
+                "Groups legal and site-map links"
+              ]
+            },
+            {
+              "type": "TestimonialsSection",
+              "original_name": "TestimonialSlider",
+              "responsibilities": [
+                "Renders social proof area",
+                "Groups multiple user success stories",
+                "Highlights key quotes"
+              ]
+            },
+            {
+              "type": "HeroSection",
+              "original_name": "Hero",
+              "responsibilities": [
+                "Renders full-width hero impact area",
+                "Handles primary call to action",
+                "Displays background media"
+              ]
+            },
+            {
+              "type": "PricingSection",
+              "original_name": "PricingTable",
+              "responsibilities": [
+                "Renders pricing plans area",
+                "Displays billing cycle toggles",
+                "Showcases value propositions"
+              ]
+            },
+            {
+              "type": "ExperienceSection",
+              "original_name": "Experience",
+              "responsibilities": [
+                "Renders career timeline",
+                "Displays job roles and achievements",
+                "Highlights key career growth"
+              ]
+            },
+            {
+              "type": "ContactSection",
+              "original_name": "Contact",
+              "responsibilities": [
+                "Renders contact message form",
+                "Displays map/office location",
+                "Handles support ticket submission"
+              ]
+            },
+            {
+              "type": "ProjectsSection",
+              "original_name": "Projects",
+              "responsibilities": [
+                "Renders portfolio gallery",
+                "Displays project tech stack",
+                "Links to live demos or case studies"
+              ]
+            },
+            {
+              "type": "AboutSection",
+              "original_name": "About",
+              "responsibilities": [
+                "Renders mission and vision info",
+                "Displays team member profiles",
+                "Tells the company story"
+              ]
+            },
+            {
+              "type": "SkillsSection",
+              "original_name": "Skills",
+              "responsibilities": [
+                "Renders competency grid",
+                "Displays skill levels/badges",
+                "Groups skills by category"
+              ]
+            },
+            {
+              "type": "FeaturesSection",
+              "original_name": "FeatureGrid",
+              "responsibilities": [
+                "Renders structured feature overview",
+                "Groups multiple feature highlights",
+                "Handles 'Learn More' routing"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pricing",
+        "route": "/pricing",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar",
+              "responsibilities": [
+                "Renders top navigation bar",
+                "Handles mobile menu toggle",
+                "Displays logo and links"
+              ]
+            },
+            {
+              "type": "Footer",
+              "original_name": "Footer",
+              "responsibilities": [
+                "Renders site footer",
+                "Displays copyright and social links",
+                "Groups legal and site-map links"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "About",
+        "route": "/about",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar",
+              "responsibilities": [
+                "Renders top navigation bar",
+                "Handles mobile menu toggle",
+                "Displays logo and links"
+              ]
+            },
+            {
+              "type": "Footer",
+              "original_name": "Footer",
+              "responsibilities": [
+                "Renders site footer",
+                "Displays copyright and social links",
+                "Groups legal and site-map links"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "discarded_components": []
+  },
+  "ast": {
+    "pages": [
+      {
+        "name": "Landing",
+        "route": "/",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "Renders top navigation bar",
+                "Handles mobile menu toggle",
+                "Displays logo and links"
+              ]
+            },
+            {
+              "type": "NewsletterSignup",
+              "original_name": "NewsletterSignup",
+              "props": [
+                "email",
+                "successMessage",
+                "errorMessage"
+              ],
+              "responsibilities": [
+                "Renders email subscription form",
+                "Handles submission validation",
+                "Displays success/error feedback"
+              ]
+            },
+            {
+              "type": "Footer",
+              "original_name": "Footer",
+              "props": [],
+              "responsibilities": [
+                "Renders site footer",
+                "Displays copyright and social links",
+                "Groups legal and site-map links"
+              ]
+            },
+            {
+              "type": "TestimonialsSection",
+              "original_name": "TestimonialSlider",
+              "props": [
+                "testimonials",
+                "activeIndex"
+              ],
+              "responsibilities": [
+                "Renders social proof area",
+                "Groups multiple user success stories",
+                "Highlights key quotes"
+              ]
+            },
+            {
+              "type": "HeroSection",
+              "original_name": "Hero",
+              "props": [
+                "title",
+                "subtitle",
+                "callToAction",
+                "backgroundImage"
+              ],
+              "responsibilities": [
+                "Renders full-width hero impact area",
+                "Handles primary call to action",
+                "Displays background media"
+              ]
+            },
+            {
+              "type": "PricingSection",
+              "original_name": "PricingTable",
+              "props": [
+                "plans",
+                "cycleOptions"
+              ],
+              "responsibilities": [
+                "Renders pricing plans area",
+                "Displays billing cycle toggles",
+                "Showcases value propositions"
+              ]
+            },
+            {
+              "type": "ExperienceSection",
+              "original_name": "Experience",
+              "props": [
+                "timeline",
+                "achievements"
+              ],
+              "responsibilities": [
+                "Renders career timeline",
+                "Displays job roles and achievements",
+                "Highlights key career growth"
+              ]
+            },
+            {
+              "type": "ContactSection",
+              "original_name": "Contact",
+              "props": [
+                "formFields",
+                "mapUrl",
+                "supportEmail"
+              ],
+              "responsibilities": [
+                "Renders contact message form",
+                "Displays map/office location",
+                "Handles support ticket submission"
+              ]
+            },
+            {
+              "type": "ProjectsSection",
+              "original_name": "Projects",
+              "props": [
+                "projects",
+                "techStacks"
+              ],
+              "responsibilities": [
+                "Renders portfolio gallery",
+                "Displays project tech stack",
+                "Links to live demos or case studies"
+              ]
+            },
+            {
+              "type": "AboutSection",
+              "original_name": "About",
+              "props": [
+                "missionVision",
+                "teamMembers"
+              ],
+              "responsibilities": [
+                "Renders mission and vision info",
+                "Displays team member profiles",
+                "Tells the company story"
+              ]
+            },
+            {
+              "type": "SkillsSection",
+              "original_name": "Skills",
+              "props": [
+                "skillsGrid",
+                "badgeLevels"
+              ],
+              "responsibilities": [
+                "Renders competency grid",
+                "Displays skill levels/badges",
+                "Groups skills by category"
+              ]
+            },
+            {
+              "type": "FeaturesSection",
+              "original_name": "FeatureGrid",
+              "props": [
+                "features",
+                "learnMoreLinks"
+              ],
+              "responsibilities": [
+                "Renders structured feature overview",
+                "Groups multiple feature highlights",
+                "Handles 'Learn More' routing"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pricing",
+        "route": "/pricing",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "Renders top navigation bar",
+                "Handles mobile menu toggle",
+                "Displays logo and links"
+              ]
+            },
+            {
+              "type": "Footer",
+              "original_name": "Footer",
+              "props": [],
+              "responsibilities": [
+                "Renders site footer",
+                "Displays copyright and social links",
+                "Groups legal and site-map links"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "About",
+        "route": "/about",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "Renders top navigation bar",
+                "Handles mobile menu toggle",
+                "Displays logo and links"
+              ]
+            },
+            {
+              "type": "Footer",
+              "original_name": "Footer",
+              "props": [],
+              "responsibilities": [
+                "Renders site footer",
+                "Displays copyright and social links",
+                "Groups legal and site-map links"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "discarded_components": [],
+    "visual_hierarchy": {
+      "primary": "NewsletterSignup",
+      "secondary": [
+        "TestimonialsSection",
+        "HeroSection",
+        "PricingSection",
+        "ExperienceSection",
+        "ContactSection",
+        "ProjectsSection",
+        "AboutSection",
+        "SkillsSection"
+      ],
+      "support": [
+        "Navbar",
+        "Footer"
+      ],
+      "cta": "NewsletterSignup",
+      "focal_point": "NewsletterSignup with High technical credibility",
+      "scroll_flow": "multi-page with anchor navigation"
+    }
+  },
+  "design": {
+    "palette_id": "P-1",
+    "palette": {
+      "name": "SaaS Architecture",
+      "primary": "white",
+      "secondary": "slate-800",
+      "accent": "violet-400",
+      "bg": "slate-50",
+      "text": "slate-900",
+      "card_bg": "white",
+      "border": "slate-200",
+      "dark": false
+    },
+    "tailwind": {
+      "container": "max-w-7xl mx-auto px-6",
+      "section": "py-16 md:py-24",
+      "card": "bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-6",
+      "btn_primary": "bg-blue-600 hover:opacity-90 text-white px-6 py-3 rounded-xl font-semibold transition-all",
+      "btn_secondary": "border border-blue-300 text-blue-700 px-6 py-3 rounded-xl hover:bg-blue-50 transition-all",
+      "text_heading": "text-slate-900",
+      "text_body": "text-slate-900 opacity-70",
+      "bg_page": "bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-screen text-white",
+      "accent_text": "text-indigo-500",
+      "accent_bg": "bg-indigo-500/10",
+      "input": "w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    },
+    "visual_effect": "corner-blur",
+    "effect_placement": "top-right",
+    "text_animation": "typewriter",
+    "border_radius": "rounded-xl",
+    "shadow_style": "shadow-md",
+    "font_pair": "Inter",
+    "dark_mode": false
+  },
+  "prompt": "```json\n{\n  \"layout\": {\n    \"header\": {\n      \"order\": 1,\n      \"components\": [\n        {\n          \"type\": \"WordmarkIcon\",\n          \"classes\": \"h-4\"\n        },\n        {\n          \"type\": \"NavigationMenu\",\n          \"classes\": \"hidden md:block\"\n        }\n      ]\n    },\n    \"main\": {\n      \"order\": 2,\n      \"columns\": [\n        {\n          \"type\": \"FeatureGrid\",\n          \"classes\": \"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4\"\n        },\n        {\n          \"type\": \"SkillIcon\",\n          \"classes\": \"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4\"\n        }\n      ]\n    },\n    \"footer\": {\n      \"order\": 3,\n      \"components\": [\n        {\n          \"type\": \"SocialButtons\",\n          \"classes\": \"flex gap-2 justify-center\"\n        }\n      ]\n    }\n  },\n  \"designLanguage\": {\n    \"aesthetic\": \"Glassmorphic\",\n    \"description\": \"A technical, senior developer portfolio with a glassmorphic aesthetic. The design should be clean, modern, and highly interactive. Use subtle gradients and reflections to create a sense of depth and transparency.\"\n  },\n  \"responsiveBreakpoints\": {\n    \"mobile\": \"640px\",\n    \"tablet\": \"768px\",\n    \"desktop\": \"1024px\"\n  },\n  \"tone\": \"Technical and professional\"\n}\n```\n\nThis JSON structure provides explicit layout instructions, specific Tailwind class hints, a precise design language description, responsive breakpoint notes, and a tone that matches the senior developer portfolio.",
+  "code": "```jsx\n<file path=\"src/components/GlassNavbar.jsx\">\nimport { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';\nimport { useState } from 'react';\n\nconst GlassNavbar = () => {\n  const [isOpen, setIsOpen] = useState(false);\n\n  return (\n    <nav className=\"bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-4 px-6 flex items-center justify-between\">\n      <div className=\"flex items-center\">\n        <div className=\"hidden md:block\">\n          <a href=\"/\">\n            <img src=\"/logo.png\" alt=\"Logo\" className=\"h-8\" />\n          </a>\n        </div>\n        <div className=\"md:hidden\">\n          <button onClick={() => setIsOpen(!isOpen)} className=\"p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500\">\n            <Bars3Icon className=\"w-6 h-6\" />\n          </button>\n        </div>\n      </div>\n      <div className=\"hidden md:flex space-x-4\">\n        <a href=\"/about\" className=\"text-slate-900 hover:text-blue-600\">About</a>\n        <a href=\"/projects\" className=\"text-slate-900 hover:text-blue-600\">Projects</a>\n        <a href=\"/experience\" className=\"text-slate-900 hover:text-blue-600\">Experience</a>\n        <a href=\"/skills\" className=\"text-slate-900 hover:text-blue-600\">Skills</a>\n        <a href=\"/features\" className=\"text-slate-900 hover:text-blue-600\">Features</a>\n        <a href=\"/pricing\" className=\"text-slate-900 hover:text-blue-600\">Pricing</a>\n        <a href=\"/contact\" className=\"text-slate-900 hover:text-blue-600\">Contact</a>\n      </div>\n      <div className=\"md:hidden\">\n        {isOpen && (\n          <div className=\"absolute top-16 left-0 right-0 mt-2 overflow-hidden rounded-lg shadow-lg\">\n            <div className=\"flex flex-col space-y-2 p-4\">\n              <a href=\"/about\" className=\"text-slate-900 hover:text-blue-600\">About</a>\n              <a href=\"/projects\" className=\"text-slate-900 hover:text-blue-600\">Projects</a>\n              <a href=\"/experience\" className=\"text-slate-900 hover:text-blue-600\">Experience</a>\n              <a href=\"/skills\" className=\"text-slate-900 hover:text-blue-600\">Skills</a>\n              <a href=\"/features\" className=\"text-slate-900 hover:text-blue-600\">Features</a>\n              <a href=\"/pricing\" className=\"text-slate-900 hover:text-blue-600\">Pricing</a>\n              <a href=\"/contact\" className=\"text-slate-900 hover:text-blue-600\">Contact</a>\n            </div>\n          </div>\n        )}\n      </div>\n      <div className=\"ml-4\">\n        <button className=\"bg-blue-600 hover:opacity-90 text-white px-6 py-3 rounded-xl font-semibold transition-all\">\n          Get Started\n        </button>\n      </div>\n    </nav>\n  );\n};\n\nexport default GlassNavbar;\n</file>\n\n<file path=\"src/components/GlassHeroSection.jsx\">\nimport { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';\n\nconst GlassHeroSection = ({ title, subtitle, callToAction, backgroundImage }) => {\n  return (\n    <section className=\"relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center\">\n      <div className=\"absolute inset-0 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-6\">\n        <h1 className=\"text-5xl font-bold text-slate-900\">{title}</h1>\n        <p className=\"text-xl text-slate-900 opacity-70 mt-4\">{subtitle}</p>\n        <button className=\"bg-blue-600 hover:opacity-90 text-white px-6 py-3 rounded-xl font-semibold transition-all\">\n          {callToAction}\n        </button>\n      </div>\n      <img src={backgroundImage} alt=\"Hero Background\" className=\"absolute inset-0 object-cover w-full h-full opacity-50\" />\n    </section>\n  );\n};\n\nexport default GlassHeroSection;\n</file>\n\n<file path=\"src/components/GlassTestimonialsSection.jsx\">\nimport { FaArrowLeft, FaArrowRight } from 'react-icons/fa';\nimport { motion, AnimatePresence } from 'framer-motion';\n\nconst GlassTestimonialsSection = ({ testimonials }) => {\n  const [activeIndex, setActiveIndex] = useState(0);\n\n  const handlePrev = () => {\n    setActiveIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);\n  };\n\n  const handleNext = () => {\n    setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);\n  };\n\n  return (\n    <section className=\"py-16 md:py-24\">\n      <div className=\"max-w-7xl mx-auto px-6\">\n        <div className=\"relative\">\n          <motion.div\n            initial={{ x: -200, opacity: 0 }}\n            animate={{ x: 0, opacity: 1 }}\n            transition={{ duration: 0.5, ease: 'easeInOut' }}\n            className=\"absolute left-0\"\n            onClick={handlePrev}\n          >\n            <FaArrowLeft className=\"text-4xl text-slate-900\" />\n          </motion.div>\n          <motion.div\n            initial={{ x: 200, opacity: 0 }}\n            animate={{ x: 0, opacity: 1 }}\n            transition={{ duration: 0.5, ease: 'easeInOut' }}\n            className=\"absolute right-0\"\n            onClick={handleNext}\n          >\n            <FaArrowRight className=\"text-4xl text-slate-900\" />\n          </motion.div>\n          <div className=\"flex flex-col space-y-4\">\n            {testimonials.map((testimonial, index) => (\n              <div\n                key={index}\n                className={`relative ${activeIndex === index ? 'opacity-100' : 'opacity-0'}`}\n              >\n                <div className=\"bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-lg p-6\">\n                  <p className=\"text-lg text-slate-900\">{testimonial.text}</p>\n                  <p className=\"text-base text-slate-900 mt-2\">{testimonial.name}</p>\n                </div>\n              </div>\n            ))}\n          </div>\n        </div>\n      </div>\n    </section>\n  );\n};\n\nexport default GlassTestimonialsSection;\n</file>\n\n<file path=\"src/components/GlassPricingSection.jsx\">\nimport { PricingCard } from '@/components/ui/pricing-card';\n\nconst GlassPricingSection = ({ title, subtitle, tiers }) => {\n  return (\n    <section className=\"py-16 md:py-24\">\n      <div className=\"max-w-7xl mx-auto px-6\">\n        <h2 className=\"text-3xl font-bold text-slate-900 mb-4\">{title}</h2>\n        <p className=\"text-lg text-slate-900 mb-8\">{subtitle}</p>\n        <div className=\"grid grid-cols-1 md:grid-cols-3 gap-4\">\n          {tiers.map((tier) => (\n            <PricingCard key={tier.name} {...tier} />\n          ))}\n        </div>\n      </div>\n    </section>\n  );\n};\n\nexport default GlassPricingSection;\n</file>\n\n<file path=\"src/components/GlassExperienceSection.jsx\">\nimport { motion, AnimatePresence } from 'framer-motion';\n\nconst GlassExperienceSection = ({ experiences }) => {\n  return (\n    <section className=\"py-16 md:py-24\">\n      <div className=\"max-w-7xl mx-auto px-6\">\n        <h2 className=\"text-3xl font-bold text-slate-900 mb-4\">Experience</h2>\n        <div className=\"grid grid-cols-1 md:grid-cols-2 gap-4\">\n          {experiences.map((experience) => (\n            <div key={experience.title} className=\"bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-lg p-6\">\n              <h3 className=\"text-xl font-bold text-slate-900 mb-2\">{experience.title}</h3>\n              <p className=\"text-lg text-slate-900\">{experience.description}</p>\n            </div>\n          ))}\n        </div>\n      </div>\n    </section>\n  );\n};\n\nexport default GlassExperienceSection;\n</file>\n\n<file path=\"src/components/GlassContactSection.jsx\">\nimport { Button } from '@/components/ui/button';\n\nconst GlassContactSection = () => {\n  return (\n    <section className=\"py-16 md:py-24\">\n      <div className=\"max-w-7xl mx-auto px-6\">\n        <h2 className=\"text-3xl font-bold text-slate-900 mb-4\">Contact Us</h2>\n        <form className=\"space-y-4\">\n          <div className=\"flex flex-col space-y-2\">\n            <label htmlFor=\"name\" className=\"text-slate-900\">Name</label>\n            <input\n              id=\"name\"\n              type=\"text\"\n              className=\"bg-white/10 border border-white/20 rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-blue-500\"\n              placeholder=\"Your Name\"\n            />\n          </div>\n          <div className=\"flex flex-col space-y-2\">\n            <label htmlFor=\"email\" className=\"text-slate-900\">Email</label>\n            <input\n              id=\"email\"\n              type=\"email\"\n              className=\"bg-white/10 border border-white/20 rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-blue-500\"\n              placeholder=\"Your Email\"\n            />\n          </div>\n          <div className=\"flex flex-col space-y-2\">\n            <label htmlFor=\"message\" className=\"text-slate-900\">Message</label>\n            <textarea\n              id=\"message\"\n              className=\"bg-white/10 border border-white/20 rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-blue-500\"\n              placeholder=\"Your Message\"\n            />\n          </div>\n          <Button type=\"submit\">Send Message</Button>\n        </form>\n      </div>\n    </section>\n  );\n};\n\nexport default GlassContactSection;\n</file>\n\n<file path=\"src/components/GlassNewsletterSignupSection.jsx\">\nimport { Button } from '@/components/ui/button';\n\nconst GlassNewsletterSignupSection = () => {\n  return (\n    <section className=\"py-16 md:py-24\">\n      <div className=\"max-w-7xl mx-auto px-6\">\n        <h2 className=\"text-3xl font-bold text-slate-900 mb-4\">Join Our Newsletter</h2>\n        <form className=\"space-y-4\">\n          <div className=\"flex flex-col space-y-2\">\n            <label htmlFor=\"email\" className=\"text-slate-900\">Email</label>\n            <input\n              id=\"email\"\n              type=\"email\"\n              className=\"bg-white/10 border border-white/20 rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-blue-500\"\n              placeholder=\"Your Email\"\n            />\n          </div>\n          <Button type=\"submit\">Subscribe</Button>\n        </form>\n      </div>\n    </section>\n  );\n};\n\nexport default GlassNewsletterSignupSection;\n</file>\n\n<file path=\"src/pages/GlassAboutPage.jsx\">\nimport { GlassNavbar, GlassHeroSection, GlassTestimonialsSection } from '@/components';\n\nconst GlassAboutPage = () => {\n  return (\n    <div className=\"max-w-7xl mx-auto px-6\">\n      <GlassNavbar />\n      <GlassHeroSection\n        title=\"About Us\"\n        subtitle=\"Learn more about our mission and values.\"\n        callToAction=\"Explore Now\"\n        backgroundImage=\"/about.jpg\"\n      />\n      <GlassTestimonialsSection\n        testimonials={[\n          {\n            text: \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at justo euismod, convallis odio vel, facilisis nisl.\",\n            name: \"John Doe\"\n          },\n          {\n            text: \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at justo euismod, convallis odio vel, facilisis nisl.\",\n            name: \"Jane Smith\"\n          }\n        ]}\n      />\n    </div>\n  );\n};\n\nexport default GlassAboutPage;\n</file>\n\n<file path=\"src/pages/GlassProjectsPage.jsx\">\nimport { GlassNavbar } from '@/components';\n\nconst GlassProjectsPage = () => {\n  return (\n    <div className=\"max-w-7xl mx-auto px-6\">\n      <GlassNavbar />\n      <h1 className=\"text-3xl font-bold text-slate-900 mb-8\">Projects</h1>\n      <div className=\"grid grid-cols-1 md:grid-cols-2 gap-4\">\n        <div className=\"bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-lg p-6\">\n          <h3 className=\"text-xl font-bold text-slate-900 mb-2\">Project 1</h3>\n          <p className=\"text-lg text-slate-900\">Description of Project 1</p>\n        </div>\n        <div className=\"bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-lg p-6\">\n          <h3 className=\"text-xl font-bold text-slate-900 mb-2\">Project 2</h3>\n          <p className=\"text-lg text-slate-900\">Description of Project 2</p>\n        </div>\n      </div>\n    </div>\n  );\n};\n\nexport default GlassProjectsPage;\n</file>\n\n<file path=\"src/pages/GlassExperiencePage.jsx\">\nimport { GlassNavbar, GlassExperienceSection } from '@/components';\n\nconst GlassExperiencePage = () => {\n  return (\n    <div className=\"max-w-7xl mx-auto px-6\">\n      <GlassNavbar />\n      <GlassExperienceSection\n        experiences={[\n          {\n            title: \"Company A\",\n            description: \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at justo euismod, convallis odio vel, facilisis nisl.\"\n          },\n          {\n            title: \"Company B\",\n            description: \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at justo euismod, convallis odio vel, facilisis nisl.\"\n          }\n        ]}\n      />\n    </div>\n  );\n};\n\nexport default GlassExperiencePage;\n</file>\n\n<file path=\"src/pages/GlassSkillsPage.jsx\">\nimport { GlassNavbar, GlassTestimonialsSection } from '@/components';\n\nconst GlassSkillsPage = () => {\n  return (\n    <div className=\"max-w-7xl mx-auto px-6\">\n      <GlassNavbar />\n      <GlassTestimonialsSection\n        testimonials={[\n          {\n            text: \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at justo euismod, convallis odio vel, facilisis nisl.\",\n            name: \"John Doe\"\n          },\n          {\n            text: \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at justo euismod, convallis odio vel, facilisis nisl.\",\n            name: \"Jane Smith\"\n          }\n        ]}\n      />\n    </div>\n  );\n};\n\nexport default GlassSkillsPage;\n</file>\n\n<file path=\"src/pages/GlassFeaturesPage.jsx\">\nimport { GlassNavbar } from '@/components';\n\nconst GlassFeaturesPage = () => {\n  return (\n    <div className=\"max-w-7xl mx-auto px-6\">\n      <GlassNavbar />\n      <h1 className=\"text-3xl font-bold text-slate-900 mb-8\">Features</h1>\n      <div className=\"grid grid-cols-1 md:grid-cols-2 gap-4\">\n        <div className=\"bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-lg p-6\">\n          <h3 className=\"text-xl font-bold text-slate-900 mb-2\">Feature 1</h3>\n          <p className=\"text-lg text-slate-900\">Description of Feature 1</p>\n        </div>\n        <div className=\"bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-lg p-6\">\n          <h3 className=\"text-xl font-bold text-slate-900 mb-2\">Feature 2</h3>\n          <p className=\"text-lg text-slate-900\">Description of Feature 2</p>\n        </div>\n      </div>\n    </div>\n  );\n};\n\nexport default GlassFeaturesPage;\n</file>\n\n<file path=\"src/pages/GlassPricingPage.jsx\">\nimport { GlassNavbar, GlassPricingSection } from '@/components';\n\nconst GlassPricingPage = () => {\n  return (\n    <div className=\"max-w-7xl mx-auto px-6\">\n      <GlassNavbar />\n      <GlassPricingSection\n        title=\"Pricing\"\n        subtitle=\"Choose the plan that fits your needs.\"\n        tiers={[\n          {\n            name: \"Free\",\n            price: \"Free\",\n            yearlyPrice: \"Free\",\n            period: \"Monthly\",\n            features: [\"Feature 1\", \"Feature 2\"],\n            description: \"This is the free plan.\",\n            buttonText: \"Sign Up\",\n            href: \"/signup\",\n            isPopular: false\n          },\n          {\n            name: \"Pro\",\n            price: \"$9.99\",\n            yearlyPrice: \"$99.99\",\n            period: \"Monthly\",\n            features: [\"Feature 1\", \"Feature 2\", \"Feature 3\"],\n            description: \"This is the pro plan.\",\n            buttonText: \"Sign Up\",\n            href: \"/signup\",\n            isPopular: true\n          }\n        ]}\n      />\n    </div>\n  );\n};\n\nexport default GlassPricingPage;\n</file>\n\n<file path=\"src/pages/GlassContactPage.jsx\">\nimport { GlassNavbar, GlassContactSection } from '@/components';\n\nconst GlassContactPage = () => {\n  return (\n    <div className=\"max-w-7xl mx-auto px-6\">\n      <GlassNavbar />\n      <GlassContactSection />\n    </div>\n  );\n};\n\nexport default GlassContactPage;\n</file>\n\n<file path=\"src/pages/GlassNewsletterSignupPage.jsx\">\nimport { GlassNavbar, GlassNewsletterSignupSection } from '@/components';\n\nconst GlassNewsletterSignupPage = () => {\n  return (\n    <div className=\"max-w-7xl mx-auto px-6\">\n      <GlassNavbar />\n      <GlassNewsletterSignupSection />\n    </div>\n  );\n};\n\nexport default GlassNewsletterSignupPage;\n</file>\n\n<file path=\"src/App.jsx\">\nimport { BrowserRouter as Router, Route, Routes } from 'react-router-dom';\nimport GlassNavbar from './components/GlassNavbar';\nimport GlassAboutPage from './pages/GlassAboutPage';\nimport GlassProjectsPage from './pages/GlassProjectsPage';\nimport GlassExperiencePage from './pages/GlassExperiencePage';\nimport GlassSkillsPage from './pages/GlassSkillsPage';\nimport GlassFeaturesPage from './pages/GlassFeaturesPage';\nimport GlassPricingPage from './pages/GlassPricingPage';\nimport GlassContactPage from './pages/GlassContactPage';\nimport GlassNewsletterSignupPage from './pages/GlassNewsletterSignupPage';\n\nconst App = () => {\n  return (\n    <Router>\n      <GlassNavbar />\n      <Routes>\n        <Route path=\"/\" element={<GlassAboutPage />} />\n        <Route path=\"/about\" element={<GlassAboutPage />} />\n        <Route path=\"/projects\" element={<GlassProjectsPage />} />\n        <Route path=\"/experience\" element={<GlassExperiencePage />} />\n        <Route path=\"/skills\" element={<GlassSkillsPage />} />\n        <Route path=\"/features\" element={<GlassFeaturesPage />} />\n        <Route path=\"/pricing\" element={<GlassPricingPage />} />\n        <Route path=\"/contact\" element={<GlassContactPage />} />\n        <Route path=\"/signup\" element={<GlassNewsletterSignupPage />} />\n      </Routes>\n    </Router>\n  );\n};\n\nexport default App;\n</file>\n```\n\n<file path=\"package.json\">{\n  \"name\": \"senior-developer-portfolio-\u2013-glassmorphic-edition\",\n  \"version\": \"0.1.0\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"vite\",\n    \"build\": \"vite build\",\n    \"preview\": \"vite preview\"\n  },\n  \"dependencies\": {\n    \"react\": \"^18.2.0\",\n    \"react-dom\": \"^18.2.0\",\n    \"react-router-dom\": \"^6.22.0\",\n    \"@heroicons/react\": \"^2.1.1\"\n  },\n  \"devDependencies\": {\n    \"@vitejs/plugin-react\": \"^4.2.1\",\n    \"autoprefixer\": \"^10.4.17\",\n    \"postcss\": \"^8.4.35\",\n    \"tailwindcss\": \"^3.4.1\",\n    \"vite\": \"^5.1.0\"\n  }\n}</file>\n<file path=\"vite.config.js\">import { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'\nexport default defineConfig({\n  plugins: [react()],\n})</file>\n<file path=\"tailwind.config.js\">/** @type {import('tailwindcss').Config} */\nexport default {\n  content: [\"./index.html\", \"./src/**/*.{js,ts,jsx,tsx}\"],\n  theme: { extend: {} },\n  plugins: [],\n}</file>\n<file path=\"postcss.config.js\">export default {\n  plugins: { tailwindcss: {}, autoprefixer: {} }\n}</file>\n<file path=\"index.html\"><!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Senior Developer Portfolio \u2013 Glassmorphic Edition</title>\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n    <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\" rel=\"stylesheet\" />\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"module\" src=\"/src/main.jsx\"></script>\n  </body>\n</html></file>\n<file path=\"src/main.jsx\">import React from 'react'\nimport ReactDOM from 'react-dom/client'\nimport App from './App'\nimport './index.css'\n\nReactDOM.createRoot(document.getElementById('root')).render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>,\n)</file>\n<file path=\"src/index.css\">@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\nbody { background: linear-gradient(135deg, #0f172a, #1e1b4b); min-height: 100vh; margin: 0; font-family: 'Inter', sans-serif; }</file>\n<file path=\"README.md\"># Senior Developer Portfolio \u2013 Glassmorphic Edition\nGenerated by Prompt Machine\n\n## Quick Start\n```bash\nnpm install\nnpm run dev\n```</file>\n",
+  "detected_styles": [
+    "glassmorphism",
+    "neumorphism",
+    "corporate",
+    "futuristic"
+  ]
+}

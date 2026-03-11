@@ -1,0 +1,411 @@
+{
+  "intent": {
+    "product_name": "Portfolio",
+    "product_type": "portfolio",
+    "target_audience": "Senior engineers",
+    "key_features": [
+      "Next.js project",
+      "Clean folder structure",
+      "Reusable components",
+      "Tailwind styling",
+      "Animation components"
+    ],
+    "tone": "professional",
+    "style_keywords": [
+      "Apple-level polish",
+      "Premium SaaS product"
+    ],
+    "pages": [
+      "home"
+    ],
+    "palette_hint": "Clean and modern",
+    "complexity": "medium",
+    "industry": "AI Systems",
+    "custom_components": [
+      "Hero",
+      "About",
+      "Skills",
+      "Projects",
+      "Experience",
+      "Contact"
+    ],
+    "ui_interactions": [
+      "animations"
+    ]
+  },
+  "ontology": {
+    "domain": "marketing",
+    "required_components": [
+      "Skills",
+      "About",
+      "Footer",
+      "Navbar",
+      "Projects",
+      "Experience",
+      "Hero",
+      "Contact",
+      "PricingTable",
+      "TestimonialSlider",
+      "FeatureGrid",
+      "NewsletterSignup"
+    ]
+  },
+  "layout": {
+    "pages": [
+      {
+        "name": "Landing",
+        "route": "/",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar",
+              "responsibilities": [
+                "Renders top navigation bar",
+                "Handles mobile menu toggle",
+                "Displays logo and links"
+              ]
+            },
+            {
+              "type": "Footer",
+              "original_name": "Footer",
+              "responsibilities": [
+                "Renders site footer",
+                "Displays copyright and social links",
+                "Groups legal and site-map links"
+              ]
+            },
+            {
+              "type": "Skills",
+              "original_name": "Skills",
+              "responsibilities": [
+                "Renders competency grid",
+                "Displays skill levels/badges",
+                "Groups skills by category"
+              ]
+            },
+            {
+              "type": "About",
+              "original_name": "About",
+              "responsibilities": [
+                "Renders mission and vision info",
+                "Displays team member profiles",
+                "Tells the company story"
+              ]
+            },
+            {
+              "type": "Projects",
+              "original_name": "Projects",
+              "responsibilities": [
+                "Renders portfolio gallery",
+                "Displays project tech stack",
+                "Links to live demos or case studies"
+              ]
+            },
+            {
+              "type": "Experience",
+              "original_name": "Experience",
+              "responsibilities": [
+                "Renders career timeline",
+                "Displays job roles and achievements",
+                "Highlights key career growth"
+              ]
+            },
+            {
+              "type": "HeroSection",
+              "original_name": "Hero",
+              "responsibilities": [
+                "Renders full-width hero impact area",
+                "Handles primary call to action",
+                "Displays background media"
+              ]
+            },
+            {
+              "type": "Contact",
+              "original_name": "Contact",
+              "responsibilities": [
+                "Renders contact message form",
+                "Displays map/office location",
+                "Handles support ticket submission"
+              ]
+            },
+            {
+              "type": "PricingSection",
+              "original_name": "PricingTable",
+              "responsibilities": [
+                "Renders pricing plans area",
+                "Displays billing cycle toggles",
+                "Showcases value propositions"
+              ]
+            },
+            {
+              "type": "TestimonialsSection",
+              "original_name": "TestimonialSlider",
+              "responsibilities": [
+                "Renders social proof area",
+                "Groups multiple user success stories",
+                "Highlights key quotes"
+              ]
+            },
+            {
+              "type": "FeaturesSection",
+              "original_name": "FeatureGrid",
+              "responsibilities": [
+                "Renders structured feature overview",
+                "Groups multiple feature highlights",
+                "Handles 'Learn More' routing"
+              ]
+            },
+            {
+              "type": "NewsletterSignup",
+              "original_name": "NewsletterSignup",
+              "responsibilities": [
+                "Renders email subscription form",
+                "Handles submission validation",
+                "Displays success/error feedback"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pricing",
+        "route": "/pricing",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar",
+              "responsibilities": [
+                "Renders top navigation bar",
+                "Handles mobile menu toggle",
+                "Displays logo and links"
+              ]
+            },
+            {
+              "type": "Footer",
+              "original_name": "Footer",
+              "responsibilities": [
+                "Renders site footer",
+                "Displays copyright and social links",
+                "Groups legal and site-map links"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "About",
+        "route": "/about",
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar",
+              "responsibilities": [
+                "Renders top navigation bar",
+                "Handles mobile menu toggle",
+                "Displays logo and links"
+              ]
+            },
+            {
+              "type": "Footer",
+              "original_name": "Footer",
+              "responsibilities": [
+                "Renders site footer",
+                "Displays copyright and social links",
+                "Groups legal and site-map links"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "discarded_components": []
+  },
+  "ast": {
+    "pages": [
+      {
+        "name": "Landing",
+        "route": "/",
+        "state_contract": {},
+        "layout": {
+          "type": "PageLayout",
+          "children": [
+            {
+              "type": "Navbar",
+              "original_name": "Navbar",
+              "props": [],
+              "responsibilities": [
+                "Renders top navigation bar",
+                "Handles mobile menu toggle",
+                "Displays logo and links"
+              ]
+            },
+            {
+              "type": "Footer",
+              "original_name": "Footer",
+              "props": [],
+              "responsibilities": [
+                "Renders site footer",
+                "Displays copyright and social links",
+                "Groups legal and site-map links"
+              ]
+            },
+            {
+              "type": "Skills",
+              "original_name": "Skills",
+              "props": [
+                "categories",
+                "skills"
+              ],
+              "responsibilities": [
+                "Renders competency grid",
+                "Displays skill levels/badges",
+                "Groups skills by category"
+              ]
+            },
+            {
+              "type": "About",
+              "original_name": "About",
+              "props": [
+                "teamMembers",
+                "missionVision"
+              ],
+              "responsibilities": [
+                "Renders mission and vision info",
+                "Displays team member profiles",
+                "Tells the company story"
+              ]
+            },
+            {
+              "type": "Projects",
+              "original_name": "Projects",
+              "props": [
+                "projects"
+              ],
+              "responsibilities": [
+                "Renders portfolio gallery",
+                "Displays project tech stack",
+                "Links to live demos or case studies"
+              ]
+            },
+            {
+              "type": "Experience",
+              "original_name": "Experience",
+              "props": [
+                "careerTimeline"
+              ],
+              "responsibilities": [
+                "Renders career timeline",
+                "Displays job roles and achievements",
+                "Highlights key career growth"
+              ]
+            },
+            {
+              "type": "HeroSection",
+              "original_name": "Hero",
+              "props": [
+                "heroMessage",
+                "callToAction",
+                "backgroundMedia"
+              ],
+              "responsibilities": [
+                "Renders full-width hero impact area",
+                "Handles primary call to action",
+                "Displays background media"
+              ]
+            },
+            {
+              "type": "Contact",
+              "original_name": "Contact",
+              "props": [
+                "contactForm",
+                "officeLocation"
+              ],
+              "responsibilities": [
+                "Renders contact message form",
+                "Displays map/office location",
+                "Handles support ticket submission"
+              ]
+            },
+            {
+              "type": "PricingSection",
+              "original_name": "PricingTable",
+              "props": [
+                "pricingPlans"
+              ],
+              "responsibilities": [
+                "Renders pricing plans area",
+                "Displays billing cycle toggles",
+                "Showcases value propositions"
+              ]
+            },
+            {
+              "type": "TestimonialsSection",
+              "original_name": "TestimonialSlider",
+              "props": [
+                "testimonials"
+              ],
+              "responsibilities": [
+                "Renders social proof area",
+                "Groups multiple user success stories",
+                "Highlights key quotes"
+              ]
+            },
+            {
+              "type": "FeaturesSection",
+              "original_name": "FeatureGrid",
+              "props": [
+                "features"
+              ],
+              "responsibilities": [
+                "Renders structured feature overview",
+                "Groups multiple feature highlights",
+                "Handles 'Learn More' routing"
+              ]
+            },
+            {
+              "type": "NewsletterSignup",
+              "original_name": "NewsletterSignup",
+              "props": [
+                "emailForm"
+              ],
+              "responsibilities": [
+                "Renders email subscription form",
+                "Handles submission validation",
+                "Displays success/error feedback"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "design": {
+    "palette_id": "P-5",
+    "tailwind": {
+      "container": "max-w-7xl mx-auto px-6",
+      "section": "py-16 md:py-24",
+      "card": "bg-zinc-50 rounded-lg border border-zinc-200 shadow-md p-6",
+      "btn_primary": "bg-zinc-900 hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold transition-all",
+      "btn_secondary": "border border-zinc-300 text-zinc-700 px-6 py-3 rounded-lg hover:bg-zinc-50 transition-all",
+      "text_heading": "text-zinc-900",
+      "text_body": "text-zinc-900 opacity-70",
+      "bg_page": "bg-white",
+      "accent_text": "text-red-500",
+      "accent_bg": "bg-red-500/10",
+      "input": "w-full px-4 py-3 rounded-lg border border-zinc-200 bg-zinc-50 text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-500"
+    },
+    "visual_effect": "none",
+    "effect_placement": "top-right",
+    "text_animation": "typewriter",
+    "border_radius": "rounded-lg",
+    "shadow_style": "shadow-md",
+    "font_pair": "Inter",
+    "dark_mode": false
+  }
+}

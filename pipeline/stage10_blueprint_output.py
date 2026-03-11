@@ -3,9 +3,7 @@
 import json
 from datetime import datetime
 from pathlib import Path
-
-OUTPUT_DIR = Path("output")
-
+import re
 
 # ── ANSI COLOUR HELPERS ───────────────────────────────────────────────────────
 class C:
@@ -14,14 +12,11 @@ class C:
     BL = "\033[34m"  ; MG = "\033[35m"  ; GY  = "\033[90m"
     WH = "\033[37m"
 
-
 def _c(col: str, text: str) -> str:
     return f"{col}{text}{C.R}"
 
-
 def _divider(char: str = "═", n: int = 62, col: str = C.MG) -> str:
     return _c(col, char * n)
-
 
 def _section(title: str, num: str, col: str = C.CY) -> str:
     return (
@@ -30,19 +25,16 @@ def _section(title: str, num: str, col: str = C.CY) -> str:
         f"{_divider('─', 62, C.GY)}"
     )
 
-
-# ── MAIN RENDER ───────────────────────────────────────────────────────────────
 def render_blueprint(blueprint: dict, verbose: bool = False) -> str:
     intent   = blueprint["intent"]
     layout   = blueprint.get("layout", {})
-    hier     = blueprint.get("hierarchy", {})
-    comps    = blueprint.get("components", {})
+    ast      = blueprint.get("ast", {})
+    hier     = ast.get("visual_hierarchy", {}) # FIX 6: Read from AST
     design   = blueprint.get("design", {})
-    skeleton = blueprint.get("skeletons", {})
     prompt   = blueprint["prompt"]
     code     = blueprint.get("code", "")
-    p        = design["palette"]
-    tw       = design["tailwind"]
+    p        = design.get("palette", {"name": "Custom", "primary": "N/A", "secondary": "N/A", "accent": "N/A"})
+    tw       = design.get("tailwind", {})
 
     out: list[str] = []
 
@@ -56,164 +48,90 @@ def render_blueprint(blueprint: dict, verbose: bool = False) -> str:
     out.append(f"  {_c(C.B,'Name:')}         {intent['product_name']}")
     out.append(f"  {_c(C.B,'Type:')}         {intent['product_type']}")
     out.append(f"  {_c(C.B,'Audience:')}     {intent['target_audience']}")
-    out.append(f"  {_c(C.B,'Tone:')}         {intent.get('tone','professional')}")
-    out.append(f"  {_c(C.B,'Industry:')}     {intent.get('industry','technology')}")
-    out.append(f"  {_c(C.B,'Complexity:')}   {intent.get('complexity','medium')}")
-    feats = "  |  ".join(intent.get("key_features", []))
-    out.append(f"  {_c(C.B,'Features:')}     {_c(C.GY, feats)}")
-    if intent.get("custom_components"):
-        cc = ", ".join(intent["custom_components"])
-        out.append(f"  {_c(C.B,'Components:')}   {_c(C.GY, cc)}")
-    if intent.get("ui_interactions"):
-        ui = ", ".join(intent["ui_interactions"])
-        out.append(f"  {_c(C.B,'Interactions:')} {_c(C.GY, ui)}")
+    out.append(f"  {_c(C.B,'Features:')}     {_c(C.GY, ' | '.join(intent.get('key_features', [])))}")
 
     # ── 02 PAGES & ROUTES ─────────────────────────────────────────────────────
     out.append(_section("PAGES & ROUTES", "02", C.CY))
-    for page in layout["pages"]:
-        star = _c(C.GR, "★") if page.get("priority") == 1 else _c(C.GY, "○")
+    pages = ast.get("pages", [])
+    for page in pages:
         name = _c(C.B, page.get("name", "Page"))
-        typ  = _c(C.GY, f"({page.get('type', 'page')})")
         rte  = _c(C.CY, page.get("route", "/"))
-        out.append(f"  {star}  {name} {typ}  →  {rte}")
-        if verbose:
-            out.append(f"     sections: {_c(C.GY, ' → '.join(page.get('sections', [])))}")
+        out.append(f"  ○  {name}  →  {rte}")
 
     # ── 03 LAYOUT CONTRACT ────────────────────────────────────────────────────
     out.append(_section("LAYOUT CONTRACT", "03", C.CY))
-    out.append(f"  {_c(C.B,'Pattern:')}  {layout.get('layout_pattern','single-page')}")
-    out.append(f"  {_c(C.B,'Global:')}   {', '.join(layout.get('global_components',[]))}")
-    out.append(f"\n  {_c(C.YL,'Component map:')}")
-    for pname, pcomps in comps.get("component_map", {}).items():
-        page_obj = next((pg for pg in layout.get("pages", []) if pg.get("name") == pname), {})
-        custom = page_obj.get("custom_components", [])
-        comps_str = " → ".join(pcomps)
-        line = f"  {_c(C.B, pname + ':')}  {comps_str}"
-        if custom:
-            custom_str = ", ".join(custom)
-            line += _c(C.GY, f"  +custom: {custom_str}")
-        out.append(line)
+    out.append(f"  {_c(C.B,'Pattern:')}  {'multi-page' if len(pages) > 1 else 'single-page'}")
+    for page in pages:
+        p_name = page.get("name")
+        p_comps = [c["type"] for c in page.get("layout", {}).get("children", [])]
+        out.append(f"  {_c(C.B, p_name + ':')}  {' → '.join(p_comps)}")
 
     # ── 04 VISUAL HIERARCHY ───────────────────────────────────────────────────
     out.append(_section("VISUAL HIERARCHY", "04", C.CY))
-    out.append(f"  {_c(C.GR,'⬛ PRIMARY:')}     {hier.get('primary_section','')}")
-    out.append(f"  {_c(C.YL,'▪ SECONDARY:')}   {', '.join(hier.get('secondary_sections',[]))}")
-    out.append(f"  {_c(C.GY,'· SUPPORT:')}     {', '.join(hier.get('supporting_sections',[]))}")
-    out.append(f"  {_c(C.B,'CTA:')}            \"{hier.get('cta_text','')}\"")
+    out.append(f"  {_c(C.GR,'⬛ PRIMARY:')}     {hier.get('primary','')}")
+    out.append(f"  {_c(C.YL,'▪ SECONDARY:')}   {', '.join(hier.get('secondary',[]))}")
+    out.append(f"  {_c(C.GY,'· SUPPORT:')}     {', '.join(hier.get('support',[]))}")
+    out.append(f"  {_c(C.B,'CTA:')}            {hier.get('cta','')}")
     out.append(f"  {_c(C.B,'Focal point:')}    {hier.get('focal_point','')}")
-    out.append(f"  {_c(C.B,'Scroll flow:')}    {_c(C.GY,' → '.join(hier.get('scroll_flow',[])))}")
+    out.append(f"  {_c(C.B,'Scroll flow:')}    {hier.get('scroll_flow','')}")
 
     # ── 05 DESIGN SYSTEM ──────────────────────────────────────────────────────
     out.append(_section("DESIGN SYSTEM", "05", C.CY))
-    out.append(f"  {_c(C.B,'Palette:')}     {design['palette_id']} — {p['name']}")
-    out.append(f"  {_c(C.B,'Colours:')}     primary {p['primary']}  ·  secondary {p['secondary']}  ·  accent {p['accent']}")
-    out.append(f"  {_c(C.B,'Dark mode:')}   {_c(C.GR,'yes') if design['dark_mode'] else _c(C.YL,'no')}")
-    out.append(f"  {_c(C.B,'Effect:')}      {design['visual_effect']} @ {design['effect_placement']}")
-    out.append(f"  {_c(C.B,'Animation:')}   {design['text_animation']}")
-    out.append(f"  {_c(C.B,'Font:')}        {design['font_pair']}")
+    out.append(f"  {_c(C.B,'Palette:')}     {p.get('name')}")
+    out.append(f"  {_c(C.B,'Colours:')}     primary {p.get('primary')}  ·  secondary {p.get('secondary')}  ·  accent {p.get('accent')}")
+    out.append(f"  {_c(C.B,'Styles:')}      {', '.join(blueprint.get('detected_styles', []))}")
     out.append(f"\n  {_c(C.YL,'Tailwind tokens:')}")
-    out.append(f"  {_c(C.GY,'container:')}      {tw['container']}")
-    out.append(f"  {_c(C.GY,'section:')}        {tw['section']}")
-    out.append(f"  {_c(C.GY,'card:')}           {tw['card']}")
-    out.append(f"  {_c(C.GY,'btn-primary:')}    {tw['btn_primary']}")
-    out.append(f"  {_c(C.GY,'btn-secondary:')}  {tw['btn_secondary']}")
-
-    # ── 06 CODE SKELETON ──────────────────────────────────────────────────────
-    out.append(_section("CODE SKELETON", "06", C.CY))
-    first_skel = next(iter(skeleton.values()), "") if skeleton else ""
-    for line in first_skel.splitlines():
-        out.append(f"  {_c(C.GY, line)}")
+    for k, v in tw.items():
+        out.append(f"  {_c(C.GY, k + ':').ljust(20)} {v}")
 
     # ── 07 REFINED PROMPT ─────────────────────────────────────────────────────
-    out.append(_section("REFINED FRONTEND PROMPT", "07", C.GR))
-    out.append("")
-    for line in prompt.splitlines():
-        out.append(f"  {line}")
+    if verbose:
+        out.append(_section("REFINED FRONTEND PROMPT", "07", C.GR))
+        for line in prompt.splitlines():
+            out.append(f"  {line}")
 
     # ── 08 GENERATED CODE (preview) ───────────────────────────────────────────
     if code:
         out.append(_section("GENERATED REACT CODE (preview)", "08", C.BL))
         lines = code.splitlines()
-        for line in lines[:70]:
+        for line in lines[:40]:
             out.append(f"  {_c(C.GY, line)}")
-        if len(lines) > 70:
-            out.append(_c(C.GY, f"  … {len(lines) - 70} more lines (see output/)"))
+        if len(lines) > 40:
+            out.append(_c(C.GY, f"  … {len(lines) - 40} more lines (see output/)"))
 
     # ── FOOTER ────────────────────────────────────────────────────────────────
     out.append(f"\n{_divider()}")
     out.append(_c(C.GR, _c(C.B, "  ✓  BLUEPRINT COMPLETE")))
     ts = datetime.now().strftime("%Y-%m-%d %H:%M")
-    out.append(_c(C.GY, f"  Prompt Machine v3.0  ·  Qwen2.5  ·  {ts}"))
+    out.append(_c(C.GY, f"  Prompt Machine v3.0  ·  {ts}"))
     out.append(_divider())
 
     return "\n".join(out)
 
-
-# ── SAVE TO DISK ──────────────────────────────────────────────────────────────
 def save_blueprint(blueprint: dict, output_dir: str = "output") -> None:
     slug = blueprint["intent"]["product_name"].lower().replace(" ", "-")
     out  = Path(output_dir) / slug
-    (out / "code").mkdir(parents=True, exist_ok=True)
+    out.mkdir(parents=True, exist_ok=True)
 
-    # blueprint.json
-    (out / "blueprint.json").write_text(
-        json.dumps({
-            "intent":   blueprint["intent"],
-            "ontology": blueprint.get("ontology", {}),
-            "layout":   blueprint.get("layout", {}),
-            "ast":      blueprint.get("ast", {}),
-            "design":   {k: v for k, v in blueprint.get("design", {}).items() if k != "palette"},
-        }, indent=2)
-    )
+    # Save blueprint.json
+    (out / "blueprint.json").write_text(json.dumps(blueprint, indent=2))
 
-    # prompt.md
-    (out / "prompt.md").write_text(
-        f"# {blueprint['intent'].get('product_name', 'App')} — Frontend Prompt\n\n{blueprint.get('prompt', '')}"
-    )
+    # Save prompt.md
+    (out / "prompt.md").write_text(f"# {blueprint['intent']['product_name']} prompt\n\n{blueprint['prompt']}")
 
-    # skeletons
-    for page_name, skel in blueprint.get("skeletons", {}).items():
-        fname = page_name.lower().replace(" ", "-")
-        (out / "code" / f"{fname}.jsx").write_text(skel)
-
-    # full generated code
+    # full generated code parsing
     if blueprint.get("code"):
         code = blueprint["code"]
-        import re
-        
-        # Parse XML file blocks generated by stage8
+        # Match <file path="...">...</file>
         file_blocks = re.findall(r'<file\s+path="(.*?)">(.*?)</file>', code, re.DOTALL)
         
-        # Robust Fallback: Handle markdown headers if XML tags are missing
-        if not file_blocks:
-            # Match headers like "### File: src/components/Name.jsx" or "#### `src/pages/Home.jsx`"
-            # We use re.MULTILINE with ^ to match headers at the start of lines
-            pattern = r'(?i)^#+\s*(?:File:\s*)?[`"\'\s]*(src/.*?\.jsx?|src/.*?\.tsx?)[`"\'\s]*'
-            matches = list(re.finditer(pattern, code, re.MULTILINE))
-            
-            for i, match in enumerate(matches):
-                path = match.group(1).strip()
-                start = match.end()
-                end = matches[i+1].start() if i+1 < len(matches) else len(code)
-                content = code[start:end].strip()
-                file_blocks.append((path, content))
-
-        if file_blocks:
-            for path, content in file_blocks:
-                # Clean up the path
-                path = path.strip().lstrip("/")
-                file_path = out / path
-                file_path.parent.mkdir(parents=True, exist_ok=True)
-                # remove markdown fences and XML noise
-                content = re.sub(r"```[\w]*\n?", "", content)
-                content = content.replace("```", "")
-                file_path.write_text(content.strip() + "\n")
-        else:
-            # Fallback legacy formatting code if NO structure is found
-            code = re.sub(r"```[\w]*\n?", "", code)
-            (out / "code" / "App.jsx").write_text(code)
+        for path, content in file_blocks:
+            path = path.strip().lstrip("/")
+            file_path = out / path
+            file_path.parent.mkdir(parents=True, exist_ok=True)
+            # Remove markdown fences if present inside block
+            clean_content = re.sub(r"```[\w]*\n?", "", content)
+            clean_content = clean_content.replace("```", "").strip()
+            file_path.write_text(clean_content + "\n")
 
     print(f"\n\033[32m✓  Saved to {out}/\033[0m")
-    print(f"\033[90m   ├─ blueprint.json\033[0m")
-    print(f"\033[90m   ├─ prompt.md\033[0m")
-    print(f"\033[90m   └─ code/   (skeletons + App.jsx)\033[0m")

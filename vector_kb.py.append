@@ -1,0 +1,92 @@
+
+# ── PIPELINE UTILITIES (REQUIRED ADDITIONS) ───────────────────────────────────
+
+def get_index():
+    """Returns a dict with the collection and model for pipeline warmup."""
+    client = get_chroma_client()
+    model = get_model()
+    collection = client.get_collection(COLLECTION_NAME, embedding_function=get_embedding_function())
+    return {
+        "collection": collection,
+        "model": model
+    }
+
+def retrieve(query_text: str, n: int = 5):
+    """Alias for query() returns list of dicts: {content, source, category, score}."""
+    return query(query_text, n)
+
+def format_for_llm(results: list[dict]) -> str:
+    """Formats retrieve() output index into a string block for the LLM prompt."""
+    if not results:
+        return "No relevant context found."
+    
+    blocks = []
+    for i, res in enumerate(results, 1):
+        blocks.append(f"--- Component {i}: {res.get('category', 'unknown')} ({res.get('source', 'raw')}) ---")
+        blocks.append(res["content"])
+        blocks.append("") # Spacer
+    return "\n".join(blocks)
+
+def smart_query(prd_text: str, component_query: str, n: int = 5) -> list[dict]:
+    """Style-aware query that prioritizes category matches based on PRD design styles."""
+    from design_style_detector import detect_styles, get_style_retrieval_filter
+    
+    styles = detect_styles(prd_text)
+    category_filters = get_style_retrieval_filter(styles)
+    
+    client = get_chroma_client()
+    collection = client.get_collection(COLLECTION_NAME, embedding_function=get_embedding_function())
+    
+    # 1. First attempt filtered query
+    filtered_results = collection.query(
+        query_texts=[component_query],
+        n_results=n,
+        where={"category": {"$in": category_filters}}
+    )
+    
+    f_docs = filtered_results["documents"][0]
+    f_metas = filtered_results["metadatas"][0]
+    f_dists = filtered_results["distances"][0]
+    
+    # Check if we have enough high-quality filtered results
+    if len(f_docs) >= 3:
+        final_results = []
+        seen_content = set()
+        
+        # Priority: Boosted matches
+        for i in range(len(f_docs)):
+            content = f_docs[i]
+            if content not in seen_content:
+                final_results.append({
+                    "content": content,
+                    "source": f_metas[i]["source"],
+                    "category": f_metas[i]["category"],
+                    "score": 1 - f_dists[i],
+                    "boosted": True
+                })
+                seen_content.add(content)
+        
+        # Backfill if we have space left
+        if len(final_results) < n:
+            normal_results = collection.query(query_texts=[component_query], n_results=n*2)
+            n_docs = normal_results["documents"][0]
+            n_metas = normal_results["metadatas"][0]
+            n_dists = normal_results["distances"][0]
+            
+            for i in range(len(n_docs)):
+                content = n_docs[i]
+                if content not in seen_content:
+                    final_results.append({
+                        "content": content,
+                        "source": n_metas[i]["source"],
+                        "category": n_metas[i]["category"],
+                        "score": 1 - n_dists[i],
+                        "boosted": False
+                    })
+                    seen_content.add(content)
+                if len(final_results) >= n:
+                    break
+        return final_results[:n]
+    
+    # 2. If filtered results < 3, just use normal query
+    return query(component_query, n)
